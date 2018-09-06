@@ -10,5 +10,5 @@ struct Voxel
         BLOCK = 1
     } type;
 
-    Vector3i _position;
+    Vector3i position;
 };

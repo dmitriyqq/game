@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Camera.hpp"
 #include "VoxelSpace.hpp"
-
+#include "ISpaceGenerator.hpp"
 
 template< typename SpaceT, typename CameraT >
 class Game{
@@ -10,23 +10,22 @@ class Game{
 
 public:
     Game(){
-        _space.generate(100, 100, 100);
+        auto generator = new PerlynSpaceGenerator();
+        generator->generate(_space, 100, 100, 100);
     }
 
-    template <typename SpaceT, typename CameraT>
     void update(){
         std::cout<<"update"<<std::endl;
     }
 
-    template <typename SpaceT, typename CameraT>
     void draw(){
-        _camera.display(_space);
+        _camera.display(&_space);
     }
 
 };
 
 int main(int argc, char** argv){
     auto myGame = new Game<SimpleSpace, Camera>();
-    myGame.draw();
-    
+    myGame->draw();
+
 }

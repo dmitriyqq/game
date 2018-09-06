@@ -5,13 +5,13 @@ struct Vector3i{
     int y;
     int z;
 
-    bool operator==(const Vector3i other){
+    bool operator==(const Vector3i &other){
         return this->x == other.x && this->y == other.y && this->z == other.z;
     }
 
-    bool operator<(const Vector3i other){
-        return this->x < other.x ? true:
-               this->y < other.y ? true: 
-               this->z == other.z ? true : false;
-    } 
+    friend bool operator<(Vector3i a, Vector3i b){
+        return a.x < b.x ? true:
+               a.y < b.y ? true:
+               a.z == b.z ? true : false;
+    }
 };

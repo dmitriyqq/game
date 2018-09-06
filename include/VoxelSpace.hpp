@@ -6,20 +6,23 @@
 #include "Voxel.hpp"
 
 class ISpace{
-    Voxel& get(int x, int y, int z) = 0;
+public:
+    virtual const Voxel& get(Vector3i pos) const = 0;
+    virtual void set(Vector3i pos, const Voxel &voxel) = 0;
 };
 
-class SimpleSpace{
+class SimpleSpace: public ISpace{
     std::map<Vector3i, Voxel> _space;
 
 public:
-    Voxel& get(Vector3i pos) const { return _space[pos]; }
+    const Voxel& get(Vector3i pos) const override
+    {
+        std::cout<<"space"<<std::endl;
+        for(auto &&voxel: _space){
+            std::cout<<"voxel "<<voxel.first.x<<" "<<voxel.first.y<<std::endl;
+        }
+        return _space.at(pos);
+    }
 
-    void set(Vector3i pos, const Voxel &voxel) const { _space[pos] = Voxel(voxel); }
+    void set(Vector3i pos, const Voxel &voxel) override { _space[pos] = Voxel(voxel); }
 };
-
-// class VoxelSpace: public ISpace{
-//     std::list < std::shared_ptr<IChunk> > visible_chunks;
-// public:
-    
-// }

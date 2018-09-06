@@ -10,17 +10,17 @@ class IRenderingBackend
 {
 
   public:
-    void display(const Voxel &voxel) const;
+  virtual void display(const Voxel &voxel) const = 0;
 };
 
-class NCursesRenderingBackend
+class NCursesRenderingBackend : public IRenderingBackend
 {
     void init()
     {
         initscr();
 
         box(stdscr,'*','*');
-        refresh();      
+        refresh();
     }
 
   public:
@@ -32,8 +32,8 @@ class NCursesRenderingBackend
         endwin();
     }
 
-    void display(const Voxel &voxel) const
+    void display(const Voxel &voxel) const override
     {
-        std::cout << "Drawing voxel at" << voxel.x << "" << voxel.y << "" << voxel.z << std::endl;
+        std::cout << "Drawing voxel at" << voxel.position.x << "" << voxel.position.y << "" << voxel.position.z << std::endl;
     }
 };

@@ -1,8 +1,5 @@
 #pragma once
 
-#include <vector>
-#include <shared_ptr>
-
 class IEntity{
 
 public:
