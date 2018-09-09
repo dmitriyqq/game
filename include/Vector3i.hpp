@@ -9,9 +9,19 @@ struct Vector3i{
         return this->x == other.x && this->y == other.y && this->z == other.z;
     }
 
-    friend bool operator<(Vector3i a, Vector3i b){
-        return a.x < b.x ? true:
-               a.y < b.y ? true:
-               a.z == b.z ? true : false;
+    friend bool operator<(const Vector3i &a, const Vector3i &b){
+        if( a.x < b.x ) {
+            return true;
+        }else if( a.x == b.x){
+            if(a.y < b.y){
+                return true;
+            }else if(a.y == b.y){
+                if(a.z < b.z){
+                    return true;
+                }
+            }
+        }
+
+        return false;
     }
 };

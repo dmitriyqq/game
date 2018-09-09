@@ -25,9 +25,9 @@ class Camera
     {
         _projection.assign(_width, std::vector<Voxel>(_height));
 
-        auto my_logger = spdlog::basic_logger_mt("basic_logger", "basic-log.txt");
-        my_logger->error("Welcome to spdlog!");
-        my_logger->flush();
+        auto logger = spdlog::get("main_logger");
+
+        logger->info("start projectiong");
 
         for (int i = 0; i < _height; i++)
         {
@@ -38,8 +38,9 @@ class Camera
                 int y = i + _position.y;
                 int z = _position.z;
 
+                logger->debug("voxel{}, {}, {} - {}, {}", x, y, z, j, i);
                 Vector3i voxel_pos = {x, y, z};
-                _projection[j][i] = space->get(voxel_pos);
+                _projection[j][i] = Voxel(space->get(voxel_pos));
             }
         }
     }
@@ -61,7 +62,7 @@ class Camera
         {
             for (int j = 0; j < _width; j++)
             {
-                _renderingBackend->display(_projection[j][i]);
+                _renderingBackend->display(_projection[j][i], i, j);
             }
         }
     }

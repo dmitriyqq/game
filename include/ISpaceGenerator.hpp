@@ -9,6 +9,9 @@ class ISpaceGenerator{
 class PerlynSpaceGenerator: public ISpaceGenerator{
     public:
     void generate(ISpace &space, int width, int height, int depth) override{
+        auto logger = spdlog::get("main_logger");
+        logger->info("generating space");
+
         for(int i = 0; i < width; i++){
             for(int j = 0; j < height; j++){
                 for(int k = 0; k < depth; k++){
@@ -20,5 +23,7 @@ class PerlynSpaceGenerator: public ISpaceGenerator{
                 }
             }
         }
+
+        logger->info("space created");
     }
 };

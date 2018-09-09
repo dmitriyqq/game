@@ -13,15 +13,10 @@ SET(PROJECT_SOURCES_DIR ${PROJECT_SOURCE_DIR}/src)
 FILE(GLOB_RECURSE HEADERS ${PROJECT_HEADERS_DIR}/*.hpp)
 FILE(GLOB_RECURSE SOURCES ${PROJECT_SOURCES_DIR}/*.cpp)
 
-if(NOT TARGET spdlog)
-  # Stand-alone build
-  find_package(spdlog CONFIG REQUIRED)
-endif()
-
 find_package(Threads REQUIRED)
 
-
 add_subdirectory(./deps/spdlog)
+
 add_executable(GameEngine ./src/main.cpp ${PROJECT_HEADERS_DIR} ${PROJECT_SOURCES_DIR})
 target_link_libraries(GameEngine ${CURSES_LIBRARIES})
 target_link_libraries(GameEngine spdlog::spdlog Threads::Threads)

@@ -3,6 +3,7 @@
 #include <iostream>
 
 #include <curses.h>
+#include <spdlog/spdlog.h>
 
 #include "Voxel.hpp"
 
@@ -10,7 +11,7 @@ class IRenderingBackend
 {
 
   public:
-  virtual void display(const Voxel &voxel) const = 0;
+  virtual void display(const Voxel &voxel, int y, int x) const = 0;
 };
 
 class NCursesRenderingBackend : public IRenderingBackend
@@ -32,8 +33,12 @@ class NCursesRenderingBackend : public IRenderingBackend
         endwin();
     }
 
-    void display(const Voxel &voxel) const override
+    void display(const Voxel &voxel, int y, int x) const override
     {
-        std::cout << "Drawing voxel at" << voxel.position.x << "" << voxel.position.y << "" << voxel.position.z << std::endl;
+        auto logger = spdlog::get("main_logger");
+
+        logger->debug("Drawing voxel at {0}, {1}, {2}", voxel.position.x, voxel.position.y, voxel.position.z);
+
+        mvaddch(y, x, voxel.type == Voxel::Type::BLOCK ? '#' : '_');
     }
 };
