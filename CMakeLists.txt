@@ -6,6 +6,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O0 -Wall -Wextra -Wzero-as-null-pointer
 find_package(Curses REQUIRED)
 include_directories(${CURSES_INCLUDE_DIR})
 include_directories(./include)
+include_directories(./deps/include)
 
 SET(PROJECT_HEADERS_DIR ${PROJECT_SOURCE_DIR}/include)
 SET(PROJECT_SOURCES_DIR ${PROJECT_SOURCE_DIR}/src)
@@ -17,7 +18,7 @@ find_package(Threads REQUIRED)
 
 add_subdirectory(./deps/spdlog)
 
-add_executable(GameEngine ./src/main.cpp ${PROJECT_HEADERS_DIR} ${PROJECT_SOURCES_DIR})
+add_executable(GameEngine ./deps/include/PerlinNoise.h ./src/main.cpp ${PROJECT_HEADERS_DIR} ${PROJECT_SOURCES_DIR})
 target_link_libraries(GameEngine ${CURSES_LIBRARIES})
 target_link_libraries(GameEngine spdlog::spdlog Threads::Threads)
 set_target_properties(GameEngine PROPERTIES LINKER_LANGUAGE CXX)

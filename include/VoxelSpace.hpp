@@ -18,8 +18,6 @@ class SimpleSpace: public ISpace{
 public:
     const Voxel& get(const Vector3i &pos) const override
     {
-        auto logger = spdlog::get("main_logger");
-        logger->debug("access of voxel {}, {}, {}", pos.x, pos.y, pos.z);
         return _space.at(pos);
     }
 

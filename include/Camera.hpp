@@ -1,13 +1,13 @@
 #pragma once
 
 #include <vector>
+#include <ncurses.h>
 
 #include "Vector3i.hpp"
 #include "Vector3f.hpp"
 #include "Voxel.hpp"
 #include "VoxelSpace.hpp"
 #include "IRenderingBackend.hpp"
-
 #include <spdlog/spdlog.h>
 #include "spdlog/sinks/stdout_color_sinks.h"
 #include "spdlog/sinks/basic_file_sink.h"
@@ -27,22 +27,38 @@ class Camera
 
         auto logger = spdlog::get("main_logger");
 
-        logger->info("start projectiong");
-
+        logger->info("start projecting");
+        constexpr int depth = 100;
         for (int i = 0; i < _height; i++)
         {
             for (int j = 0; j < _width; j++)
             {
-                // Coords mapping
-                int x = j + _position.x;
-                int y = i + _position.y;
-                int z = _position.z;
+                for (int k = 0; k < depth; k++) {
+                    // Coords mapping
+                    int x = j + _position.x;
+                    int y = i + _position.y;
+                    int z = k + _position.z;
 
-                logger->debug("voxel{}, {}, {} - {}, {}", x, y, z, j, i);
-                Vector3i voxel_pos = {x, y, z};
-                _projection[j][i] = Voxel(space->get(voxel_pos));
+
+                    Vector3i voxel_pos = {x, y, z};
+                    auto voxel = space->get(voxel_pos);
+
+                    if (voxel.type != Voxel::Type::AIR && voxel.position.z > _projection[i][j].position.z)
+                        _projection[j][i] = Voxel(voxel);
+                }
             }
         }
+
+        logger->info("end projecting");
+        logger->debug("debug projecting");
+        for (int i = 0; i < _height; i++)
+        {
+            for (int j = 0; j < _width; j++) {
+                auto voxel = _projection[i][j];
+                logger->debug("voxel {} {} {}, {}, {} - {}", i, j, voxel.position.x, voxel.position.y, voxel.position.z, (int) voxel.type);
+            }
+        }
+        logger->debug("end debug projecting");
     }
 
   public:
@@ -65,5 +81,6 @@ class Camera
                 _renderingBackend->display(_projection[j][i], i, j);
             }
         }
+        refresh();
     }
 };

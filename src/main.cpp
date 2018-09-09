@@ -18,7 +18,12 @@ public:
     }
 
     void update(){
-        std::cout<<"update"<<std::endl;
+        // std::cout<<"update"<<std::endl;
+        char c = getch();
+        if( c == 'q'){
+            // TODO fix this
+            throw "EXITFUCKINGGAME";
+        }
     }
 
     void draw(){
@@ -35,16 +40,20 @@ int main(){
 
     try {
         auto myGame = new Game<SimpleSpace, Camera>();
-        myGame->draw();
+        while(true) {
+            myGame->draw();
+            myGame->update();
+        }
     }
     catch (std::exception & e){
         logger->error("exception_occured " + std::string(e.what()));
         logger->flush();
-
         // TODO fix this
         endwin();
 
         return 23;
     }
+    //getch();
+    endwin();
     return 0;
 }
