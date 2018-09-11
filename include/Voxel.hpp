@@ -16,4 +16,11 @@ struct Voxel
     } type;
 
     Vector3i position;
+
+    static const Voxel& NullVoxel(){
+        static Voxel voxel = {
+                .type = Type::AIR,
+                .position = {0,0,0}
+        };
+    }
 };

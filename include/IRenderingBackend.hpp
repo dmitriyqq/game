@@ -11,7 +11,12 @@ class IRenderingBackend
 {
 
   public:
-  virtual void display(const Voxel &voxel, int y, int x) const = 0;
+
+    virtual int width() = 0;
+
+    virtual int height() = 0;
+
+    virtual void display(const Voxel &voxel, int y, int x) const = 0;
 };
 
 class NCursesRenderingBackend : public IRenderingBackend
@@ -19,6 +24,11 @@ class NCursesRenderingBackend : public IRenderingBackend
     void init()
     {
         initscr();
+        noecho();
+        cbreak();
+        keypad(stdscr, 1);
+        nodelay(stdscr, 0);
+
         auto logger = spdlog::get("main_logger");
         if(has_colors() == FALSE)
         {	endwin();
@@ -30,6 +40,18 @@ class NCursesRenderingBackend : public IRenderingBackend
     }
 
   public:
+    int width() override {
+        int y, x;
+        getmaxyx(stdscr, y, x);
+        return x;
+    }
+
+    int height() override {
+        int y, x;
+        getmaxyx(stdscr, y, x);
+        return y;
+    }
+
     NCursesRenderingBackend(){
         init();
     }
@@ -42,9 +64,9 @@ class NCursesRenderingBackend : public IRenderingBackend
     {
         auto logger = spdlog::get("main_logger");
 
-        logger->debug("Drawing voxel at {0}, {1}, {2}", voxel.position.x, voxel.position.y, voxel.position.z);
+        logger->debug("Drawing voxel at screen({}, {}) - model: ({}, {}, {})", x, y, voxel.position.x, voxel.position.y, voxel.position.z);
 
-        start_color();			/* Start color 			*/
+        start_color();  /* Start color */
         init_pair(1, COLOR_RED, COLOR_BLACK);
         init_pair(2, COLOR_BLUE, COLOR_BLACK);
         init_pair(3, COLOR_YELLOW, COLOR_BLACK);
@@ -59,15 +81,15 @@ class NCursesRenderingBackend : public IRenderingBackend
                 break;
             case Voxel::Type::WATER:
                 attron(COLOR_PAIR(2));
-                mvaddch(y, x, '#');
+                mvaddch(y, x, '~');
                 break;
             case Voxel::Type::SAND:
                 attron(COLOR_PAIR(3));
-                mvaddch(y, x, '#');
+                mvaddch(y, x, '.');
                 break;
             case Voxel::Type::GRASS:
                 attron(COLOR_PAIR(4));
-                mvaddch(y, x, '#');
+                mvaddch(y, x, '_');
                 break;
             case Voxel::Type::ROCK:
                 attron(COLOR_PAIR(5));
@@ -75,7 +97,7 @@ class NCursesRenderingBackend : public IRenderingBackend
                 break;
             case Voxel::Type::SNOW:
                 attron(COLOR_PAIR(6));
-                mvaddch(y, x, '#');
+                mvaddch(y, x, '*');
                 break;
         }
 

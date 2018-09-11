@@ -1,6 +1,6 @@
 #include "VoxelSpace.hpp"
 #include <PerlinNoise.h>
-
+#include <ctime>
 class ISpaceGenerator{
     public:
     virtual void generate(ISpace &space, int width, int height, int depth) = 0;
@@ -11,12 +11,12 @@ class PerlynSpaceGenerator: public ISpaceGenerator{
     void generate(ISpace &space, int width, int height, int depth) override{
         auto logger = spdlog::get("main_logger");
         logger->info("generating space");
-        siv::PerlinNoise noise;
+        siv::PerlinNoise noise(time(0));
 
 
         for(int i = 0; i < width; i++){
             for(int j = 0; j < height; j++){
-                int h = noise.noise(i / (float) width , j / (float) height) * depth + depth / 4;
+                int h = noise.noise(i / (float) width , j / (float) height) * depth + depth / 4 + 10;
                 logger->info("coords {} {} - height {}", i, j, h);
                 for(int k = 0; k < depth; k++){
                     auto voxel = Voxel();

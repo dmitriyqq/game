@@ -15,7 +15,7 @@
 class Camera
 {
     Vector3f _position = {0, 0, 0};
-    int _width = 80, _height = 25;
+    int _width = 50, _height = 50;
 
     IRenderingBackend *_renderingBackend;
 
@@ -43,7 +43,7 @@ class Camera
                     Vector3i voxel_pos = {x, y, z};
                     auto voxel = space->get(voxel_pos);
 
-                    if (voxel.type != Voxel::Type::AIR && voxel.position.z > _projection[i][j].position.z)
+                    if ((voxel.type != Voxel::Type::AIR))
                         _projection[j][i] = Voxel(voxel);
                 }
             }
@@ -55,7 +55,7 @@ class Camera
         {
             for (int j = 0; j < _width; j++) {
                 auto voxel = _projection[i][j];
-                logger->debug("voxel {} {} {}, {}, {} - {}", i, j, voxel.position.x, voxel.position.y, voxel.position.z, (int) voxel.type);
+                logger->debug("voxel screen({}, {}) model:({}, {}, {}) - type: {}", i, j, voxel.position.x, voxel.position.y, voxel.position.z, (int) voxel.type);
             }
         }
         logger->debug("end debug projecting");
@@ -64,6 +64,13 @@ class Camera
   public:
     Camera(){
         _renderingBackend = new NCursesRenderingBackend();
+        _width = _renderingBackend->width();
+        _height = _renderingBackend->height();
+
+        auto logger = spdlog::get("main_logger");
+        logger->info("GET WIDTH = {}", _width);
+        logger->info("GET HEIGHT = {}", _height);
+        logger->flush();
     }
 
     void move(Vector3f offset)

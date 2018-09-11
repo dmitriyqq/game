@@ -6,7 +6,7 @@ struct Vector3i{
     int z;
 
     bool operator==(const Vector3i &other){
-        return this->x == other.x && this->y == other.y && this->z == other.z;
+        return (this->x == other.x && this->y == other.y && this->z == other.z);
     }
 
     friend bool operator<(const Vector3i &a, const Vector3i &b){
