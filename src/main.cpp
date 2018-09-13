@@ -1,14 +1,48 @@
 #include <iostream>
+#include <thread>
 #include "Camera.hpp"
 #include "VoxelSpace.hpp"
 #include "ISpaceGenerator.hpp"
 #include "KeyTable.hpp"
+#include "UI.hpp"
 
-template< typename SpaceT, typename CameraT >
+template< typename SpaceT, typename UiT>
 class Game{
     SpaceT _space;
-    CameraT _camera;
+    UiT __ui;
     KeyTable *keytable;
+
+    std::chrono::system_clock::time_point lastTime;
+
+    static constexpr float DESIRED_LOGIC_FPS = 30;
+    static constexpr float DESIRED_RENDER_FPS = 1;
+
+    float desiredLogicDeltaTime = 1.0f / DESIRED_LOGIC_FPS;
+    float desiredRenderDeltaTime = 1.0f / DESIRED_RENDER_FPS;
+
+    float logicDeltaTime, renderDeltaTime;
+
+    bool isPlaying = false;
+
+
+    void gameLoop(){
+        auto newTime = std::chrono::system_clock::now();
+        float delta = (std::chrono::duration_cast<std::chrono::milliseconds>(lastTime - newTime).count() / 1000.0f);
+
+        logicDeltaTime += delta;
+        renderDeltaTime += delta;
+
+        if(logicDeltaTime > desiredLogicDeltaTime) {
+            update();
+        }
+
+        if(renderDeltaTime > desiredLogicDeltaTime){
+            draw();
+        }
+
+        lastTime = newTime;
+        gameLoop();
+    }
 
 public:
     Game(){
@@ -21,6 +55,15 @@ public:
         keytable = new KeyTable();
     }
 
+    void start(){
+        isPlaying = true;
+        gameLoop();
+    }
+
+    void finish(){
+        isPlaying = false;
+    }
+
     void update(){
         keytable->update();
 
@@ -31,7 +74,7 @@ public:
     }
 
     void draw(){
-        _camera.display(&_space);
+        __ui.display(&_space);
     }
 
 };
@@ -43,11 +86,8 @@ int main(){
     logger->flush_on(spdlog::level::debug);
 
     try {
-        auto myGame = new Game<SimpleSpace, Camera>();
-        while(true) {
-            myGame->draw();
-            myGame->update();
-        }
+        auto myGame = new Game<SimpleSpace, UI>();
+        myGame->start();
     }
     catch (std::exception & e){
         logger->error("exception_occured " + std::string(e.what()));

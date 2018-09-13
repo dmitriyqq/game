@@ -73,6 +73,14 @@ class Camera
         logger->flush();
     }
 
+    int width(){
+        return _renderingBackend->width();
+    }
+
+    int height(){
+        return _renderingBackend->height();
+    }
+
     void move(Vector3f offset)
     {
         _position += offset;
@@ -90,4 +98,9 @@ class Camera
         }
         refresh();
     }
+
+    const IRenderingBackend* getBackend(){
+        return _renderingBackend;
+    }
+
 };

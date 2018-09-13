@@ -9,7 +9,7 @@ include_directories(./include)
 include_directories(./deps/include)
 
 SET(PROJECT_HEADERS_DIR ${PROJECT_SOURCE_DIR}/include)
-SET(PROJECT_SOURCES_DIR ${PROJECT_SOURCE_DIR}/src include/KeyTable.hpp)
+SET(PROJECT_SOURCES_DIR ${PROJECT_SOURCE_DIR}/src include/KeyTable.hpp include/UI.hpp include/DebugWindow.hpp)
 
 FILE(GLOB_RECURSE HEADERS ${PROJECT_HEADERS_DIR}/*.hpp)
 FILE(GLOB_RECURSE SOURCES ${PROJECT_SOURCES_DIR}/*.cpp)
