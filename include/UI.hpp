@@ -3,35 +3,53 @@
 #include "Camera.hpp"
 #include "DebugWindow.hpp"
 
+template <typename CameraT>
 class UI {
 
-    Camera *camera;
+    CameraT *camera;
     DebugWindow *window;
+
+    void init()
+    {
+        initscr();
+        noecho();
+        cbreak();
+        keypad(stdscr, true);
+        nodelay(stdscr, true);
+        raw();
+        noecho();
+
+        auto logger = spdlog::get("main_logger");
+        if(has_colors() == FALSE)
+        {	endwin();
+            logger->error("Your terminal does not support color");
+            exit(1);
+        }
+        box(stdscr,'*','*');
+        refresh();
+    }
 
 public:
     UI(){
-        camera = new Camera();
-        window = new DebugWindow(DebugWindow::getXOffset(camera->width()), camera->height());
+        init();
+        int width, height;
+        getmaxyx(stdscr, height, width);
+        auto logger = spdlog::get("main_logger");
+
+        logger->info("Width={}, Height={}", width, height);
+        logger->info("DW={}, A={}", DebugWindow::WIDTH, width - DebugWindow::WIDTH);
+        logger->info("Offset={}", width - DebugWindow::WIDTH);
+
+        camera = new CameraT(width - DebugWindow::WIDTH, height);
+        window = new DebugWindow(DebugWindow::getXOffset(width), height);
     }
 
-    void debug(const std::string &key, std::string &value){
-        window->debug(key, value);
-    }
+    void display(std::vector <IDrawable *> drawables) const{
 
-    void debug(const std::string &key, int value){
-        window->debug(key, std::to_string(value));
-    }
+        DebugWindow::debug("width", camera->width());
+        DebugWindow::debug("height", camera->height());
 
-    void debug(const std::string &key, double value){
-        window->debug(key, std::to_string(value));
-    }
-
-    void display(const ISpace *space){
-
-        debug("width", camera->width());
-        debug("height", camera->height());
-
-        camera->display(space);
+        camera->display(drawables);
         window->draw();
     }
 };

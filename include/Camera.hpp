@@ -12,6 +12,11 @@
 #include "spdlog/sinks/stdout_color_sinks.h"
 #include "spdlog/sinks/basic_file_sink.h"
 
+class IDrawable{
+public:
+    virtual void draw(IRenderingBackend *backend) const = 0;
+};
+
 class Camera
 {
     Vector3f _position = {0, 0, 0};
@@ -21,8 +26,7 @@ class Camera
 
     std::vector<std::vector<Voxel>> _projection;
 
-    void redraw(const ISpace *space)
-    {
+    void redraw(const ISpace *space){
         _projection.assign(_width, std::vector<Voxel>(_height));
 
         auto logger = spdlog::get("main_logger");
@@ -62,8 +66,8 @@ class Camera
     }
 
   public:
-    Camera(){
-        _renderingBackend = new NCursesRenderingBackend();
+    Camera(int width, int height){
+        _renderingBackend = new NCursesRenderingBackend(width, height);
         _width = _renderingBackend->width();
         _height = _renderingBackend->height();
 
@@ -86,17 +90,20 @@ class Camera
         _position += offset;
     }
 
-    void display(const ISpace *space)
+    void display(std::vector <IDrawable *> drawables)
     {
-        redraw(space);
-        for (int i = 0; i < _height; i++)
-        {
-            for (int j = 0; j < _width; j++)
-            {
-                _renderingBackend->display(_projection[j][i], i, j);
-            }
+//        for (int i = 0; i < _height; i++)
+//        {
+//            for (int j = 0; j < _width; j++)
+//            {
+//                _renderingBackend->display(_projection[j][i], i, j);
+//            }
+//        }
+        for(auto &drawable: drawables){
+            drawable->draw(_renderingBackend);
         }
-        refresh();
+
+        _renderingBackend->endDisplay();
     }
 
     const IRenderingBackend* getBackend(){

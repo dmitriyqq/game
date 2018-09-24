@@ -16,48 +16,54 @@ class IRenderingBackend
 
     virtual int height() = 0;
 
+    virtual void startDisplay() = 0;
+
     virtual void display(const Voxel &voxel, int y, int x) const = 0;
+
+    virtual void endDisplay() = 0;
 };
 
 class NCursesRenderingBackend : public IRenderingBackend
 {
-    void init()
-    {
-        initscr();
-        noecho();
-        cbreak();
-        keypad(stdscr, 1);
-        nodelay(stdscr, 0);
+    WINDOW* window;
 
-        auto logger = spdlog::get("main_logger");
-        if(has_colors() == FALSE)
-        {	endwin();
-            logger->error("Your terminal does not support color");
-            exit(1);
-        }
-        box(stdscr,'*','*');
-        refresh();
-    }
 
   public:
     int width() override {
         int y, x;
-        getmaxyx(stdscr, y, x);
+        getmaxyx(window, y, x);
         return x;
     }
 
     int height() override {
         int y, x;
-        getmaxyx(stdscr, y, x);
+        getmaxyx(window, y, x);
         return y;
     }
 
-    NCursesRenderingBackend(){
-        init();
+    NCursesRenderingBackend(int width, int height){
+        auto logger = spdlog::get("main_logger");
+        logger->info("NCursesRenderingBackend: Width: {}, Height: {}", width, height);
+        window = newwin(height, width, 0, 0);
+        box(window,'#','#');
+        wrefresh(window);
     }
 
     ~NCursesRenderingBackend(){
         endwin();
+    }
+
+    void startDisplay() override {
+        // wclear(window);
+        for(int i = 0; i < width(); i++){
+            for(int j = 0; j < height(); j++){
+                mvaddch(j, i, ' ');
+            }
+        }
+    }
+
+    void endDisplay() override{
+        wrefresh(window);
     }
 
     void display(const Voxel &voxel, int y, int x) const override
@@ -76,30 +82,29 @@ class NCursesRenderingBackend : public IRenderingBackend
 
         switch(voxel.type){
             case Voxel::Type::AIR:
-                attron(COLOR_PAIR(1));
-                mvaddch(y, x, '#');
+                wattron(window, COLOR_PAIR(1));
+                mvwaddch(window, y, x, '#');
                 break;
             case Voxel::Type::WATER:
-                attron(COLOR_PAIR(2));
-                mvaddch(y, x, '~');
+                wattron(window, COLOR_PAIR(2));
+                mvwaddch(window, y, x, '~');
                 break;
             case Voxel::Type::SAND:
-                attron(COLOR_PAIR(3));
-                mvaddch(y, x, '.');
+                wattron(window, COLOR_PAIR(3));
+                mvwaddch(window, y, x, '.');
                 break;
             case Voxel::Type::GRASS:
-                attron(COLOR_PAIR(4));
-                mvaddch(y, x, '_');
+                wattron(window, COLOR_PAIR(4));
+                mvwaddch(window, y, x, '_');
                 break;
             case Voxel::Type::ROCK:
-                attron(COLOR_PAIR(5));
-                mvaddch(y, x, '#');
+                wattron(window, COLOR_PAIR(5));
+                mvwaddch(window, y, x, '#');
                 break;
             case Voxel::Type::SNOW:
-                attron(COLOR_PAIR(6));
-                mvaddch(y, x, '*');
+                wattron(window, COLOR_PAIR(6));
+                mvwaddch(window, y, x, '*');
                 break;
         }
-
     }
 };

@@ -5,99 +5,131 @@
 #include "ISpaceGenerator.hpp"
 #include "KeyTable.hpp"
 #include "UI.hpp"
+#include "Game.hpp"
 
-template< typename SpaceT, typename UiT>
-class Game{
-    SpaceT _space;
+//template< typename SpaceT, typename UiT>
+//class Game : public IGame {
+//    SpaceT _space;
+//    UiT __ui;
+//    KeyTable *keytable;
+//
+//    void update() override {
+//        keytable->update();
+//    }
+//
+//    void draw() const override {
+//        __ui.display(&_space);
+//    }
+//
+//public:
+//    Game(){
+//        auto generator = new PerlynSpaceGenerator();
+//        generator->generate(_space, 200, 200, 70);
+//
+//        keytable = new KeyTable();
+//    }
+//};
+
+class GameEnd : public IKeyboardSubscriber{
+public:
+    void processKey(char key) override {
+        if(key == 'q'){
+            throw std::logic_error("end fucking game");
+        }
+    }
+};
+
+class SnakeCamera{
+    NCursesRenderingBackend *__renderingBackend;
+public:
+    int width(){
+        return __renderingBackend->width();
+    }
+
+    int height(){
+        return __renderingBackend->width();
+    }
+
+    SnakeCamera(int width, int height) {
+        __renderingBackend = new NCursesRenderingBackend(width, height);
+    }
+
+    void display(const std::vector<IDrawable *> &drawables){
+        __renderingBackend->startDisplay();
+        for(auto &drawable: drawables){
+            drawable->draw(__renderingBackend);
+        }
+
+        __renderingBackend->endDisplay();
+    }
+};
+
+class Snake : public IKeyboardSubscriber, public IDrawable{
+public:
+    int x = 50, y = 50;
+    void processKey(char key) override {
+        switch (key){
+            case 'w': y--; break;
+            case 'a': x--; break;
+            case 's': y++; break;
+            case 'd': x++; break;
+            default: break;
+        }
+    }
+
+    void draw(IRenderingBackend * backend) const override{
+        Voxel voxel;
+        voxel.type = Voxel::Type::SNOW;
+        backend->display(voxel, y, x);
+    }
+};
+
+template <typename UiT>
+class Game : public IGame {
     UiT __ui;
-    KeyTable *keytable;
+    KeyTable keytable;
+    Snake __snake;
+    GameEnd __game_end;
+    std::vector <IDrawable*> drawables;
 
-    std::chrono::system_clock::time_point lastTime;
+    void update() override {
+        keytable.update();
+        DebugWindow::debug("snakex", __snake.x);
+        DebugWindow::debug("snakey", __snake.y);
+    }
 
-    static constexpr float DESIRED_LOGIC_FPS = 30;
-    static constexpr float DESIRED_RENDER_FPS = 1;
-
-    float desiredLogicDeltaTime = 1.0f / DESIRED_LOGIC_FPS;
-    float desiredRenderDeltaTime = 1.0f / DESIRED_RENDER_FPS;
-
-    float logicDeltaTime, renderDeltaTime;
-
-    bool isPlaying = false;
-
-
-    void gameLoop(){
-        auto newTime = std::chrono::system_clock::now();
-        float delta = (std::chrono::duration_cast<std::chrono::milliseconds>(lastTime - newTime).count() / 1000.0f);
-
-        logicDeltaTime += delta;
-        renderDeltaTime += delta;
-
-        if(logicDeltaTime > desiredLogicDeltaTime) {
-            update();
-        }
-
-        if(renderDeltaTime > desiredLogicDeltaTime){
-            draw();
-        }
-
-        lastTime = newTime;
-        gameLoop();
+    void draw() const override {
+        __ui.display(drawables);
     }
 
 public:
     Game(){
-        auto logger = spdlog::get("main_logger");
-        logger->info("Creating Game");
-
-        auto generator = new PerlynSpaceGenerator();
-        generator->generate(_space, 200, 200, 70);
-
-        keytable = new KeyTable();
+        keytable.addSubscriber(&__snake);
+        keytable.addSubscriber(&__game_end);
+        drawables.push_back(&__snake);
     }
-
-    void start(){
-        isPlaying = true;
-        gameLoop();
-    }
-
-    void finish(){
-        isPlaying = false;
-    }
-
-    void update(){
-        keytable->update();
-
-//        if( c == 'q'){
-//             TODO fix this
-//            throw "EXITFUCKINGGAME";
-//        }
-    }
-
-    void draw(){
-        __ui.display(&_space);
-    }
-
 };
 
 int main(){
-    auto logger = spdlog::basic_logger_mt("main_logger", "log.txt");
+    auto logger = spdlog::basic_logger_mt(Constants::MAIN_LOGGER, "log.txt");
     logger->error("Welcome to spdlog!");
-    logger->set_level(spdlog::level::warn);
+    logger->set_level(spdlog::level::info);
     logger->flush_on(spdlog::level::debug);
 
     try {
-        auto myGame = new Game<SimpleSpace, UI>();
+        auto myGame = new Game<UI <SnakeCamera> >();
         myGame->start();
     }
     catch (std::exception & e){
         logger->error("exception_occured " + std::string(e.what()));
         logger->error("shutdown" + std::string(e.what()));
         logger->flush();
+
         // TODO fix this
         endwin();
         return 23;
     }
-    //getch();
+
     endwin();
     return 0;
 }

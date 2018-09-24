@@ -1,31 +1,39 @@
 #pragma once
 
-#include <array>
+#include <vector>
+
 #include <curses.h>
 #include <spdlog/spdlog.h>
+#include "UI.hpp"
+
+class IKeyboardSubscriber{
+public:
+    virtual void processKey(char key) = 0;
+};
 
 class KeyTable{
-    std::array<bool, 256> _table;
-
+    std::vector <IKeyboardSubscriber *> __subscribers;
 public:
-    bool isPressed(char key){
-        return _table[(unsigned char) key];
-    }
-
-    void release(char key){
-        _table[(unsigned char) key] = false;
-    }
-
-    void press(char key){
-        _table[(unsigned char) key] = true;
-    }
-
     void update(){
         auto logger = spdlog::get("main_logger");
         char c = getch();
-        if(c != ERR){
-            press(c);
+        while(c != ERR){
             logger->warn("{} is pressed", c);
+
+            std::string key;
+            key += c;
+
+            DebugWindow::debug("key", key);
+
+            for(auto &subscriber: __subscribers){
+                subscriber->processKey(c);
+            }
+
+            c = getch();
         }
+    }
+
+    void addSubscriber(IKeyboardSubscriber *subscriber){
+        __subscribers.push_back(subscriber);
     }
 };

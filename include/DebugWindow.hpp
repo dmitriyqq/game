@@ -2,28 +2,43 @@
 
 #include <map>
 #include <curses.h>
+#include <spdlog/spdlog.h>
 
 class DebugWindow{
-    static constexpr int WIDTH = 12;
-
-    std::map <std::string, std::string> __debugKeyValue;
-    std::map <std::string, int> __count;
+    static std::map <std::string, std::string> __debugKeyValue;
+    static std::map <std::string, int> __count;
 
     WINDOW* window;
+
 public:
-    void debug(const std::string &key, const std::string &value){
-        __debugKeyValue[key] = value;
-        __count[key]++;
+    static constexpr int WIDTH = 30;
+
+    static void debug(const std::string &key, const std::string &value){
+        DebugWindow::__debugKeyValue[key] = value;
+        DebugWindow::__count[key]++;
     }
 
+    static void debug(const std::string &key, int value){
+        DebugWindow::debug(key, std::to_string(value));
+    }
+
+    static void debug(const std::string &key, double value){
+        DebugWindow::debug(key, std::to_string(value));
+    }
+
+
     DebugWindow(int posx, int height){
-        window = newwin(0, posx, WIDTH, height);
+        auto logger = spdlog::get("main_logger");
+        logger->info("Debug Window: {} {} {} {}", height, WIDTH, 0, posx+1);
+        window = newwin(height, WIDTH, 0, posx);
+        box(window,'@','@');
+        wrefresh(window);
     }
 
     void draw(){
-        int i = 0;
-        for(auto &&debug: __debugKeyValue){
-            mvwprintw(window, i++, 0, "%s:%s", debug.first.c_str(), debug.second.c_str());
+        int i = 1;
+        for(auto &&debug: DebugWindow::__debugKeyValue){
+            mvwprintw(window, i++, 1, "%s:%s", debug.first.c_str(), debug.second.c_str());
         }
         wrefresh(window);
     }
@@ -33,3 +48,6 @@ public:
     }
 
 };
+
+std::map <std::string, int> DebugWindow::__count = std::map <std::string, int>();
+std::map <std::string, std::string> DebugWindow::__debugKeyValue = std::map <std::string, std::string>();
