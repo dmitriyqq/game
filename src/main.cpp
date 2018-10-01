@@ -58,10 +58,10 @@ public:
 
     void processKey(char key) override {
         switch (key){
-            case 'w': __direction = Direction::NORTH; break;
-            case 'a': __direction = Direction::WEST; break;
-            case 's': __direction = Direction::SOUTH; break;
-            case 'd': __direction = Direction::EAST; break;
+            case 'w': if(__direction != Direction::SOUTH) __direction = Direction::NORTH; break;
+            case 'a': if(__direction != Direction::EAST) __direction = Direction::WEST; break;
+            case 's': if(__direction != Direction::NORTH) __direction = Direction::SOUTH; break;
+            case 'd': if(__direction != Direction::WEST) __direction = Direction::EAST; break;
             default: break;
         }
     }
@@ -129,8 +129,6 @@ public:
         Voxel voxel;
         voxel.type = Voxel::Type::GRASS;
         backend->display(voxel, __y, __x);
-        auto logger = spdlog::get(Constants::MAIN_LOGGER);
-        logger->error("draw a type{} at {} {}", (int)voxel.type,__x, __y);
     }
 
     void recreate(int newX, int newY){
@@ -155,8 +153,6 @@ public:
         Voxel voxel;
         voxel.type = Voxel::Type::AIR;
         backend->display(voxel, __y, __x);
-        auto logger = spdlog::get(Constants::MAIN_LOGGER);
-        logger->error("draw a type{} at {} {}", (int)voxel.type,__x, __y);
     }
 };
 
@@ -214,7 +210,6 @@ public:
     std::pair<int, int> getNewCellCords(int seed = -1){
         static std::mt19937 generator((unsigned int) time(nullptr));
         auto logger = spdlog::get(Constants::MAIN_LOGGER);
-        logger->error("RND width height {} {}", __maxX, __maxY);
         static std::uniform_int_distribution<int> distributionX(1, __maxX-1);
         static std::uniform_int_distribution<int> distributionY(1, __maxY-1);
         if(seed != -1) generator.seed(seed);
