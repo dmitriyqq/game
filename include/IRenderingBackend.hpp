@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-#include <curses.h>
+#include <ncurses/curses.h>
 #include <spdlog/spdlog.h>
 
 #include "Voxel.hpp"

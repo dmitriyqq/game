@@ -5,11 +5,12 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O0 -Wall -Wextra -Wzero-as-null-pointer
 
 find_package(Curses REQUIRED)
 include_directories(${CURSES_INCLUDE_DIR})
+
 include_directories(./include)
 include_directories(./deps/include)
 
 SET(PROJECT_HEADERS_DIR ${PROJECT_SOURCE_DIR}/include)
-SET(PROJECT_SOURCES_DIR ${PROJECT_SOURCE_DIR}/src include/KeyTable.hpp include/UI.hpp include/DebugWindow.hpp)
+SET(PROJECT_SOURCES_DIR ${PROJECT_SOURCE_DIR}/src)
 
 FILE(GLOB_RECURSE HEADERS ${PROJECT_HEADERS_DIR}/*.hpp)
 FILE(GLOB_RECURSE SOURCES ${PROJECT_SOURCES_DIR}/*.cpp)

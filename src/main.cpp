@@ -6,29 +6,7 @@
 #include "KeyTable.hpp"
 #include "UI.hpp"
 #include "Game.hpp"
-
-//template< typename SpaceT, typename UiT>
-//class Game : public IGame {
-//    SpaceT _space;
-//    UiT __ui;
-//    KeyTable *keytable;
-//
-//    void update() override {
-//        keytable->update();
-//    }
-//
-//    void draw() const override {
-//        __ui.display(&_space);
-//    }
-//
-//public:
-//    Game(){
-//        auto generator = new PerlynSpaceGenerator();
-//        generator->generate(_space, 200, 200, 70);
-//
-//        keytable = new KeyTable();
-//    }
-//};
+#include <queue>
 
 class GameEnd : public IKeyboardSubscriber{
 public:
@@ -65,22 +43,163 @@ public:
 };
 
 class Snake : public IKeyboardSubscriber, public IDrawable{
+    int __x = 0, __y = 0;
+    int __lenght = 3;
+    enum class Direction { NORTH = 0, EAST = 1, SOUTH = 2, WEST = 3} __direction = Direction::EAST;
+
+    std::deque<std::pair<int, int> > __segments;
+
 public:
-    int x = 50, y = 50;
+    bool collide(int x, int y){
+        return (x == __x && y == __y);
+    }
+
     void processKey(char key) override {
         switch (key){
-            case 'w': y--; break;
-            case 'a': x--; break;
-            case 's': y++; break;
-            case 'd': x++; break;
+            case 'w': __direction = Direction::NORTH; break;
+            case 'a': __direction = Direction::WEST; break;
+            case 's': __direction = Direction::SOUTH; break;
+            case 'd': __direction = Direction::EAST; break;
             default: break;
         }
     }
 
     void draw(IRenderingBackend * backend) const override{
         Voxel voxel;
+        DebugWindow::debug("snakelength", (int)__segments.size());
         voxel.type = Voxel::Type::SNOW;
-        backend->display(voxel, y, x);
+        for(auto &&s: __segments){
+            backend->display(voxel, s.second, s.first);
+        }
+    }
+
+    void move(){
+        using velocity = std::pair<int, int>;
+        std::array<velocity,4> VELOCITIES = {
+                velocity(0, -1),
+                velocity(1, 0),
+                velocity(0, 1),
+                velocity(-1, 0),
+        };
+
+        int dX = VELOCITIES[(int)__direction].first;
+        int dY = VELOCITIES[(int)__direction].second;
+        int newX = __x + dX;
+        int newY = __y + dY;
+
+        __segments.emplace_back(newX, newY);
+        __x = newX;
+        __y = newY;
+
+        DebugWindow::debug("snakex", __x);
+        DebugWindow::debug("snakey", __y);
+
+        if((int)__segments.size() > __lenght) {
+            __segments.pop_front();
+        }
+    }
+
+    void grow(){
+        this->__lenght++;
+    }
+};
+
+class SnakeBonus : public IDrawable{
+protected:
+    int __x = 0, __y = 0;
+
+public:
+    SnakeBonus(int x, int y): __x(x), __y(y){
+
+    }
+
+    virtual std::pair<bool, bool> isEaten(Snake &snake){
+        if(snake.collide(__x, __y)){
+            snake.grow();
+            return {true, false};
+        }else{
+            return {false, false};
+        }
+
+    }
+
+    void draw(IRenderingBackend * backend) const override{
+        Voxel voxel;
+        voxel.type = Voxel::Type::GRASS;
+        backend->display(voxel, __y, __x);
+    }
+
+    void recreate(int newX, int newY){
+        __x = newX;
+        __y = newY;
+    }
+};
+
+class Wall : public SnakeBonus{
+public:
+    Wall(int x, int y): SnakeBonus(x, y){};
+    std::pair<bool, bool> isEaten(Snake &snake) override{
+        if(snake.collide(__x, __y)){
+            return {true, true};
+        }else{
+            return {false, false};
+        }
+    }
+    void draw(IRenderingBackend * backend) const override{
+        Voxel voxel;
+        voxel.type = Voxel::Type::AIR;
+        backend->display(voxel, __y, __x);
+    }
+};
+
+class CellsFactory{
+    std::map <std::pair<int, int>, SnakeBonus*> bonuses;
+    int __maxX;
+    int __maxY;
+public:
+    CellsFactory(int maxX, int maxY): __maxX(maxX), __maxY(maxY) {
+        for(int i = 0; i < 5; i++){
+            auto coords = getNewCellCords();
+            bonuses[coords] = new SnakeBonus(coords.first, coords.second);
+        }
+        for(int i = 0; i < 25; i++){
+            auto coords = getNewCellCords();
+            bonuses[coords] = new Wall(coords.first, coords.second);
+        }
+    }
+
+
+    bool updateCells(Snake &snake){
+        for(auto &bonus: bonuses){
+            auto resp = bonus.second->isEaten(snake);
+            if(resp.second){
+                return true;
+            }
+
+            if(resp.first){
+                auto coords = getNewCellCords();
+                bonus.second->recreate(coords.first, coords.second);
+            }
+        }
+
+        return false;
+    }
+
+    std::map<std::pair<int, int>, SnakeBonus* >& getCells(){
+        return bonuses;
+    }
+
+    std::pair<int, int> getNewCellCords(int seed = -1){
+        static std::mt19937 generator((unsigned int) time(nullptr));
+        static std::uniform_int_distribution<int> distributionX(0, __maxX);
+        static std::uniform_int_distribution<int> distributionY(0, __maxY);
+        if(seed != -1) generator.seed(seed);
+        std::pair<int, int> coords(distributionX(generator), distributionY(generator));
+        while(bonuses.find(coords) != end(bonuses)){
+            coords.first = distributionX(generator);
+            coords.second = distributionY(generator);
+        }
+        return coords;
     }
 };
 
@@ -90,15 +209,17 @@ class Game : public IGame {
     KeyTable keytable;
     Snake __snake;
     GameEnd __game_end;
+    CellsFactory *__factory;
     std::vector <IDrawable*> drawables;
 
     void update() override {
         keytable.update();
-        DebugWindow::debug("snakex", __snake.x);
-        DebugWindow::debug("snakey", __snake.y);
+        __snake.move();
+        __factory->updateCells(__snake);
     }
 
     void draw() const override {
+
         __ui.display(drawables);
     }
 
@@ -107,6 +228,11 @@ public:
         keytable.addSubscriber(&__snake);
         keytable.addSubscriber(&__game_end);
         drawables.push_back(&__snake);
+        __factory = new CellsFactory(__ui.gameWidth(), __ui.gameHeight());
+        auto c =__factory->getCells();
+        for(auto cell: c){
+            drawables.push_back(cell.second);
+        }
     }
 };
 

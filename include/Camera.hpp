@@ -1,7 +1,7 @@
 #pragma once
 
 #include <vector>
-#include <ncurses.h>
+#include <ncurses/curses.h>
 
 #include "Vector3i.hpp"
 #include "Vector3f.hpp"

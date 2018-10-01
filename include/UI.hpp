@@ -44,6 +44,14 @@ public:
         window = new DebugWindow(DebugWindow::getXOffset(width), height);
     }
 
+    int gameWidth() const{
+        return camera->width();
+    }
+
+    int gameHeight() const{
+        return camera->height();
+    }
+
     void display(std::vector <IDrawable *> drawables) const{
 
         DebugWindow::debug("width", camera->width());

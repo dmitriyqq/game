@@ -16,7 +16,7 @@ class PerlynSpaceGenerator: public ISpaceGenerator{
 
         for(int i = 0; i < width; i++){
             for(int j = 0; j < height; j++){
-                int h = noise.noise(i / (float) width , j / (float) height) * depth + depth / 4 + 10;
+                int h = (int) noise.noise(i / (float) width , j / (float) height) * depth + depth / 4 + 10;
                 logger->debug("coords {} {} - height {}", i, j, h);
                 for(int k = 0; k < depth; k++){
                     auto voxel = Voxel();

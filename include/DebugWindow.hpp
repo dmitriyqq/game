@@ -1,7 +1,7 @@
 #pragma once
 
 #include <map>
-#include <curses.h>
+#include <ncurses/curses.h>
 #include <spdlog/spdlog.h>
 
 class DebugWindow{

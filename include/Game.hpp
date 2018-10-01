@@ -36,6 +36,7 @@ protected:
         __render_deltatime += delta;
 
         DebugWindow::debug("delta_time", delta);
+        DebugWindow::debug("fps", 1.0f/delta);
         DebugWindow::debug("ticks", __ticks);
         DebugWindow::debug("dlogic", __desired_logic_deltatime);
         DebugWindow::debug("drender", __desired_render_deltatime);
