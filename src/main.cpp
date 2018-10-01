@@ -1,5 +1,6 @@
 #include <iostream>
 #include <thread>
+#include "Constants.hpp"
 #include "Camera.hpp"
 #include "VoxelSpace.hpp"
 #include "ISpaceGenerator.hpp"
@@ -25,7 +26,7 @@ public:
     }
 
     int height(){
-        return __renderingBackend->width();
+        return __renderingBackend->height();
     }
 
     SnakeCamera(int width, int height) {
@@ -34,6 +35,7 @@ public:
 
     void display(const std::vector<IDrawable *> &drawables){
         __renderingBackend->startDisplay();
+
         for(auto &drawable: drawables){
             drawable->draw(__renderingBackend);
         }
@@ -43,7 +45,7 @@ public:
 };
 
 class Snake : public IKeyboardSubscriber, public IDrawable{
-    int __x = 0, __y = 0;
+    int __x = 1, __y = 1;
     int __lenght = 3;
     enum class Direction { NORTH = 0, EAST = 1, SOUTH = 2, WEST = 3} __direction = Direction::EAST;
 
@@ -127,9 +129,13 @@ public:
         Voxel voxel;
         voxel.type = Voxel::Type::GRASS;
         backend->display(voxel, __y, __x);
+        auto logger = spdlog::get(Constants::MAIN_LOGGER);
+        logger->error("draw a type{} at {} {}", (int)voxel.type,__x, __y);
     }
 
     void recreate(int newX, int newY){
+        auto logger = spdlog::get(Constants::MAIN_LOGGER);
+        logger->error("recreating at {} {}", newX, newY);
         __x = newX;
         __y = newY;
     }
@@ -149,6 +155,8 @@ public:
         Voxel voxel;
         voxel.type = Voxel::Type::AIR;
         backend->display(voxel, __y, __x);
+        auto logger = spdlog::get(Constants::MAIN_LOGGER);
+        logger->error("draw a type{} at {} {}", (int)voxel.type,__x, __y);
     }
 };
 
@@ -165,6 +173,20 @@ public:
         for(int i = 0; i < 25; i++){
             auto coords = getNewCellCords();
             bonuses[coords] = new Wall(coords.first, coords.second);
+        }
+
+        for(int i = 0; i < __maxX; i++){
+            std::pair<int, int> coordsTop = {i, 0};
+            std::pair<int, int> coordsBot = {i, __maxY-1};
+            bonuses[coordsTop] = new Wall(coordsTop.first, coordsTop.second);
+            bonuses[coordsBot] = new Wall(coordsBot.first, coordsBot.second);
+        }
+
+        for(int i = 0; i < __maxY; i++){
+            std::pair<int, int> coordsTop = {0, i};
+            std::pair<int, int> coordsBot = {__maxX-1, i};
+            bonuses[coordsTop] = new Wall(coordsTop.first, coordsTop.second);
+            bonuses[coordsBot] = new Wall(coordsBot.first, coordsBot.second);
         }
     }
 
@@ -191,8 +213,10 @@ public:
 
     std::pair<int, int> getNewCellCords(int seed = -1){
         static std::mt19937 generator((unsigned int) time(nullptr));
-        static std::uniform_int_distribution<int> distributionX(0, __maxX);
-        static std::uniform_int_distribution<int> distributionY(0, __maxY);
+        auto logger = spdlog::get(Constants::MAIN_LOGGER);
+        logger->error("RND width height {} {}", __maxX, __maxY);
+        static std::uniform_int_distribution<int> distributionX(1, __maxX-1);
+        static std::uniform_int_distribution<int> distributionY(1, __maxY-1);
         if(seed != -1) generator.seed(seed);
         std::pair<int, int> coords(distributionX(generator), distributionY(generator));
         while(bonuses.find(coords) != end(bonuses)){
@@ -215,11 +239,12 @@ class Game : public IGame {
     void update() override {
         keytable.update();
         __snake.move();
-        __factory->updateCells(__snake);
+        if(__factory->updateCells(__snake)){
+            __playing = false;
+        }
     }
 
     void draw() const override {
-
         __ui.display(drawables);
     }
 

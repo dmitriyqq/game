@@ -1,7 +1,7 @@
 #pragma once
 
 #include <vector>
-#include <ncurses/curses.h>
+
 
 #include "Vector3i.hpp"
 #include "Vector3f.hpp"
@@ -78,11 +78,11 @@ class Camera
     }
 
     int width(){
-        return _renderingBackend->width();
+        return _width;
     }
 
     int height(){
-        return _renderingBackend->height();
+        return _height;
     }
 
     void move(Vector3f offset)

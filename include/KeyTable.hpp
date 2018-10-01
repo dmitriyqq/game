@@ -2,7 +2,7 @@
 
 #include <vector>
 
-#include <ncurses/curses.h>
+#include <Curses.h>
 #include <spdlog/spdlog.h>
 #include "UI.hpp"
 

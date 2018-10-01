@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-#include <ncurses/curses.h>
+#include <Curses.h>
 #include <spdlog/spdlog.h>
 
 #include "Voxel.hpp"
@@ -45,8 +45,8 @@ class NCursesRenderingBackend : public IRenderingBackend
         auto logger = spdlog::get("main_logger");
         logger->info("NCursesRenderingBackend: Width: {}, Height: {}", width, height);
         window = newwin(height, width, 0, 0);
-        box(window,'#','#');
-        wrefresh(window);
+        box(window, '|', '-');
+        // wrefresh(window);
     }
 
     ~NCursesRenderingBackend(){
@@ -54,7 +54,7 @@ class NCursesRenderingBackend : public IRenderingBackend
     }
 
     void startDisplay() override {
-        // wclear(window);
+        wclear(window);
         for(int i = 0; i < width(); i++){
             for(int j = 0; j < height(); j++){
                 mvaddch(j, i, ' ');
@@ -63,14 +63,14 @@ class NCursesRenderingBackend : public IRenderingBackend
     }
 
     void endDisplay() override{
-        wrefresh(window);
+        wnoutrefresh(window);
     }
 
     void display(const Voxel &voxel, int y, int x) const override
     {
-        auto logger = spdlog::get("main_logger");
+        // auto logger = spdlog::get("main_logger");
 
-        logger->debug("Drawing voxel at screen({}, {}) - model: ({}, {}, {})", x, y, voxel.position.x, voxel.position.y, voxel.position.z);
+        // logger->debug("Drawing voxel at screen({}, {}) - model: ({}, {}, {})", x, y, voxel.position.x, voxel.position.y, voxel.position.z);
 
         start_color();  /* Start color */
         init_pair(1, COLOR_RED, COLOR_BLACK);

@@ -12,14 +12,14 @@ class IGame{
 
     int __ticks = 0;
 
-    float __desired_logic_fps = 30.0f;
-    float __desired_render_fps =  30.0f;
+    float __desired_logic_fps = 10.0f;
+    float __desired_render_fps =  10.0f;
 
     float __desired_logic_deltatime = 1.0f / __desired_logic_fps;
     float __desired_render_deltatime = 1.0f / __desired_render_fps;
 
     float __logic_deltatime = 0.0f, __render_deltatime = 0.0f;
-
+protected:
     bool __playing = false;
 protected:
     virtual void update() = 0;

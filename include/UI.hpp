@@ -25,7 +25,7 @@ class UI {
             logger->error("Your terminal does not support color");
             exit(1);
         }
-        box(stdscr,'*','*');
+        box(stdscr, '|', '-');
         refresh();
     }
 

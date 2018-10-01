@@ -1,7 +1,7 @@
 #pragma once
 
 #include <map>
-#include <ncurses/curses.h>
+#include <Curses.h>
 #include <spdlog/spdlog.h>
 
 class DebugWindow{
@@ -31,7 +31,7 @@ public:
         auto logger = spdlog::get("main_logger");
         logger->info("Debug Window: {} {} {} {}", height, WIDTH, 0, posx+1);
         window = newwin(height, WIDTH, 0, posx);
-        box(window,'@','@');
+        box(window, '|', '-');
         wrefresh(window);
     }
 
