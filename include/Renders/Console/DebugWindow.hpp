@@ -2,7 +2,7 @@
 
 #include <map>
 #include <Curses.h>
-#include <spdlog/spdlog.h>
+// #include <spdlog/spdlog.h>
 
 class DebugWindow{
     static std::map <std::string, std::string> __debugKeyValue;
@@ -28,8 +28,8 @@ public:
 
 
     DebugWindow(int posx, int height){
-        auto logger = spdlog::get("main_logger");
-        logger->info("Debug Window: {} {} {} {}", height, WIDTH, 0, posx+1);
+        //auto logger = spdlog::get("main_logger");
+         //logger->info("Debug Window: {} {} {} {}", height, WIDTH, 0, posx+1);
         window = newwin(height, WIDTH, 0, posx);
         box(window, '|', '-');
         wrefresh(window);

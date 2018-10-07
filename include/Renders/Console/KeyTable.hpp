@@ -4,12 +4,9 @@
 
 #include <Curses.h>
 #include <spdlog/spdlog.h>
-#include "UI.hpp"
+#include "Renders/Console/UI.hpp"
 
-class IKeyboardSubscriber{
-public:
-    virtual void processKey(char key) = 0;
-};
+
 
 class KeyTable{
     std::vector <IKeyboardSubscriber *> __subscribers;

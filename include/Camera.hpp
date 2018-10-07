@@ -3,19 +3,15 @@
 #include <vector>
 
 
-#include "Vector3i.hpp"
-#include "Vector3f.hpp"
-#include "Voxel.hpp"
-#include "VoxelSpace.hpp"
-#include "IRenderingBackend.hpp"
-#include <spdlog/spdlog.h>
-#include "spdlog/sinks/stdout_color_sinks.h"
-#include "spdlog/sinks/basic_file_sink.h"
-
-class IDrawable{
-public:
-    virtual void draw(IRenderingBackend *backend) const = 0;
-};
+#include "Model/Vector3i.hpp"
+#include "Model/Vector3f.hpp"
+#include "Model/Voxel.hpp"
+#include "Model/VoxelSpace.hpp"
+#include "Model/IRenderingBackend.hpp"
+// #include <spdlog/spdlog.h>
+#include <Renders/IDrawable.hpp>
+// #include "spdlog/sinks/stdout_color_sinks.h"
+// #include "spdlog/sinks/basic_file_sink.h"
 
 class Camera
 {
@@ -29,9 +25,9 @@ class Camera
     void redraw(const ISpace *space){
         _projection.assign(_width, std::vector<Voxel>(_height));
 
-        auto logger = spdlog::get("main_logger");
+        // auto logger = spdlog::get("main_logger");
 
-        logger->info("start projecting");
+       //logger->info("start projecting");
         constexpr int depth = 100;
         for (int i = 0; i < _height; i++)
         {
@@ -53,16 +49,16 @@ class Camera
             }
         }
 
-        logger->info("end projecting");
-        logger->debug("debug projecting");
+        //logger->info("end projecting");
+        //logger->debug("debug projecting");
         for (int i = 0; i < _height; i++)
         {
             for (int j = 0; j < _width; j++) {
                 auto voxel = _projection[i][j];
-                logger->debug("voxel screen({}, {}) model:({}, {}, {}) - type: {}", i, j, voxel.position.x, voxel.position.y, voxel.position.z, (int) voxel.type);
+                //logger->debug("voxel screen({}, {}) model:({}, {}, {}) - type: {}", i, j, voxel.position.x, voxel.position.y, voxel.position.z, (int) voxel.type);
             }
         }
-        logger->debug("end debug projecting");
+       // logger->debug("end debug projecting");
     }
 
   public:
@@ -71,10 +67,10 @@ class Camera
         _width = _renderingBackend->width();
         _height = _renderingBackend->height();
 
-        auto logger = spdlog::get("main_logger");
-        logger->info("GET WIDTH = {}", _width);
-        logger->info("GET HEIGHT = {}", _height);
-        logger->flush();
+        //auto logger = spdlog::get("main_logger");
+        //logger->info("GET WIDTH = {}", _width);
+        //logger->info("GET HEIGHT = {}", _height);
+        //logger->flush();
     }
 
     int width(){

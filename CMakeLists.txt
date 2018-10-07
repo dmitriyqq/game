@@ -5,6 +5,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O0 -Wall -Wextra -Wzero-as-null-pointer
 
 find_package(Curses REQUIRED)
 include_directories(${CURSES_INCLUDE_DIR})
+include_directories(${GLFW3_INCLUDE_DIR})
 
 include_directories(./include)
 include_directories(./deps/include)
@@ -16,10 +17,15 @@ FILE(GLOB_RECURSE HEADERS ${PROJECT_HEADERS_DIR}/*.hpp)
 FILE(GLOB_RECURSE SOURCES ${PROJECT_SOURCES_DIR}/*.cpp)
 
 find_package(Threads REQUIRED)
+find_package(glfw3 REQUIRED)
+find_package(glm REQUIRED)
 
-add_subdirectory(./deps/spdlog)
+# add_subdirectory(./deps/spdlog)
+add_subdirectory(./examples)
 
-add_executable(GameEngine ./deps/include/PerlinNoise.h ./src/main.cpp ${PROJECT_HEADERS_DIR} ${PROJECT_SOURCES_DIR})
+add_library(GameEngine src/glad.c ./deps/include/PerlinNoise.h ${HEADERS} ${SOURCES})
+target_include_directories(GameEngine PUBLIC ./deps/include/glad)
+target_link_libraries(GameEngine glfw3)
 target_link_libraries(GameEngine ${CURSES_LIBRARIES})
-target_link_libraries(GameEngine spdlog::spdlog Threads::Threads)
+#target_link_libraries(GameEngine spdlog::spdlog Threads::Threads)
 set_target_properties(GameEngine PROPERTIES LINKER_LANGUAGE CXX)
