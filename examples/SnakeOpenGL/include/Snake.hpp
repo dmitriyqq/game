@@ -1,14 +1,13 @@
 #pragma once
 
-#include <Renders/IRenderingBackend.hpp>
+#include "../../MyGame/include/IVoxelRenderingBackend.hpp"
 #include <Renders/IDrawable.hpp>
 
 #include <deque>
 #include <array>
 #include <Engine/IKeyboardSubscriber.hpp>
-#include <Model/Voxel.hpp>
+#include "../../MyGame/include/Voxel.hpp"
 
-// ,
 class Snake : public IDrawable, public Engine::Input::IKeyboardSubscriber{
     int __x = 1, __y = 1;
     int __length = 3;
@@ -24,17 +23,16 @@ public:
     void processKey(Engine::Input::Key key) override {
         using keyType = Engine::Input::Key;
         switch (key){
-            case keyType::UP: __direction = Direction::NORTH; break;
-            case keyType::LEFT: __direction = Direction::WEST; break;
-            case keyType::DOWN: __direction = Direction::SOUTH; break;
-            case keyType::RIGHT: __direction = Direction::EAST; break;
+            case keyType::UP: if(__direction != Direction::SOUTH) __direction = Direction::NORTH; break;
+            case keyType::LEFT: if(__direction != Direction::EAST) __direction = Direction::WEST; break;
+            case keyType::DOWN: if(__direction != Direction::NORTH) __direction = Direction::SOUTH; break;
+            case keyType::RIGHT: if(__direction != Direction::WEST) __direction = Direction::EAST; break;
             default: break;
         }
     }
 
-    void draw(IRenderingBackend * backend) const override{
+    void draw(IVoxelRenderingBackend * backend) const override{
         Voxel voxel;
-//        DebugWindow::debug("snakelength", (int)__segments.size());
         voxel.type = Voxel::Type::WATER;
         for(auto &&s: __segments){
             backend->display(voxel, s.second, s.first);

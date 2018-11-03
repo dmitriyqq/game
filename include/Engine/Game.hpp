@@ -2,15 +2,11 @@
 
 #include <chrono>
 #include "Utils/Constants.hpp"
-#include "Renders/Console/DebugWindow.hpp"
-#include "Renders/Console/UI.hpp"
 
 namespace Engine {
 
     class IGame {
         std::chrono::system_clock::time_point __last_time;
-
-
 
         float __desired_logic_fps = 60.0f;
         float __desired_render_fps = 60.0f;
@@ -28,10 +24,9 @@ namespace Engine {
 
         void gameLoop() {
             while(__playing) {
-                // auto logger = spdlog::get(Constants::LOOP_LOGGER);
                 auto newTime = std::chrono::system_clock::now();
-                float delta = (std::chrono::duration_cast<std::chrono::milliseconds>(newTime - __last_time).count() /
-                               1000.0f);
+                float delta = std::chrono::duration_cast<std::chrono::milliseconds>
+                        (newTime - __last_time).count() / 1000.0f;
 
                 __logic_deltatime += delta;
                 __render_deltatime += delta;
@@ -50,17 +45,9 @@ namespace Engine {
                 __last_time = newTime;
                 __delta_time = __render_deltatime;
             }
-            // std::this_thread::sleep_for(std::chrono::milliseconds(1));
-            //            if (__playing) {
-            //                gameLoop();
-            //            }
         }
 
     public:
-
-        IGame() {
-            // auto logger = spdlog::basic_logger_mt(Constants::LOOP_LOGGER, "log.txt");
-        }
         virtual void start() {
             __last_time = std::chrono::system_clock::now();
             __playing = true;
@@ -74,6 +61,8 @@ namespace Engine {
         virtual void pause() {
             __playing = false;
         }
+
+        // !TODO make this private and provide separate delta time to different stages
         int __ticks = 0;
         float __delta_time = 0.0f;
     };

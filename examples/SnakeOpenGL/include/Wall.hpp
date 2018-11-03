@@ -12,7 +12,7 @@ public:
             return {false, false};
         }
     }
-    void draw(IRenderingBackend * backend) const override{
+    void draw(IVoxelRenderingBackend * backend) const override{
         Voxel voxel;
         voxel.type = Voxel::Type::SAND;
         backend->display(voxel, __y, __x);

@@ -2,12 +2,12 @@
 #include <thread>
 #include "Utils/Constants.hpp"
 #include "Camera.hpp"
-#include "Model/VoxelSpace.hpp"
-#include "Model/ISpaceGenerator.hpp"
+#include "VoxelSpace.hpp"
+#include "ISpaceGenerator.hpp"
 #include "Renders/Console/KeyTable.hpp"
 #include "Renders/Console/UI.hpp"
 #include "Engine/Game.hpp"
-#include "Renders/OpenGL/OpenGLRenderingBackend.hpp"
+#include "VoxelRenderingBackend.hpp"
 
 #include <queue>
 

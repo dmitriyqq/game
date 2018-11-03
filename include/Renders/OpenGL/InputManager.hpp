@@ -20,7 +20,7 @@ namespace Glfw{
         std::vector <Engine::Input::IKeyboardSubscriber*> __kbSubscribers;
         std::vector <Engine::Input::IMouseSubscriber*> __mouseSubscribers;
 
-        GLFWwindow *__window;
+        GLFWwindow *__window = nullptr;
         KeyMap keyMap;
 
         double mouseX = 0, mouseY = 0;
@@ -30,7 +30,6 @@ namespace Glfw{
             glfwSetWindowUserPointer(__window, this);
             glfwSetCursorPosCallback(__window, handleMouse);
             glfwSetKeyCallback(__window, handleKeyboard);
-            // glfwSet
         }
 
         void updateMouse(double newX, double newY){
@@ -43,15 +42,14 @@ namespace Glfw{
             }
         }
 
-        static void handleMouse(GLFWwindow* window, double xpos, double ypos){
+        static void handleMouse(GLFWwindow* window, double posx, double posy){
             auto manager = (InputManager *) glfwGetWindowUserPointer(window);
-            manager->updateMouse(xpos, ypos);
+            manager->updateMouse(posx, posy);
         }
 
         static void handleKeyboard(GLFWwindow *window, int key, int scancode, int action, int mods){
             auto context = (InputManager*)glfwGetWindowUserPointer(window);
 
-            // dirty fix to undefined reference to static member
             if(action == GLFW_PRESS){
                 auto k = context->keyMap.map(key);
                 for(auto &&subscriber: context->__kbSubscribers){
@@ -60,10 +58,17 @@ namespace Glfw{
             }
         }
     public:
-        InputManager(GLFWwindow *window){
+        InputManager() = default;
+
+        explicit InputManager(GLFWwindow *window){
+            setupWindow(window);
+        }
+
+        void setupWindow(GLFWwindow *window){
             __window = window;
             setupCallbacks();
         }
+
 
         void addSubscriber(IKeyboardSubscriber *subscriber) override {
             __kbSubscribers.push_back(subscriber);

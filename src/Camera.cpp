@@ -5,7 +5,7 @@ namespace OpenGL {
 
 Camera::Camera(vec3 position, vec3 up, float yaw, float pitch)
         : movementSpeed(SPEED),
-          mouseSensitivity(SENSITIVTY),
+          mouseSensitivity(SENSITIVITY),
           zoom(ZOOM) {
     Front = vec3(0.0f, 0.0f, -1.0f);
     Position = position;
@@ -16,15 +16,11 @@ Camera::Camera(vec3 position, vec3 up, float yaw, float pitch)
     updateVectors();
 }
 
-Camera::~Camera() {
-
-}
-
-mat4 Camera::getViewMatrix() {
+mat4 Camera::getViewMatrix() const {
     return glm::lookAt(Position, Position + Front, Up);
 }
 
-mat4 Camera::getProjectionMatrix(float width, float height) {
+mat4 Camera::getProjectionMatrix(float width, float height) const {
     return glm::perspective(zoom, width / height, 0.1f, 100.0f);
 }
 
@@ -78,6 +74,10 @@ void Camera::setPosition(Direction direction, float deltaTime) {
         Position -= Right * velocity;
     if (direction == RIGHT)
         Position += Right * velocity;
+}
+
+void Camera::setPosition(glm::vec3 position) {
+    Position = position;
 }
 
 }

@@ -1,3 +1,5 @@
+#pragma once
+
 #include "IKeyboardSubscriber.hpp"
 
 namespace Engine {

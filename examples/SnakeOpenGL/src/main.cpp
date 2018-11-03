@@ -37,7 +37,6 @@ class Game : public Engine::IGame {
 
 public:
     Game(){
-
 //        keytable.addSubscriber(&__game_end);
         __renderer = new SnakeRenderer(__iomanager);
         __iomanager->addSubscriber((Engine::Input::IKeyboardSubscriber*)&__snake);

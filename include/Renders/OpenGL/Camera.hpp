@@ -19,6 +19,8 @@ public:
         RIGHT
     };
 
+    void setPosition(glm::vec3 position) override;
+
     Camera(vec3
     position = vec3(0.0f, 0.0f, 0.0f),
             vec3
@@ -27,11 +29,11 @@ public:
     float pitch = PITCH
     );
 
-    virtual ~Camera();
+    virtual ~Camera() = default;
 
-    virtual mat4 getViewMatrix();
+    mat4 getViewMatrix() const override;
 
-    virtual mat4 getProjectionMatrix(float width, float height);
+    mat4 getProjectionMatrix(float width, float height) const override;
 
     virtual vec3 getPosition() const { return Position; }
 
@@ -47,7 +49,7 @@ private:
     static constexpr float YAW = 90.0f;
     static constexpr float PITCH = 0.0f;
     static constexpr float SPEED = 2.5f;
-    static constexpr float SENSITIVTY = 0.1f;
+    static constexpr float SENSITIVITY = 0.1f;
     static constexpr float ZOOM = 45.0f;
 
     float yaw = 0;

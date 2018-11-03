@@ -1,8 +1,8 @@
 #pragma once
 
-#include "IRenderingBackend.hpp"
+#include "IWindow.hpp"
 
 class IDrawable{
 public:
-    virtual void draw(IRenderingBackend *backend) const = 0;
+    virtual void draw(IWindow *window) const = 0;
 };

@@ -1,15 +1,16 @@
 #pragma once
 
 #include <Camera.hpp>
-#include "Renders/OpenGL/OpenGlRenderingBackend.hpp"
+#include "../../MyGame/include/VoxelRenderingBackend.hpp"
 #include <Engine/IUpdatable.hpp>
 #include <Renders/OpenGL/FpsLikeCamera.hpp>
 #include <Renders/OpenGL/GlfwKeyboardState.hpp>
 #include <Renders/OpenGL/InputManager.hpp>
 #include <Renders/OpenGL/RotatingCamera.hpp>
+#include <Renders/IDrawable.hpp>
 
 class SnakeRenderer{
-    OpenGL::OpenGLRenderingBackend *__renderingBackend;
+    OpenGL::VoxelRenderingBackend *__renderingBackend;
     Glfw::InputManager *__iomanager;
     OpenGL::RotatingCamera __camera;
 public:
@@ -22,7 +23,7 @@ public:
     }
 
     SnakeRenderer(Glfw::InputManager *&outManager): __camera(25, 0, 25, 70){
-        __renderingBackend = new OpenGL::OpenGLRenderingBackend(&__camera);
+        __renderingBackend = new OpenGL::VoxelRenderingBackend(&__camera);
         __iomanager = new Glfw::InputManager(__renderingBackend->getWindow());
         outManager = __iomanager;
         // __iomanager->addSubscriber(&__camera);

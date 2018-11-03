@@ -47,7 +47,7 @@ public:
         for(auto &bonus: bonuses){
             auto resp = bonus.second->isEaten(snake);
             if(resp.second){
-                // return true;
+                return true;
             }
 
             if(resp.first){
