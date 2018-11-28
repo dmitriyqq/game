@@ -1,6 +1,7 @@
 #pragma once
 
 #include <chrono>
+#include <iostream>
 #include "Utils/Constants.hpp"
 
 namespace Engine {
@@ -23,7 +24,9 @@ namespace Engine {
         virtual void draw() const = 0;
 
         void gameLoop() {
+            std::cout<<"game started"<<std::endl;
             while(__playing) {
+
                 auto newTime = std::chrono::system_clock::now();
                 float delta = std::chrono::duration_cast<std::chrono::milliseconds>
                         (newTime - __last_time).count() / 1000.0f;
@@ -31,16 +34,16 @@ namespace Engine {
                 __logic_deltatime += delta;
                 __render_deltatime += delta;
 
-                if (__logic_deltatime > __desired_logic_deltatime) {
-                    __logic_deltatime = 0;
+//                if (__logic_deltatime > __desired_logic_deltatime) {
+//                    __logic_deltatime = 0;
                     update();
                     __ticks++;
-                }
+//                }
 
-                if (__render_deltatime > __desired_render_deltatime) {
-                    __render_deltatime = 0;
+//                if (__render_deltatime > __desired_render_deltatime) {
+//                    __render_deltatime = 0;
                     draw();
-                }
+//                }
 
                 __last_time = newTime;
                 __delta_time = __render_deltatime;
@@ -49,6 +52,7 @@ namespace Engine {
 
     public:
         virtual void start() {
+            std::cout<<"Starting game"<<std::endl;
             __last_time = std::chrono::system_clock::now();
             __playing = true;
             gameLoop();

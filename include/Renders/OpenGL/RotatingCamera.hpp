@@ -44,6 +44,10 @@ class RotatingCamera : public ICamera, Engine::Input::IUpdatable{
             updatePosition();
         }
 
+        void setTarget(glm::vec3 target){
+            __target = target;
+        }
+
         void setPosition(glm::vec3 position) {
             __position = position;
         }

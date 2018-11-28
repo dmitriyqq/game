@@ -24,5 +24,5 @@ add_subdirectory(./examples)
 
 add_library(GameEngine ./deps/src/glad.c ./deps/include/PerlinNoise.h ${HEADERS} ${SOURCES})
 target_include_directories(GameEngine PUBLIC ./deps/include/glad)
-target_link_libraries(GameEngine glfw3)
+target_link_libraries(GameEngine glfw dl)
 set_target_properties(GameEngine PROPERTIES LINKER_LANGUAGE CXX)
