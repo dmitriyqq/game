@@ -19,10 +19,12 @@ FILE(GLOB_RECURSE SOURCES ${PROJECT_SOURCES_DIR}/*.cpp)
 find_package(Threads REQUIRED)
 find_package(glfw3 REQUIRED)
 find_package(glm REQUIRED)
+find_package(Assimp REQUIRED)
 
 add_subdirectory(./examples)
 
 add_library(GameEngine ./deps/src/glad.c ./deps/include/PerlinNoise.h ${HEADERS} ${SOURCES})
 target_include_directories(GameEngine PUBLIC ./deps/include/glad)
 target_link_libraries(GameEngine glfw3)
+target_link_libraries(GameEngine Assimp)
 set_target_properties(GameEngine PROPERTIES LINKER_LANGUAGE CXX)
