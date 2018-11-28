@@ -1,0 +1,37 @@
+[
+{
+  "directory": "/home/dima/projects/gameEngine/build",
+  "command": "/bin/gcc -DGLFW_DLL -I/home/dima/projects/gameEngine/./include -I/home/dima/projects/gameEngine/./deps/include -I/home/dima/projects/gameEngine/./deps/include/glad  -g   -o CMakeFiles/GameEngine.dir/deps/src/glad.c.o   -c /home/dima/projects/gameEngine/deps/src/glad.c",
+  "file": "/home/dima/projects/gameEngine/deps/src/glad.c"
+},
+{
+  "directory": "/home/dima/projects/gameEngine/build",
+  "command": "/bin/g++  -DGLFW_DLL -I/home/dima/projects/gameEngine/./include -I/home/dima/projects/gameEngine/./deps/include -I/home/dima/projects/gameEngine/./deps/include/glad   -O0 -Wall -Wextra -Wzero-as-null-pointer-constant -Winit-self -Wswitch-default -Wfloat-equal -Wdangling-else -Wno-unused-parameter -fPIC -march=native -g   -std=gnu++17 -o CMakeFiles/GameEngine.dir/src/Camera.cpp.o -c /home/dima/projects/gameEngine/src/Camera.cpp",
+  "file": "/home/dima/projects/gameEngine/src/Camera.cpp"
+},
+{
+  "directory": "/home/dima/projects/gameEngine/build",
+  "command": "/bin/g++  -DGLFW_DLL -I/home/dima/projects/gameEngine/./include -I/home/dima/projects/gameEngine/./deps/include -I/home/dima/projects/gameEngine/./deps/include/glad   -O0 -Wall -Wextra -Wzero-as-null-pointer-constant -Winit-self -Wswitch-default -Wfloat-equal -Wdangling-else -Wno-unused-parameter -fPIC -march=native -g   -std=gnu++17 -o CMakeFiles/GameEngine.dir/src/Shader.cpp.o -c /home/dima/projects/gameEngine/src/Shader.cpp",
+  "file": "/home/dima/projects/gameEngine/src/Shader.cpp"
+},
+{
+  "directory": "/home/dima/projects/gameEngine/build",
+  "command": "/bin/g++  -DGLFW_DLL -I/home/dima/projects/gameEngine/./include -I/home/dima/projects/gameEngine/./deps/include -I/home/dima/projects/gameEngine/./deps/include/glad   -O0 -Wall -Wextra -Wzero-as-null-pointer-constant -Winit-self -Wswitch-default -Wfloat-equal -Wdangling-else -Wno-unused-parameter -fPIC -march=native -g   -std=gnu++17 -o CMakeFiles/GameEngine.dir/src/ShaderProgram.cpp.o -c /home/dima/projects/gameEngine/src/ShaderProgram.cpp",
+  "file": "/home/dima/projects/gameEngine/src/ShaderProgram.cpp"
+},
+{
+  "directory": "/home/dima/projects/gameEngine/build/examples/SnakeOpenGL",
+  "command": "/bin/g++  -DGLFW_DLL -I/home/dima/projects/gameEngine/./include -I/home/dima/projects/gameEngine/./deps/include -I/home/dima/projects/gameEngine/examples/SnakeOpenGL/./include -I/home/dima/projects/gameEngine/examples/SnakeOpenGL/../../include -I/home/dima/projects/gameEngine/./deps/include/glad   -O0 -Wall -Wextra -Wzero-as-null-pointer-constant -Winit-self -Wswitch-default -Wfloat-equal -Wdangling-else -Wno-unused-parameter -fPIC -march=native -O0 -Wall -Wextra -Wzero-as-null-pointer-constant -Winit-self -Wswitch-default -Wfloat-equal -Wdangling-else -Wno-unused-parameter -fPIC -march=native -O0 -Wall -Wextra -Wzero-as-null-pointer-constant -Winit-self -Wswitch-default -Wfloat-equal -Wdangling-else -Wno-unused-parameter -fPIC -march=native -g   -std=gnu++17 -o CMakeFiles/SnakeOpenGL.dir/src/main.cpp.o -c /home/dima/projects/gameEngine/examples/SnakeOpenGL/src/main.cpp",
+  "file": "/home/dima/projects/gameEngine/examples/SnakeOpenGL/src/main.cpp"
+},
+{
+  "directory": "/home/dima/projects/gameEngine/build/examples/MyGame",
+  "command": "/bin/g++  -DGLFW_DLL -I/home/dima/projects/gameEngine/./include -I/home/dima/projects/gameEngine/./deps/include -I/home/dima/projects/gameEngine/examples/MyGame/./include -I/home/dima/projects/gameEngine/examples/MyGame/../../include -I/home/dima/projects/gameEngine/./deps/include/glad   -O0 -Wall -Wextra -Wzero-as-null-pointer-constant -Winit-self -Wswitch-default -Wfloat-equal -Wdangling-else -Wno-unused-parameter -fPIC -march=native -O0 -Wall -Wextra -Wzero-as-null-pointer-constant -Winit-self -Wswitch-default -Wfloat-equal -Wdangling-else -Wno-unused-parameter -fPIC -march=native -O0 -Wall -Wextra -Wzero-as-null-pointer-constant -Winit-self -Wswitch-default -Wfloat-equal -Wdangling-else -Wno-unused-parameter -fPIC -march=native -g   -std=gnu++17 -o CMakeFiles/MyGame.dir/src/main.cpp.o -c /home/dima/projects/gameEngine/examples/MyGame/src/main.cpp",
+  "file": "/home/dima/projects/gameEngine/examples/MyGame/src/main.cpp"
+},
+{
+  "directory": "/home/dima/projects/gameEngine/build/examples/TestModels",
+  "command": "/bin/g++  -DGLFW_DLL -I/home/dima/projects/gameEngine/./include -I/home/dima/projects/gameEngine/./deps/include -I/home/dima/projects/gameEngine/examples/TestModels/./include -I/home/dima/projects/gameEngine/examples/TestModels/../../include -I/home/dima/projects/gameEngine/./deps/include/glad   -O0 -Wall -Wextra -Wzero-as-null-pointer-constant -Winit-self -Wswitch-default -Wfloat-equal -Wdangling-else -Wno-unused-parameter -fPIC -march=native -O0 -Wall -Wextra -Wzero-as-null-pointer-constant -Winit-self -Wswitch-default -Wfloat-equal -Wdangling-else -Wno-unused-parameter -fPIC -march=native -O0 -Wall -Wextra -Wzero-as-null-pointer-constant -Winit-self -Wswitch-default -Wfloat-equal -Wdangling-else -Wno-unused-parameter -fPIC -march=native -g   -std=gnu++17 -o CMakeFiles/TST.dir/main.cpp.o -c /home/dima/projects/gameEngine/examples/TestModels/main.cpp",
+  "file": "/home/dima/projects/gameEngine/examples/TestModels/main.cpp"
+}
+]

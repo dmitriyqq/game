@@ -51,6 +51,7 @@ namespace Engine {
         }
 
     public:
+        virtual  ~IGame() = default;
         virtual void start() {
             std::cout<<"Starting game"<<std::endl;
             __last_time = std::chrono::system_clock::now();

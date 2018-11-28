@@ -1,0 +1,14 @@
+/home/dima/projects/gameEngine/build/CMakeFiles/rebuild_cache.dir
+/home/dima/projects/gameEngine/build/CMakeFiles/GameEngine.dir
+/home/dima/projects/gameEngine/build/CMakeFiles/edit_cache.dir
+/home/dima/projects/gameEngine/build/examples/CMakeFiles/rebuild_cache.dir
+/home/dima/projects/gameEngine/build/examples/CMakeFiles/edit_cache.dir
+/home/dima/projects/gameEngine/build/examples/SnakeOpenGL/CMakeFiles/rebuild_cache.dir
+/home/dima/projects/gameEngine/build/examples/SnakeOpenGL/CMakeFiles/SnakeOpenGL.dir
+/home/dima/projects/gameEngine/build/examples/SnakeOpenGL/CMakeFiles/edit_cache.dir
+/home/dima/projects/gameEngine/build/examples/MyGame/CMakeFiles/rebuild_cache.dir
+/home/dima/projects/gameEngine/build/examples/MyGame/CMakeFiles/MyGame.dir
+/home/dima/projects/gameEngine/build/examples/MyGame/CMakeFiles/edit_cache.dir
+/home/dima/projects/gameEngine/build/examples/TestModels/CMakeFiles/rebuild_cache.dir
+/home/dima/projects/gameEngine/build/examples/TestModels/CMakeFiles/TST.dir
+/home/dima/projects/gameEngine/build/examples/TestModels/CMakeFiles/edit_cache.dir
