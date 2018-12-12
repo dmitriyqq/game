@@ -34,16 +34,16 @@ namespace Engine {
                 __logic_deltatime += delta;
                 __render_deltatime += delta;
 
-//                if (__logic_deltatime > __desired_logic_deltatime) {
-//                    __logic_deltatime = 0;
+            //    if (__logic_deltatime > __desired_logic_deltatime) {
+                //    __logic_deltatime = 0;
                     update();
                     __ticks++;
-//                }
+            //    }
 
-//                if (__render_deltatime > __desired_render_deltatime) {
-//                    __render_deltatime = 0;
+            //    if (__render_deltatime > __desired_render_deltatime) {
+                //    __render_deltatime = 0;
                     draw();
-//                }
+            //    }
 
                 __last_time = newTime;
                 __delta_time = __render_deltatime;

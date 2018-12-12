@@ -12,10 +12,10 @@ public:
             return {false, false};
         }
     }
-    void draw(IVoxelRenderingBackend * backend) const override{
+    void draw(IWindow *window) const override{
         Voxel voxel;
         voxel.type = Voxel::Type::SAND;
-        backend->display(voxel, __y, __x);
+        // backend->display(voxel, __y, __x);
     }
 };
 

@@ -5,7 +5,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O0 -Wall -Wextra -Wzero-as-null-pointer
 
 include_directories(./include)
 
-add_executable(TST main.cpp)
+add_executable(TST main.cpp Mesh.hpp)
 
 target_include_directories(TST PUBLIC ../../include)
-target_link_Libraries(TST GameEngine)
+target_link_libraries(TST GameEngine)

@@ -21,10 +21,10 @@ public:
 
     }
 
-    void draw(IVoxelRenderingBackend * backend) const override{
+    void draw(IWindow *window) const override{
         Voxel voxel;
         voxel.type = Voxel::Type::GRASS;
-        backend->display(voxel, __y, __x);
+        // backend->display(voxel, __y, __x);
     }
 
     void recreate(int newX, int newY){

@@ -2919,8 +2919,8 @@ static int stbi__free_jpeg_components(stbi__jpeg *z, int ncomp, int why)
       }
       if (z->img_comp[i].raw_coeff) {
          STBI_FREE(z->img_comp[i].raw_coeff);
-         z->img_comp[i].raw_coeff = 0;
-         z->img_comp[i].coeff = 0;
+         z->img_comp[i].raw_coeff = nullptr;
+         z->img_comp[i].coeff = nullptr;
       }
       if (z->img_comp[i].linebuf) {
          STBI_FREE(z->img_comp[i].linebuf);
@@ -2991,8 +2991,8 @@ static int stbi__process_frame_header(stbi__jpeg *z, int scan)
       // so these muls can't overflow with 32-bit ints (which we require)
       z->img_comp[i].w2 = z->img_mcu_x * z->img_comp[i].h * 8;
       z->img_comp[i].h2 = z->img_mcu_y * z->img_comp[i].v * 8;
-      z->img_comp[i].coeff = 0;
-      z->img_comp[i].raw_coeff = 0;
+      z->img_comp[i].coeff = nullptr;
+      z->img_comp[i].raw_coeff = nullptr;
       z->img_comp[i].linebuf = NULL;
       z->img_comp[i].raw_data = stbi__malloc_mad2(z->img_comp[i].w2, z->img_comp[i].h2, 15);
       if (z->img_comp[i].raw_data == NULL)
@@ -4312,6 +4312,7 @@ static int stbi__create_png_image_raw(stbi__png *a, stbi_uc *raw, stbi__uint32 r
             case STBI__F_paeth      : cur[k] = STBI__BYTECAST(raw[k] + stbi__paeth(0,prior[k],0)); break;
             case STBI__F_avg_first  : cur[k] = raw[k]; break;
             case STBI__F_paeth_first: cur[k] = raw[k]; break;
+            default: break;
          }
       }
 
@@ -4350,6 +4351,7 @@ static int stbi__create_png_image_raw(stbi__png *a, stbi_uc *raw, stbi__uint32 r
             STBI__CASE(STBI__F_paeth)        { cur[k] = STBI__BYTECAST(raw[k] + stbi__paeth(cur[k-filter_bytes],prior[k],prior[k-filter_bytes])); } break;
             STBI__CASE(STBI__F_avg_first)    { cur[k] = STBI__BYTECAST(raw[k] + (cur[k-filter_bytes] >> 1)); } break;
             STBI__CASE(STBI__F_paeth_first)  { cur[k] = STBI__BYTECAST(raw[k] + stbi__paeth(cur[k-filter_bytes],0,0)); } break;
+            default: break;
          }
          #undef STBI__CASE
          raw += nk;
@@ -4367,6 +4369,7 @@ static int stbi__create_png_image_raw(stbi__png *a, stbi_uc *raw, stbi__uint32 r
             STBI__CASE(STBI__F_paeth)        { cur[k] = STBI__BYTECAST(raw[k] + stbi__paeth(cur[k- output_bytes],prior[k],prior[k- output_bytes])); } break;
             STBI__CASE(STBI__F_avg_first)    { cur[k] = STBI__BYTECAST(raw[k] + (cur[k- output_bytes] >> 1)); } break;
             STBI__CASE(STBI__F_paeth_first)  { cur[k] = STBI__BYTECAST(raw[k] + stbi__paeth(cur[k- output_bytes],0,0)); } break;
+            default: break;
          }
          #undef STBI__CASE
 
@@ -5221,7 +5224,7 @@ static int stbi__tga_get_comp(int bits_per_pixel, int is_grey, int* is_rgb16)
    switch(bits_per_pixel) {
       case 8:  return STBI_grey;
       case 16: if(is_grey) return STBI_grey_alpha;
-            // else: fall-through
+            // fall through
       case 15: if(is_rgb16) *is_rgb16 = 1;
             return STBI_rgb;
       case 24: // fall-through
@@ -5912,7 +5915,7 @@ static stbi_uc *stbi__pic_load_core(stbi__context *s,int width,int height,int *c
                      if (count > left)
                         count = (stbi_uc) left;
 
-                     if (!stbi__readval(s,packet->channel,value))  return 0;
+                     if (!stbi__readval(s,packet->channel,value)) return 0;
 
                      for(i=0; i<count; ++i,dest+=4)
                         stbi__copyval(packet->channel,dest,value);

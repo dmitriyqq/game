@@ -15,7 +15,7 @@ namespace Glfw {
         Glfw::InputManager __inputManager;
 //        OpenGL::ShaderProgram *__used_program = nullptr;
     public:
-        explicit Window(int width = 600, int height = 600) : IWindow(width, height) {
+        explicit Window(int width = 1200, int height = 800) : IWindow(width, height) {
             glfwInit();
             glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
             glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
@@ -29,7 +29,7 @@ namespace Glfw {
 
             glfwMakeContextCurrent(__window);
 
-            glfwSetInputMode(__window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+            // glfwSetInputMode(__window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
             if (!gladLoadGLLoader((GLADloadproc) glfwGetProcAddress)) {
                 throw "Failed to initialize GLAD";

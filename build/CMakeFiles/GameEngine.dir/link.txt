@@ -1,2 +1,0 @@
-/bin/ar qc libGameEngine.a  CMakeFiles/GameEngine.dir/deps/src/glad.c.o CMakeFiles/GameEngine.dir/src/Camera.cpp.o CMakeFiles/GameEngine.dir/src/Shader.cpp.o CMakeFiles/GameEngine.dir/src/ShaderProgram.cpp.o
-/bin/ranlib libGameEngine.a

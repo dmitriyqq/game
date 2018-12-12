@@ -11,7 +11,7 @@
 #include "Voxel.hpp"
 #include "Renders/OpenGL/ICamera.hpp"
 #include <Renders/OpenGL/CubeMesh.hpp>
-#include <Chunk.hpp>
+// #include <Chunk.hpp>
 
 namespace OpenGL {
 

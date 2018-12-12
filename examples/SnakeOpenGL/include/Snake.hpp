@@ -31,11 +31,11 @@ public:
         }
     }
 
-    void draw(IVoxelRenderingBackend * backend) const override{
+    void draw(IWindow *window) const override{
         Voxel voxel;
         voxel.type = Voxel::Type::WATER;
         for(auto &&s: __segments){
-            backend->display(voxel, s.second, s.first);
+            // backend->display(voxel, s.second, s.first);
         }
     }
 

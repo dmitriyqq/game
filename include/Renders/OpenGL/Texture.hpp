@@ -1,4 +1,5 @@
 #pragma once
+#define STB_IMAGE_IMPLEMENTATION
 
 #include <string>
 #include <glad/glad.h>
@@ -11,6 +12,7 @@ private:
     int __width, __height;
     int __numChannels;
 public:
+    std::string type;
     Texture() = default;
     explicit Texture(const std::string & filename){
         load(filename);
@@ -38,6 +40,10 @@ public:
         }else{
             std::cout << "Failed to load texture" << std::endl;
         }
+    }
+
+    unsigned int getId() const {
+        return __id;
     }
 
     void use(){

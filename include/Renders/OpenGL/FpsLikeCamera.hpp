@@ -7,7 +7,7 @@
 namespace OpenGL{
 
 class FpsLikeCamera: public Camera, public Engine::Input::IUpdatable, public Engine::Input::IMouseSubscriber {
-        float __speed = 10.0f;
+        float __speed = 0.010f;
     public:
         FpsLikeCamera(): Camera() {}
         void update(float delta_time, Engine::Input::IKeyboardState &keyboard) override {

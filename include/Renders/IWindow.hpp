@@ -15,6 +15,7 @@ public:
     virtual Engine::Input::IKeyboardState* getKeyBoardState() = 0;
     virtual Engine::Input::IKeyboardDirectInput *getKeyboardDirectInput() = 0;
     virtual Engine::Input::IMouseInput *getMouseInput() = 0;
+
     virtual void startDisplay() = 0;
     virtual void endDisplay() = 0;
 //    virtual void useShaders(OpenGL::ShaderProgram *program) = 0;

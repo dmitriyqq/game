@@ -23,8 +23,8 @@ public:
     }
 
     SnakeRenderer(Glfw::InputManager *&outManager): __camera(25, 0, 25, 70){
-        __renderingBackend = new OpenGL::VoxelRenderingBackend(&__camera);
-        __iomanager = new Glfw::InputManager(__renderingBackend->getWindow());
+        // __renderingBackend = new OpenGL::VoxelRenderingBackend(&__camera);
+        // __iomanager = new Glfw::InputManager(__renderingBackend->getWindow());
         outManager = __iomanager;
         // __iomanager->addSubscriber(&__camera);
     }
@@ -33,7 +33,7 @@ public:
         __renderingBackend->startDisplay();
 
         for(auto &drawable: drawables){
-            drawable->draw(__renderingBackend);
+            // drawable->draw(__renderingBackend);
         }
 
         __renderingBackend->endDisplay();

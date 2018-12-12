@@ -9,8 +9,6 @@ namespace OpenGL {
     public:
         // !Todo fix this
         CubeVAO(float posx = 0, float posy = 0, float posz = 0, float size= 1) {
-            float hs = size / 2;
-
             float vertices[] = {
                     -0.5, -0.5, 0.5,
                     0.5, -0.5, 0.5,
