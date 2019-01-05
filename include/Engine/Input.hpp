@@ -2,6 +2,6 @@
 
 namespace Engine{
     namespace Input{
-        enum class Key{ UP, DOWN, LEFT, RIGHT, ACCEPT, ACTION, EXIT };
+        enum class Key{ UP, DOWN, LEFT, RIGHT, ACCEPT, ACTION, EXIT, MORE, LESS };
     }
 }

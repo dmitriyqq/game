@@ -24,8 +24,12 @@ namespace Glfw {
                     return KeyType::ACCEPT;
                 case GLFW_KEY_ESCAPE:
                     return KeyType::EXIT;
+                case GLFW_KEY_Q:
+                    return KeyType::MORE;
+                case GLFW_KEY_E:
+                    return KeyType::LESS;
                 default:
-                    return KeyType::EXIT;
+                    return KeyType::ACTION;
             }
         }
 

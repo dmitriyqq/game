@@ -1,0 +1,15 @@
+# Blender MTL File: 'Earth1-1.blend'
+# Material Count: 1
+
+newmtl Map
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.780793 0.780793 0.780793
+Ks 0.000000 0.000000 0.000000
+Ke 0.233798 0.233798 0.233798
+Ni 1.000000
+d 1.000000
+illum 1
+map_Bump -bm 0.500000 textures/4kEarthBump.png
+map_Kd textures/earth.4096x2048.jpg
+map_Ns textures/4kEarthSpec.png

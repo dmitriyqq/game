@@ -69,7 +69,7 @@ namespace Engine {
 
         // !TODO make this private and provide separate delta time to different stages
         int __ticks = 0;
-        float __delta_time = 0.0f;
+        float __delta_time = 0.01f;
     };
 
 }

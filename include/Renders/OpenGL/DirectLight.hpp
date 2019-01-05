@@ -31,6 +31,7 @@ public:
     }
 
     void uniform(ShaderProgram * program){
+        program->use();
         program->setVec3("dirLight.direction", m_direction);
         program->setVec3("dirLight.ambient", m_ambient);
         program->setVec3("dirLight.diffuse", m_diffuse);

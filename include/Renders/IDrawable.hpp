@@ -4,5 +4,5 @@
 
 class IDrawable{
 public:
-    virtual void draw(IWindow *window) const = 0;
+    virtual void draw() const = 0;
 };

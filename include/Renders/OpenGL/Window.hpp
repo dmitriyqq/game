@@ -8,6 +8,8 @@
 #include "InputManager.hpp"
 #include "ShaderProgram.hpp"
 
+#include <nanogui/nanogui.h>
+
 namespace Glfw {
 
     class Window : public IWindow {
@@ -53,6 +55,10 @@ namespace Glfw {
             return &__inputManager;
         }
 
+        nanogui::Screen* getScreen() {
+            return __inputManager.getScreen();
+        }
+
         void startDisplay() override {
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         }
@@ -73,6 +79,7 @@ namespace Glfw {
 //            program->use();
 //        }
 //    }
+        GLFWwindow* getWindow() const { return __window; }
 
         void setupInputManager() {
             __inputManager.setupWindow(__window);

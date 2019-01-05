@@ -13,8 +13,11 @@ private:
     int __numChannels;
 public:
     std::string type;
+    std::string path;
     Texture() = default;
+    Texture(const Texture &texture) = default;
     explicit Texture(const std::string & filename){
+        path = filename;
         load(filename);
     }
 
@@ -25,7 +28,7 @@ public:
             glBindTexture(GL_TEXTURE_2D, __id);
 
             if(__numChannels == 4) {
-                glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, __width, __height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
+                glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, __width, __height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
             } else if(__numChannels == 3) {
                 glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, __width, __height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
             }
@@ -46,11 +49,11 @@ public:
         return __id;
     }
 
-    void use(){
+    void use() const {
         glBindTexture(GL_TEXTURE_2D, __id);
     }
 
     ~Texture(){
-        glDeleteTextures(1, &__id);
+        // glDeleteTextures(1, &__id);
     }
 };

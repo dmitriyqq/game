@@ -16,5 +16,5 @@ struct Material{
 };
 
 struct TexutureMaterial: Material{
-
+    
 };
