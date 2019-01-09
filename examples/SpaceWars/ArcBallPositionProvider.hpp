@@ -32,7 +32,7 @@ protected:
         return glm::vec3(x, y, z);
     }
 
-    void setPosition(float phi) {
+    void setPhase(float phi) {
         __phi = phi;
     }
 

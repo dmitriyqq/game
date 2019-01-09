@@ -8,7 +8,12 @@ namespace Engine {
 
         class IUpdatable {
         public:
-            virtual void update(float delta_time, IKeyboardState &keyboard) = 0;
+            virtual void update(float delta_time) = 0;
+        };
+
+        class IUpdatableKeytable {
+        public:
+            virtual void update(float delta_time, IKeyboardState &state) = 0;
         };
 
     }

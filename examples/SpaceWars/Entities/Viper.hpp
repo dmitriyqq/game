@@ -7,10 +7,10 @@
 
 #include <reactphysics3d.h>
 
-class Player;
+class GodPlayer;
 
 class Viper : public DynamicEntity {
-        Player *__player = nullptr;
+        GodPlayer *__player = nullptr;
         float __speed = 1.0f;
     public:
         Viper(

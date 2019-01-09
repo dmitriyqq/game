@@ -1,8 +1,13 @@
 #pragma once
 
-class IEntity{
+namespace Engine {
 
-public:
-    virtual void update() = 0;
-    virtual void draw() = 0;
-};
+    class IEntity : public IDrawable, public Input::IUpdatable {
+
+    public:
+        virtual void update(float delta_time) = 0;
+
+        virtual void draw() const = 0;
+    };
+
+}

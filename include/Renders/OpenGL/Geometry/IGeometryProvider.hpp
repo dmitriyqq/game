@@ -5,10 +5,10 @@
 #include <vector>
 
 namespace OpenGL {
-
+  template <class V>
   class IGeometryProvider {
   public:
-    virtual std::vector<Vertex> getData() const = 0;
+    virtual std::vector<V> getData() const = 0;
   };
 
 }

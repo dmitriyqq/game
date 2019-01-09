@@ -10,9 +10,9 @@ class ArcBallCamera : public OpenGL::FpsLikeCamera, public ArcBallPositionProvid
     bool __mousePressed = false;
     float __speed = 0.05f;
 
-    glm::vec3 up = glm::vec3(0, 1, 0);
     public:
-        ArcBallCamera() {
+    glm::vec3 up = glm::vec3(0, 1, 0);
+    ArcBallCamera() {
         }
 
         void setCenter(glm::vec3 position) {
@@ -30,19 +30,27 @@ class ArcBallCamera : public OpenGL::FpsLikeCamera, public ArcBallPositionProvid
         void update(float delta_time, Engine::Input::IKeyboardState &keyboard) override {
 
             if(keyboard.isKeyPressed(Engine::Input::Key::DOWN)){
-                __center.z +=  __speed * delta_time;
+                auto f = getForwardVector();
+                __center.x +=  -__speed * f.x * delta_time;
+                __center.z +=  -__speed * f.z * delta_time;
             }
 
             if(keyboard.isKeyPressed(Engine::Input::Key::UP)){
-                __center.z -= __speed * delta_time;
+                auto f = getForwardVector();
+                __center.x +=  __speed * f.x * delta_time;
+                __center.z +=  __speed * f.z * delta_time;
             }
 
             if(keyboard.isKeyPressed(Engine::Input::Key::LEFT)){
-                __center.x += __speed * delta_time;
+                auto r = getRightVector();
+                __center.x += __speed * r.x * delta_time;
+                __center.z += __speed * r.z * delta_time;
             }
 
             if(keyboard.isKeyPressed(Engine::Input::Key::RIGHT)){
-                __center.x -= __speed * delta_time;
+                auto r = getRightVector();
+                __center.x += -__speed * r.x * delta_time;
+                __center.z += -__speed * r.z * delta_time;
             }
 
             if(keyboard.isKeyPressed(Engine::Input::Key::MORE)){
@@ -76,13 +84,13 @@ class ArcBallCamera : public OpenGL::FpsLikeCamera, public ArcBallPositionProvid
         }
 
 
-        glm::vec3 getForwardVector() const override{
+        glm::vec3 getForwardVector() const override {
             auto v = getPosition();
             auto d = __center - v;
             return glm::normalize(d);
         }
 
-        glm::vec3 getRightVector() const override{
+        glm::vec3 getRightVector() const override {
             auto u = up;
             auto f = getForwardVector();
             auto c = glm::cross(u, f);
@@ -90,14 +98,14 @@ class ArcBallCamera : public OpenGL::FpsLikeCamera, public ArcBallPositionProvid
             return cameraRight;
         }
 
-        glm::vec3 getUpVector() const override{
+        glm::vec3 getUpVector() const override {
             auto f = getForwardVector();
             auto r = getRightVector();
             glm::vec3 cameraUp = glm::cross(f, r);
             return cameraUp;
         }
 
-        glm::vec3 getPosition() const override{
+        glm::vec3 getPosition() const override {
             return getPostionVector();
         }
 };

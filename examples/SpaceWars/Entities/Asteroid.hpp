@@ -7,10 +7,10 @@
 
 #include <reactphysics3d.h>
 
-class Player;
+class GodPlayer;
 
 class Asteroid : public DynamicEntity {
-        Player *__player = nullptr;
+        GodPlayer *__player = nullptr;
         glm::vec3 __force;
     public:
         Asteroid(
@@ -21,7 +21,7 @@ class Asteroid : public DynamicEntity {
         {
         }
 
-        void addToWorld(rp3d::DynamicsWorld &world, glm::vec3 pos) override { 
+        void addToWorld(rp3d::DynamicsWorld *world, glm::vec3 pos) override {
             DynamicEntity::addToWorld(world, pos);
             __body->applyForceToCenterOfMass(rp3d::Vector3(__force.x, __force.y, __force.z));
             auto x = rand()%100 / ((float)(rand()%10) + 1);

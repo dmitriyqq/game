@@ -4,7 +4,7 @@
 #include <glm/matrix.hpp>
 
 namespace OpenGL{
-    class ICamera{
+class ICamera {
     public:
         virtual glm::mat4 getViewMatrix() const = 0;
 
@@ -20,4 +20,7 @@ namespace OpenGL{
 
         virtual glm::vec3 getPosition() const = 0;
     };
+
+class IInteractiveCamera: public ICamera, public Engine::Input::IKeyboardSubscriber, public Engine::Input::IMouseSubscriber {};
+
 }

@@ -30,6 +30,8 @@ include_directories(./deps/nanogui/include/)
 include_directories(./deps/nanogui/ext/eigen)
 include_directories(./deps/nanogui/ext/nanovg/src)
 
+# glm is header only
+include_directories(./deps/glm/)
 
 # stb_image is header only
 include_directories(./deps/stb_image/)

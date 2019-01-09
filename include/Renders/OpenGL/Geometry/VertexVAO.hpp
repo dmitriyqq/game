@@ -8,31 +8,43 @@
 
 #include <glad/glad.h>
 
-
 namespace OpenGL {
 /**
  * \class VAO representation
  *
  * \brief holds information about data stored in GPU and knows how to draw it
  *
+ * the parameter of template is Vertex class that defines 'void defineData(void)' function
+ *
  * \note doesn't use EBO, just plain VBO
  */
-    class VertexVAO : public IGeometry {
+    template<class V>
+    class VertexVAO : public IGeometry, public IDrawable {
         int __first;
         int __count;
         GLenum __mode;
 
         unsigned int __id, __vbo;
 
-        IGeometryProvider *provider;
+        bool __data = false;
+
+        IGeometryProvider<V> *__provider = nullptr;
 
         void destroyBuffer() {
-            glDeleteBuffers(1, &__vbo);
-            glDeleteVertexArrays(1, &__id);
+            if (__data) {
+                glDeleteBuffers(1, &__vbo);
+                glDeleteVertexArrays(1, &__id);
+                __data = false;
+            }
         }
 
-        void bufferData(const std::vector<Vertex> &data) {
-            destroyBuffer();
+        void bufferData(const std::vector<V> &data) {
+            if (__data) {
+                updateData(data);
+                return;
+            }
+
+            __data = true;
 
             __first = 0;
             __count = static_cast<int>(data.size());
@@ -42,34 +54,31 @@ namespace OpenGL {
 
             glGenBuffers(1, &__vbo);
             glBindBuffer(GL_ARRAY_BUFFER, __vbo);
-            glBufferData(GL_ARRAY_BUFFER, sizeof(data) * sizeof(Vertex), &data[0], GL_STATIC_DRAW);
+            glBufferData(GL_ARRAY_BUFFER, data.size() * sizeof(V), &data[0], GL_STATIC_DRAW);
 
-            glEnableVertexAttribArray(0);
-            glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)0);
-
-            glEnableVertexAttribArray(1);
-            glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*) offsetof(Vertex, normal));
-
-            glEnableVertexAttribArray(2);
-            glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*) offsetof(Vertex, texCoords));
-
-            glEnableVertexAttribArray(3);
-            glVertexAttribPointer(3, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*) offsetof(Vertex, tangent));
-
-            glEnableVertexAttribArray(4);
-            glVertexAttribPointer(4, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*) offsetof(Vertex, bitangent));
+            V::defineData();
 
             glBindVertexArray(0);
             glBindBuffer(GL_ARRAY_BUFFER, 0);
         }
+
+        void updateData(const std::vector<V> &data) {
+            glBindVertexArray(__id);
+            glBindBuffer(GL_ARRAY_BUFFER, __vbo);
+            glBufferSubData(GL_ARRAY_BUFFER, 0, data.size() * sizeof(V), &data[0]);
+            glBindVertexArray(0);
+            glBindBuffer(GL_ARRAY_BUFFER, 0);
+        }
 public:
-    VertexVAO(IGeometryProvider *provider, GLenum mode = GL_TRIANGLES) {
-        bufferData(provider->getData());
+    // Fuck shit you can't call virtual methods in constructor
+    VertexVAO(IGeometryProvider<V> *provider, GLenum mode = GL_TRIANGLES):
+    __provider(provider)
+    {
         setMode(mode);
     }
 
     void update() {
-        bufferData(provider->getData());
+        VertexVAO::bufferData(__provider->getData());
     }
 
     virtual ~VertexVAO() {
@@ -105,6 +114,8 @@ public:
     }
 
     void draw(GLenum mode, int first, int count) const override {
+        glBindVertexArray(__id);
+        glBindBuffer(GL_ARRAY_BUFFER, __vbo);
         glDrawArrays(mode, first, static_cast<unsigned int>(count));
     }
   };

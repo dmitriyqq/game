@@ -1,9 +1,8 @@
 #pragma once
 
-#include "Entity.hpp"
 #include "DrawableEntity.hpp"
 
-class DynamicEntity : public DrawableEntity {
+class StaticEntity: public DrawableEntity {
     rp3d::BoxShape *__shape = nullptr;
     rp3d::ProxyShape *__proxyShape = nullptr;
     glm::vec3 __scale;
@@ -11,7 +10,7 @@ class DynamicEntity : public DrawableEntity {
     OpenGL::IBoundingBoxDrawable *__drawable = nullptr;
     OpenGL::PositionShaderProgram *__program = nullptr;
 
-    void setBoundingBox() {
+    virtual void setBoundingBox() {
         auto box = __drawable->getBox();
         auto t = box.second - box.first;
         auto c = __scale;
@@ -24,20 +23,25 @@ class DynamicEntity : public DrawableEntity {
         rp3d::decimal mass = rp3d::decimal(4.0);
         __proxyShape = __body->addCollisionShape(__shape, rp3d::Transform::identity(), mass);
     }
-
 protected:
     rp3d::RigidBody *__body = nullptr;
 public:
-    DynamicEntity(
-        OpenGL::PositionShaderProgram *program,
-        OpenGL::IBoundingBoxDrawable *drawable,
-        glm::vec3 scale): DrawableEntity(program, drawable, scale){
+    StaticEntity(OpenGL::PositionShaderProgram *program,
+                 OpenGL::IBoundingBoxDrawable *drawable,
+                 glm::vec3 scale): DrawableEntity(program, drawable, scale) {
+
+    }
+
+    void setPosition(float x, float y, float z) {
+        auto t = __body->getTransform();
+        t.setPosition(rp3d::Vector3(x, y, z));
+        __body->setTransform(t);
     }
 
     virtual void addToWorld(rp3d::DynamicsWorld *world, glm::vec3 pos) {
         auto transform = rp3d::Transform(rp3d::Vector3(pos.x, pos.y, pos.z), rp3d::Quaternion::identity());
         __body = world->createRigidBody(transform);
-        __body->setType(rp3d::BodyType::DYNAMIC);
+        __body->setType(rp3d::BodyType::STATIC);
         setBoundingBox();
     }
 
@@ -49,5 +53,4 @@ public:
 
         DrawableEntity::draw();
     }
-
 };
