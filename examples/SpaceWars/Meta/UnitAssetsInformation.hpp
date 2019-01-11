@@ -1,0 +1,16 @@
+//
+// Created by dima on 1/9/19.
+//
+
+#ifndef GAMEENGINE_UNITASSETSINFORMATION_HPP
+#define GAMEENGINE_UNITASSETSINFORMATION_HPP
+
+
+
+class UnitAssetsInformation {
+
+};
+
+
+
+#endif //GAMEENGINE_UNITASSETSINFORMATION_HPP
