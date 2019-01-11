@@ -8,7 +8,7 @@ namespace Glfw {
     class KeyMap {
         using KeyType = Engine::Input::Key;
     public:
-        Engine::Input::Key map(int glfw_key) {
+        Engine::Input::Key map(int glfw_key) const {
             switch (glfw_key) {
                 case GLFW_KEY_W:
                     return KeyType::UP;
@@ -33,7 +33,7 @@ namespace Glfw {
             }
         }
 
-        int map(Engine::Input::Key key) {
+        int map(Engine::Input::Key key) const {
 
             switch (key) {
                 case KeyType::UP:

@@ -7,9 +7,6 @@ class StaticEntity: public DrawableEntity {
     rp3d::ProxyShape *__proxyShape = nullptr;
     glm::vec3 __scale;
 
-    OpenGL::IBoundingBoxDrawable *__drawable = nullptr;
-    OpenGL::PositionShaderProgram *__program = nullptr;
-
     virtual void setBoundingBox() {
         auto box = __drawable->getBox();
         auto t = box.second - box.first;
@@ -28,7 +25,7 @@ protected:
 public:
     StaticEntity(OpenGL::PositionShaderProgram *program,
                  OpenGL::IBoundingBoxDrawable *drawable,
-                 glm::vec3 scale): DrawableEntity(program, drawable, scale) {
+                 glm::vec3 scale): DrawableEntity(program, drawable), __scale(scale){
 
     }
 
@@ -38,14 +35,22 @@ public:
         __body->setTransform(t);
     }
 
+    void setRotation(float w) {
+        auto t = __body->getTransform();
+        t.setOrientation(rp3d::Quaternion(0.0f, w, 0.0f, 1.0f));
+        __body->setTransform(t);
+    }
+
     virtual void addToWorld(rp3d::DynamicsWorld *world, glm::vec3 pos) {
         auto transform = rp3d::Transform(rp3d::Vector3(pos.x, pos.y, pos.z), rp3d::Quaternion::identity());
         __body = world->createRigidBody(transform);
         __body->setType(rp3d::BodyType::STATIC);
+        __body->setUserData(this);
         setBoundingBox();
     }
 
     void draw() const override {
+        __program->use();
         glm::mat4 matrix;
         __body->getTransform().getOpenGLMatrix(&matrix[0][0]);
         matrix = glm::scale(matrix, __scale);

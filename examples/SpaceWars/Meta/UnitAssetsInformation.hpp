@@ -1,16 +1,9 @@
-//
-// Created by dima on 1/9/19.
-//
+#pragma once
 
-#ifndef GAMEENGINE_UNITASSETSINFORMATION_HPP
-#define GAMEENGINE_UNITASSETSINFORMATION_HPP
+#include <string>
 
+struct UnitAssetsInformation {
+    std::string ModelPath;
 
-
-class UnitAssetsInformation {
-
+    int cost;
 };
-
-
-
-#endif //GAMEENGINE_UNITASSETSINFORMATION_HPP

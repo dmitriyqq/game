@@ -43,7 +43,7 @@ namespace Glfw {
             __inputManager.setupWindow(__window);
         }
 
-        IKeyboardState *getKeyBoardState() override {
+        IKeyboardState* getKeyBoardState() override {
             return &__inputManager;
         }
 
@@ -68,7 +68,7 @@ namespace Glfw {
                 glfwSwapBuffers(__window);
                 glfwPollEvents();
             } else {
-                throw "exit";
+                exit(69);
             }
         }
 

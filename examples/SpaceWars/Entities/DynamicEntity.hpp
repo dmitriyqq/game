@@ -31,18 +31,20 @@ public:
     DynamicEntity(
         OpenGL::PositionShaderProgram *program,
         OpenGL::IBoundingBoxDrawable *drawable,
-        glm::vec3 scale): DrawableEntity(program, drawable, scale){
+        glm::vec3 scale): DrawableEntity(program, drawable), __scale(scale){
     }
 
     virtual void addToWorld(rp3d::DynamicsWorld *world, glm::vec3 pos) {
         auto transform = rp3d::Transform(rp3d::Vector3(pos.x, pos.y, pos.z), rp3d::Quaternion::identity());
         __body = world->createRigidBody(transform);
         __body->setType(rp3d::BodyType::DYNAMIC);
+        __body->setUserData(this);
         setBoundingBox();
     }
 
     void draw() const override {
         glm::mat4 matrix;
+        __program->use();
         __body->getTransform().getOpenGLMatrix(&matrix[0][0]);
         matrix = glm::scale(matrix, __scale);
         __program->setModel(matrix);

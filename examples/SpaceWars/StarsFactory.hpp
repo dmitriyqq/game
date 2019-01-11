@@ -17,7 +17,9 @@ class StarsFactory {
     std::mt19937 __rnd;
 
 public:
-    StarsFactory(OpenGL::Model *model, rp3d::DynamicsWorld *world, OpenGL::PositionShaderProgram *program):
+    StarsFactory(OpenGL::Model *model,
+                 rp3d::DynamicsWorld *world,
+                 OpenGL::PositionShaderProgram *program):
         __model(model),
         __world(world),
         __program(program),
@@ -29,5 +31,6 @@ public:
         float t = static_cast<float>(__dist(__rnd));
         Star *star = new Star(__model, __program, __world, position, t);
         star->setPlayer(player);
+        return star;
     }
 };

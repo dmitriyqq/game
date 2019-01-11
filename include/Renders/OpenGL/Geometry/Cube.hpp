@@ -9,9 +9,7 @@ namespace OpenGL {
 class Cube: public IGeometryProvider<ColorVertex>, public VertexVAO<ColorVertex>  {
     glm::vec3 COLOR = glm::vec3(0.0f, 0.0f, 1.0f);
 public:
-    Cube():
-        VertexVAO<ColorVertex>(this, GL_LINES) {
-    }
+    Cube(): VertexVAO<ColorVertex>(this, GL_LINES) { }
 
     std::vector<ColorVertex> getData() const override {
         auto vert = std::vector<ColorVertex>();

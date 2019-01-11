@@ -11,13 +11,12 @@
 
 #include "../Entities/Galaxy.hpp"
 
-class Map : Engine::Input::IMouseSubscriber, IDrawable {
-    bool __debug = false;
+class Map : IDrawable, Engine::Input::IUpdatable {
+    bool __debug = true;
     float __size;
-    rp3d::CollisionBody *body = nullptr;
 
-    OpenGL::PositionShaderProgram *program = nullptr;
-    OpenGL::PositionShaderProgram *debugProgram = nullptr;
+    OpenGL::PositionShaderProgram *__program = nullptr;
+    OpenGL::PositionShaderProgram *__debugProgram = nullptr;
 
     OpenGL::AxiesDebug *__axiesDebug = nullptr;
     OpenGL::GridDebug *__gridDebug = nullptr;
@@ -25,9 +24,20 @@ class Map : Engine::Input::IMouseSubscriber, IDrawable {
     glm::vec3 planeN = glm::vec3(0.0f, 1.0f, 0.0f);
     glm::vec3 planeP = glm::vec3(0.0f, 0.0f, 0.0f);
 
+    StarsFactory *__starsFactory = nullptr;
+    PlanetsFactory *__planetsFactory = nullptr;
     std::vector<Galaxy*> __galaxies;
+
 public:
-    Map(OpenGL::PositionShaderProgram *program, OpenGL::PositionShaderProgram *debugProgram, float size = 1024.0f):
+
+    Map(OpenGL::PositionShaderProgram *program,
+        OpenGL::PositionShaderProgram *debugProgram,
+        StarsFactory *starsFactory,
+        PlanetsFactory *planetsFactory, float size = 1024.0f):
+        __program(program),
+        __debugProgram(debugProgram),
+        __starsFactory(starsFactory),
+        __planetsFactory(planetsFactory),
         __size(size) {
         __axiesDebug = new OpenGL::AxiesDebug(__size, __size, __size);
         __axiesDebug->update();
@@ -36,20 +46,33 @@ public:
         __gridDebug->update();
     }
 
-    void draw() const {
+    void draw() const override {
+        glDisable(GL_DEPTH_TEST);
         if(__debug) {
-            debugProgram->use();
+            __debugProgram->use();
             __axiesDebug->draw();
             __gridDebug->draw();
         }
-        program->use();
+        __program->use();
+        glEnable(GL_DEPTH_TEST);
         for (auto galaxy: __galaxies) {
             galaxy->draw();
         }
     }
 
+    void update(float delta_time) override {
+        for(auto &&galaxy: __galaxies) {
+            galaxy->update(delta_time);
+        }
+    }
+
+    void constructGalaxy(glm::vec3 position, Player *player) {
+        __galaxies.emplace_back(new Galaxy(__starsFactory, __planetsFactory, player, position));
+    }
+
     std::pair<bool, glm::vec3> getIntersectionPoint(rp3d::Ray ray) {
-        auto d = glm::dot(planeP, -planeN);
+        glm::vec3 tmp = planeN * (-1.0f);
+        auto d = glm::dot(planeP, tmp);
         if (std::abs(d) < 0.0001f) // your favorite epsilon
         {
             return {false, glm::vec3()};
@@ -57,7 +80,8 @@ public:
 
         auto rayP = ray.point1;
         auto rayD = ray.point2 - ray.point1;
-        float t = -(d + rayP.z * planeN.z + rayP.y * planeN.y + rayP.x * planeN.x) / (rayD.z * planeN.z + rayD.y * planeN.y + rayD.x * planeN.x);
+        float t = -(d + rayP.z * planeN.z + rayP.y * planeN.y + rayP.x * planeN.x)
+                / (rayD.z * planeN.z + rayD.y * planeN.y + rayD.x * planeN.x);
 
         if (t <= 0) {
             return {false, glm::vec3()};

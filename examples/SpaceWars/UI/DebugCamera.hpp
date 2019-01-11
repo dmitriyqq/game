@@ -4,22 +4,20 @@
 #include <Renders/OpenGL/ICamera.hpp>
 #include "Vector.hpp"
 
-class DebugCamera: public nanogui::Window {
-    Vector *__position;
-    Vector *__forward;
+class DebugCamera {
+    VectorWidget *__position;
+    VectorWidget *__forward;
     OpenGL::ICamera *__camera = nullptr;
+    nanogui::Window *__window = nullptr;
 public:
     DebugCamera(nanogui::Screen *screen, OpenGL::ICamera *camera):
-        nanogui::Window(screen, ""),
         __camera(camera) {
-        setPosition(nanogui::Vector2i(0, 0));
-        setLayout(new nanogui::BoxLayout(nanogui::Orientation::Vertical, nanogui::Alignment::Minimum));
-
-        __position = new Vector(this);
-        addChild(__position);
-
-        __forward = new Vector(this);
-        addChild(__forward);
+        __window = new nanogui::Window(screen);
+        __window->setLayout(new nanogui::BoxLayout(nanogui::Orientation::Vertical, nanogui::Alignment::Minimum, 0, 0));
+        __position = new VectorWidget(__window);
+        __window->addChild(__position);
+        __forward = new VectorWidget(__window);
+        __window->addChild(__forward);
         update();
     }
 
@@ -28,5 +26,9 @@ public:
         __position->setValue(p);
         auto f = __camera->getForwardVector();
         __forward->setValue(f);
+    }
+
+    nanogui::Window* getWindow() {
+        return __window;
     }
 };

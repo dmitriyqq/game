@@ -11,7 +11,7 @@ class FpsLikeCamera: public Camera, public Engine::Input::IUpdatableKeytable, pu
     public:
         FpsLikeCamera(): Camera() {}
 
-        void update(float delta_time, Engine::Input::IKeyboardState &keyboard) override {
+        void update(float delta_time, const Engine::Input::IKeyboardState &keyboard) override {
 
             if(keyboard.isKeyPressed(Engine::Input::Key::UP)){
                 setPosition(Direction::FORWARD, __speed * delta_time);

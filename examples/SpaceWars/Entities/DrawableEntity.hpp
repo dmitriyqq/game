@@ -12,19 +12,17 @@
 #include "Entity.hpp"
 
 class DrawableEntity: public Entity {
-    OpenGL::IBoundingBoxDrawable *__drawable = nullptr;
-    glm::vec3 __scale;
 protected:
+    OpenGL::IBoundingBoxDrawable *__drawable = nullptr;
     OpenGL::PositionShaderProgram *__program = nullptr;
 public:
     DrawableEntity(
         OpenGL::PositionShaderProgram *program,
-        OpenGL::IBoundingBoxDrawable *drawable,
-        glm::vec3 scale):
-        __scale(scale), __drawable(drawable), __program(program)
+        OpenGL::IBoundingBoxDrawable *drawable):  __drawable(drawable), __program(program)
     {}
 
     void draw() const override {
+
         __drawable->draw();
     }
 };

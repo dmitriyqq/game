@@ -3,8 +3,12 @@
 #include "Players/Player.hpp"
 #include "ArcBallCamera.hpp"
 #include "RaycastCallback.hpp"
+#include "Map/Map.hpp"
 
 #include <spdlog/spdlog.h>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+
 #include <Renders/OpenGL/Geometry/Cube.hpp>
 #include <Renders/OpenGL/Geometry/VectorDebug.hpp>
 
@@ -20,7 +24,7 @@ class ObjectSelector: public Engine::Input::IMouseSubscriber, public Engine::Inp
     rp3d::DynamicsWorld *__world = nullptr;
     RaycastCallback *__callback = nullptr;
     OpenGL::Mesh *__mesh = nullptr;
-    ArcBallCamera *__camera = nullptr;
+    OpenGL::ICamera *__camera = nullptr;
     OpenGL::PositionShaderProgram *__program = nullptr;
     OpenGL::PositionShaderProgram *__debugProgram = nullptr;
 
@@ -30,13 +34,14 @@ class ObjectSelector: public Engine::Input::IMouseSubscriber, public Engine::Inp
     OpenGL::VectorDebug *__forward = nullptr;
     OpenGL::VectorDebug *__target = nullptr;
 
+    glm::vec3 c = glm::vec3(0.0f, 0.0f, 0.0f);
+
 public:
     ObjectSelector(
             Map *map,
             bool debug,
             rp3d::DynamicsWorld *world,
-            ArcBallCamera *camera,
-
+            OpenGL::ICamera *camera,
             OpenGL::PositionShaderProgram *debugProgram,
             OpenGL::PositionShaderProgram *program,
             Player *player,
@@ -58,7 +63,9 @@ public:
         __forward = new OpenGL::VectorDebug(0, 0, 0, 0, 0, 0, glm::vec3(0.0f, 1.0f, 0.0f));
         __target = new OpenGL::VectorDebug(0, 0, 0, 0, 0, 0, glm::vec3(1.0f, 1.0f, 0.0f));
 
-        __mesh = new OpenGL::Mesh(__debugProgram, new OpenGL::Cube());
+        auto cube = new OpenGL::Cube();
+        cube->update();
+        __mesh = new OpenGL::Mesh(__program, cube);
         __callback = new RaycastCallback(__mesh);
     }
 
@@ -89,22 +96,22 @@ public:
 
     void onMouseDown(Engine::Input::MouseButton key) override {};
 
-    void updateData (){
+    void updateData(){
 
         float x = (2.0f * __x) / __width - 1.0f;
         float y = 1.0f - (2.0f * __y) / __height;
         float z = 1.0f;
 
-        glm::vec3 ray_nds = glm::vec3(x, y, z);
+        glm::vec3 ray_nds =  glm::vec3(x, y, z);
         glm::vec4 ray_clip = glm::vec4(ray_nds.x, ray_nds.y, -1.0, 1.0);
-        glm::vec4 ray_eye = inverse(__camera->getProjectionMatrix(__width, __height)) * ray_clip;
+        glm::vec4 ray_eye =  glm::inverse(__camera->getProjectionMatrix(__width, __height)) * ray_clip;
         ray_eye = glm::vec4(ray_eye.x, ray_eye.y, -1.0, 0.0);
-        glm::vec3 ray_wor = (inverse(__camera->getViewMatrix()) * ray_eye);
+        glm::vec3 ray_wor = glm::inverse(__camera->getViewMatrix()) * ray_eye;
 
         ray_wor = glm::normalize(ray_wor);
 
         auto f = 10.0f * __camera->getForwardVector();
-        auto c = __camera->getCenter();
+
         auto r = 10.0f * __camera->getRightVector();
         auto u = 10.0f * __camera->getUpVector();
         auto o = y * u / 10.0f + x * r / 10.0f;
@@ -130,5 +137,6 @@ public:
             log->info("ray doesn't intersect any object");
             __map->getIntersectionPoint(ray);
         }
+
     }
 };

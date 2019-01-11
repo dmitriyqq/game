@@ -140,7 +140,7 @@ namespace Glfw{
             __kbSubscribers.push_back(subscriber);
         }
 
-        bool isKeyPressed(Engine::Input::Key key) override {
+        bool isKeyPressed(Engine::Input::Key key) const override {
             int glfwKey = keyMap.map(key);
             return glfwGetKey(__window, glfwKey) == GLFW_PRESS;
         }

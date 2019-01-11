@@ -13,17 +13,24 @@
 #include <glm/glm.hpp>
 #include <spdlog/spdlog.h>
 #include <reactphysics3d.h>
+#include <nanogui/nanogui.h>
 
 class StarsFactory;
 class PlanetsFactory;
 class Player;
 
 class Entity : public Engine::IEntity {
-
     Player* __player = nullptr;
 protected:
     void setPlayer(Player* player){ __player = player;}
 public:
+    float health;
+    float armor;
+
+    enum class Type {
+        ENTITY, PLANET, SUN, ASTEROID, UNIT, GALAXY
+    };
+
     Entity(Player *player = nullptr): __player(player) {}
 
     Player* getPlayer() const { return __player;}
@@ -36,5 +43,17 @@ public:
     virtual void draw() const {
         auto log = spdlog::get("log");
         log->error("Calling draw on headless entity. This is strange");
+    }
+
+    virtual nanogui::Window* getWindow() {
+        return new
+    }
+
+    virtual Type getType() {
+        return Type::ENTITY;
+    }
+
+    virtual const char* getName() {
+        return "Entity";
     }
 };

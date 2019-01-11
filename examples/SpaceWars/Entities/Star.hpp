@@ -16,5 +16,13 @@ public:
     float radius): GlobeBody(model, program, world, position, radius) {
 
     }
+
+    virtual Type getType() {
+        return __type;
+    }
+
+    virtual const char* getName() {
+        return "Entity";
+    }
 };
 

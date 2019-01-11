@@ -9,8 +9,8 @@
 #include <vector>
 #include <glad/glad.h>
 
-
 namespace OpenGL {
+
     class VectorDebug : public IGeometryProvider<ColorVertex>, public VertexVAO<ColorVertex> {
         float __x1, __y1, __z1;
         float __x2, __y2, __z2;
@@ -20,7 +20,7 @@ namespace OpenGL {
             __x1(x1), __y1(y1), __z1(z1),  __color(color),
             __x2(x2), __y2(y2), __z2(z2),  VertexVAO<ColorVertex>(this, GL_LINES) {}
 
-        virtual std::vector<ColorVertex> getData() const override {
+        std::vector<ColorVertex> getData() const override {
             std::vector <ColorVertex> vec;
             vec.emplace_back(glm::vec3(__x1, __y1, __z1), __color);
             vec.emplace_back(glm::vec3(__x2, __y2, __z2), __color);
@@ -34,10 +34,6 @@ namespace OpenGL {
             __x2 = x2;
             __y2 = y2;
             __z2 = z2;
-            VertexVAO::update();
-        }
-
-        void update() {
             VertexVAO::update();
         }
     };

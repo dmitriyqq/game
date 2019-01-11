@@ -8,14 +8,14 @@
 #include "../StarsFactory.hpp"
 #include "Planet.hpp"
 
-class Galaxy: Entity{
+class Galaxy: public Entity{
     static constexpr int NUM_PLANETS = 5;
 
     StarsFactory *__starFactory = nullptr;
     PlanetsFactory *__planetsFactory = nullptr;
 
     Star *__star = nullptr;
-    std::vector <Planet *> __planet;
+    std::vector <Planet *> __planets;
 
 public:
     Galaxy(StarsFactory* starsFactory,
@@ -23,16 +23,29 @@ public:
            Player* player,
            glm::vec3 position):
         __starFactory(starsFactory),
-        __planetsFactory(planetsFactory,
-        Entity(player)
-   {
-        __star = __starFactory->createStar();
-        for(int i = 0; i < NUM_PLANETS; i++) {
-            rp3d::RigidBody *body = world.createRigidBody(rp3d::Transform::identity());
-            // __planets[i] = new Planet(model, program, body, );
+        __planetsFactory(planetsFactory), Entity(player) {
+        __star = __starFactory->createStar(player, position);
+
+        float step = 8.0f;
+        float offset = __star->getRadius() + 2.0f * step;
+        for (int i = 0; i < NUM_PLANETS; i++) {
+            auto planet = __planetsFactory->createPlanet(player, position, offset);
+            offset += 4.0f * planet->getRadius() + step;
+            __planets.push_back(planet);
         }
     }
-    // Galaxy(glm::vec3 position): Planet() {
-    //     // __sun = new Sun()
-    // }
+
+    void draw() const override {
+        __star->draw();
+
+        for(auto &&planet: __planets) {
+            planet->draw();
+        }
+    }
+
+    void update(float delta_time) override {
+        for(auto &&planet: __planets) {
+            planet->update(delta_time);
+        }
+    }
 };

@@ -10,11 +10,11 @@ class RaycastCallback : public rp3d::RaycastCallback, public IDrawable{
     bool __hit = false;
     virtual rp3d::decimal notifyRaycastHit(const rp3d::RaycastInfo& info) override {
 
-        std::cout << "Hit point : " <<
-                  info.worldPoint.x <<
-                  info.worldPoint.y <<
-                  info.worldPoint.z <<
-                  std::endl;
+        auto logger = spdlog::get("log");
+        logger->info("Hit point : {} {} {}", info.worldPoint.x, info.worldPoint.y, info.worldPoint.z);
+
+        auto hit = info.body->getUserData();
+
         Entity *e = static_cast<Entity*> (info.body->getUserData());
         __mesh->setPosition(info.worldPoint.x, info.worldPoint.y, info.worldPoint.z);
         __hit = true;
@@ -32,7 +32,7 @@ public:
         return __hit;
     }
 
-    bool refresh() {
+    void refresh() {
       __hit = false;
     }
 };

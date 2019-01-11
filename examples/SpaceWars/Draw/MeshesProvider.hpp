@@ -14,8 +14,8 @@ public:
         __program->loadShaders("./sharedAssets/shaders/useLightShader.vert",
          "./sharedAssets/shaders/useLightShader.frag");
 
-        __planet_model = new OpenGL::Model("./sharedAssets/planets/planet.obj");
-        __viper_model = new OpenGL::Model("./sharedAssets/models/viper/viper.obj");
+//        __planet_model = new OpenGL::Model("./sharedAssets/planets/planet.obj");
+//        __viper_model = new OpenGL::Model("./sharedAssets/models/viper/viper.obj");
     }
 
     OpenGL::Mesh* getPlanetMesh(float min_radius, float max_radius) {

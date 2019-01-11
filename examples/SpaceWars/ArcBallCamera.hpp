@@ -8,7 +8,7 @@
 
 class ArcBallCamera : public OpenGL::FpsLikeCamera, public ArcBallPositionProvider{
     bool __mousePressed = false;
-    float __speed = 0.05f;
+    float __speed = 10.5f;
 
     public:
     glm::vec3 up = glm::vec3(0, 1, 0);
@@ -27,7 +27,7 @@ class ArcBallCamera : public OpenGL::FpsLikeCamera, public ArcBallPositionProvid
 
         void setZoom(float zoom) { __orbitRadius = zoom; }
 
-        void update(float delta_time, Engine::Input::IKeyboardState &keyboard) override {
+        void update(float delta_time, const Engine::Input::IKeyboardState &keyboard) override {
 
             if(keyboard.isKeyPressed(Engine::Input::Key::DOWN)){
                 auto f = getForwardVector();

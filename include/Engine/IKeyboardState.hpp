@@ -6,7 +6,7 @@ namespace Engine{
     namespace Input {
         class IKeyboardState {
         public:
-            virtual bool isKeyPressed(Key key) = 0;
+            virtual bool isKeyPressed(Key key) const = 0;
         };
     }
 }

@@ -6,11 +6,9 @@
 #define GAMEENGINE_UNITSFACTORY_HPP
 
 
-
 class UnitsFactory {
 
 };
-
 
 
 #endif //GAMEENGINE_UNITSFACTORY_HPP

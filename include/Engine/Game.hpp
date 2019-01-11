@@ -28,33 +28,35 @@ namespace Engine {
             while(__playing) {
 
                 auto newTime = std::chrono::system_clock::now();
-                float delta = std::chrono::duration_cast<std::chrono::milliseconds>
-                        (newTime - __last_time).count() / 1000.0f;
-
+                float delta = std::chrono::duration_cast<std::chrono::nanoseconds>
+                        (newTime - __last_time).count() / 1e9f;
+                __last_time = newTime;
                 __logic_deltatime += delta;
                 __render_deltatime += delta;
 
-            //    if (__logic_deltatime > __desired_logic_deltatime) {
-                //    __logic_deltatime = 0;
+                __delta_time = __render_deltatime;
+
+                if (__logic_deltatime > __desired_logic_deltatime) {
+                    __logic_deltatime = 0;
                     update();
                     __ticks++;
-            //    }
+                }
 
-            //    if (__render_deltatime > __desired_render_deltatime) {
-                //    __render_deltatime = 0;
+                if (__render_deltatime > __desired_render_deltatime) {
+                    __render_deltatime = 0;
                     draw();
-            //    }
+                }
 
-                __last_time = newTime;
-                __delta_time = __render_deltatime;
             }
         }
 
     public:
         virtual  ~IGame() = default;
+
         virtual void start() {
             std::cout<<"Starting game"<<std::endl;
             __last_time = std::chrono::system_clock::now();
+            std::this_thread::sleep_for(std::chrono::milliseconds(10));
             __playing = true;
             gameLoop();
         }

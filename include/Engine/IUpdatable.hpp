@@ -13,7 +13,7 @@ namespace Engine {
 
         class IUpdatableKeytable {
         public:
-            virtual void update(float delta_time, IKeyboardState &state) = 0;
+            virtual void update(float delta_time, const IKeyboardState &state) = 0;
         };
 
     }

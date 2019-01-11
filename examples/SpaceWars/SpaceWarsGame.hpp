@@ -8,6 +8,7 @@
 #include <Renders/OpenGL/Model.hpp>
 #include <Engine/IMouseSubscriber.hpp>
 #include <Engine/ISelectable.hpp>
+#include <Engine/IUpdatable.hpp>
 #include <Renders/OpenGL/Window.hpp>
 
 #include <Engine/Input.hpp>
@@ -24,105 +25,136 @@
 
 #include "ObjectSelector.hpp"
 #include "Entities/DynamicEntity.hpp"
+#include "Players/HumanPlayer.hpp"
+#include "Players/GodPlayer.hpp"
+#include "Players/ComputerPlayer.hpp"
 
 class ExitGameESC: public Engine::Input::IKeyboardSubscriber {
     public: 
     void processKey(Engine::Input::Key key) override {
         if (key == Engine::Input::Key::EXIT)
-            throw "exit";
+            exit(96);
     }
 };
 
 class SpaceWarsGame: public Engine::IGame {
     Glfw::Window *__window = nullptr;
-    OpenGL::PositionShaderProgram *program = nullptr;
-    OpenGL::PositionShaderProgram *debugProgram = nullptr;
+    OpenGL::PositionShaderProgram *__program = nullptr;
+    OpenGL::PositionShaderProgram *__debugProgram = nullptr;
     OpenGL::ICamera *__currentCamera = nullptr;
 
-
-    OpenGL::Model *__viperModel;
-    OpenGL::Model *__asteroidModel;
-
-    nanogui::FormHelper *gui;
-    nanogui::Screen *screen;
-
+    nanogui::Screen *__screen;
     ObjectSelector *__selector;
+    DebugCamera *__debugCam;
+
+    std::vector<Engine::Input::IUpdatableKeytable *> __systems;
 
     std::vector<Player *> __players;
-
+    Player *__selectedPlayer = nullptr;
     Map *__map = nullptr;
-    DebugCamera *__debugCam;
+
     rp3d::DynamicsWorld *__world;
 
-    Star *__stars[1000];
-    OpenGL::Model *__pmodels[10];
-    DynamicEntity *__entity[1000];
-    int __num_entities = 0;
-    int x = 10000;
+    // do not forget to dispose it...
+    std::vector <OpenGL::Model*> __models;
 
-
-    void initPrograms() {
-        debugProgram = new OpenGL::PositionShaderProgram();
-        debugProgram->loadShaders("./sharedAssets/shaders/debugShader.vert",
-                             "./sharedAssets/shaders/debugShader.frag");
-        program = new OpenGL::PositionShaderProgram();
-        program->loadShaders("./sharedAssets/shaders/useLightShader.vert",
-         "./sharedAssets/shaders/useLightShader.frag");
+    void updateSystems(float delta_time) {
+        for(auto &&system:__systems) {
+            system->update(delta_time, *__window->getKeyBoardState());
+        }
     }
 
-public:
     void initUI() {
         using namespace nanogui;
-        nanogui::init();
-        screen = __window->getScreen();
+        __screen = __window->getScreen();
 //        gui = new FormHelper(screen);
 //        ref<Window> window = gui->addWindow(Eigen::Vector2i(10, 10), "Object creator");
 //        gui->addVariable("Resources", x);
 //        gui->addButton("Create object", [&](){ addObject(); });
 
-        __debugCam = new DebugCamera(screen, __currentCamera);
-
-        screen->setVisible(true);
-        screen->performLayout();
+        __debugCam = new DebugCamera(__screen, __currentCamera);
+//        __debugCam->getWindow();
+        __screen->setVisible(true);
+        __screen->performLayout();
 
 //        window->center();
     }
+
+    void initPrograms() {
+        __debugProgram = new OpenGL::PositionShaderProgram();
+        __debugProgram->loadShaders("./sharedAssets/shaders/debugShader.vert",
+                                  "./sharedAssets/shaders/debugShader.frag");
+        __debugProgram->setModel(glm::mat4(1));
+
+        __program = new OpenGL::PositionShaderProgram();
+        __program->loadShaders("./sharedAssets/shaders/useLightShader.vert",
+                             "./sharedAssets/shaders/useLightShader.frag");
+    }
+
+    void createMap() {
+        StarsFactory *starsFactory;
+        PlanetsFactory *planetsFactory;
+        // stars factory
+        {
+            auto starModel = new OpenGL::Model("./sharedAssets/models/sol/sol.obj", __program);
+            __models.push_back(starModel);
+            starsFactory = new StarsFactory(starModel, __world, __program);
+        }
+        // planets factory
+        {
+            auto planetModel = new OpenGL::Model("./sharedAssets/models/planet/planet.obj", __program);
+            __models.push_back(planetModel);
+            planetsFactory = new PlanetsFactory(planetModel, __world, __program);
+        }
+
+        __map = new Map(__program, __debugProgram, starsFactory, planetsFactory);
+        __map->constructGalaxy(glm::vec3(0, 0, 0), __players[1]);
+    }
+
+    void createPlayers() {
+        __players.push_back(new GodPlayer("God Player"));
+        __players.push_back(new HumanPlayer("Human Player"));
+        __players.push_back(new ComputerPlayer("Computer Player"));
+
+        __selectedPlayer = __players[1];
+        // units factory
+        {
+
+        }
+        // environments factory
+        {
+
+        }
+
+    }
+
+public:
+    void registerSystem(Engine::Input::IUpdatableKeytable *updatable) {
+        __systems.push_back(updatable);
+    }
+
 
     SpaceWarsGame() : Engine::IGame(), __world(new rp3d::DynamicsWorld(rp3d::Vector3(0, 0, 0))) {
         __window = new Glfw::Window();
         __world->setIsGratityEnabled(false);
 
-        initPrograms();
-        debugProgram->setModel(glm::mat4(1));
-
-
-        __players.emplace_back(new );
-
-        __planetModel = new OpenGL::Model("./sharedAssets/planets/planet.obj", program);
-        __viperModel = new OpenGL::Model("./sharedAssets/models/viper/viper.obj", program);
-
-        __pmodels[1] = new OpenGL::Model("./sharedAssets/models/moon/moon.obj", program);
-        __pmodels[2] = new OpenGL::Model("./sharedAssets/models/earth/earth.obj", program);
-        __pmodels[0] = new OpenGL::Model("./sharedAssets/models/planet/planet.obj", program);
-        __pmodels[3] = new OpenGL::Model("./sharedAssets/models/sol/sol.obj", program);
-        __pmodels[4] = new OpenGL::Model("./sharedAssets/models/venus/venus.obj", program);
-        __asteroidModel = new OpenGL::Model("./sharedAssets/models/asteroid/asteroid.obj", program);
-
-
         auto arcBallCamera = new ArcBallCamera();
         arcBallCamera->setZoom(40.0f);
         __window->getMouseInput()->addSubscriber(arcBallCamera);
+        registerSystem(arcBallCamera);
 
         __currentCamera = arcBallCamera;
 
+        initPrograms();
+        createPlayers();
+        createMap();
         initUI();
 
         auto width = __window->getWidth();
         auto height = __window->getHeight();
 
-        __map = new Map(__currentCamera, debugProgram);
-        __selector = new ObjectSelector(__map, true, __world, __currentCamera, debugProgram, program, width, height);
-        OpenGL::Graphics2D::get()->setScreenSize(width, height);
+        __selector = new ObjectSelector(__map, true, __world, __currentCamera, __debugProgram, __program, __selectedPlayer, width, height);
+
         __window->getMouseInput()->addSubscriber(__selector);
         __window->getKeyboardDirectInput()->addSubscriber(new ExitGameESC());
         __window->getKeyboardDirectInput()->addSubscriber(__selector);
@@ -131,13 +163,11 @@ public:
     ~SpaceWarsGame() = default;
 protected:
     void update() override {
-        arcBall->update(__delta_time, *__window->getKeyBoardState());
-
         if(__delta_time > 0.00001f){
-            for(int i = 0; i < __num_entities; i++) {
-                __entity[i]->update(__delta_time);
-            }
-            __world.update(__delta_time);
+            updateSystems(__delta_time);
+
+            __map->update(__delta_time);
+            __world->update(__delta_time);
         }
 
         __debugCam->update();
@@ -145,31 +175,19 @@ protected:
         auto width = __window->getWidth();
         auto height = __window->getHeight();
 
-        program->setCamera(__currentCamera, width, height);
-        debugProgram->setCamera(__currentCamera, width, height);
+        __program->setCamera(__currentCamera, width, height);
+        __debugProgram->setCamera(__currentCamera, width, height);
 
     }
 
     void draw() const override {
         __window->startDisplay();
-        
-        program->use();
 
-
-
-        for(int i = 0; i < 10; i++) {
-            __stars[i]->draw();
-        }
-
-        for(int i = 0; i < __num_entities; i++) {
-            __entity[i]->draw();
-        }
-
-
+        __map->draw();
         __selector->draw();
 
-        screen->drawContents();
-        screen->drawWidgets();
+        __screen->drawContents();
+        __screen->drawWidgets();
 
         __window->endDisplay();
     }
