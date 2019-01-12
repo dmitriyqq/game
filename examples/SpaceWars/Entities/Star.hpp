@@ -17,12 +17,12 @@ public:
 
     }
 
-    virtual Type getType() {
-        return __type;
+    Type getType() override {
+        return Entity::Type::STAR;
     }
 
-    virtual const char* getName() {
-        return "Entity";
+    const char* getName() override {
+        return "Star";
     }
 };
 

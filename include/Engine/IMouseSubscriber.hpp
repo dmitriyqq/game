@@ -7,11 +7,11 @@ namespace Engine{
 
         class IMouseSubscriber{
         public:
-            virtual void update(double x, double y, double dx, double dy) = 0;
+            virtual void onMouseMove(float x, float y, float dx, float dy) = 0;
 
-            virtual void onMouseUp(MouseButton key) {};
+            virtual void onMouseUp(MouseButton key, float x, float y, int mods) {};
 
-            virtual void onMouseDown(MouseButton key) {};
+            virtual void onMouseDown(MouseButton key, float x, float y, int mods) {};
         };
     }
 

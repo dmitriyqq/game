@@ -17,9 +17,6 @@ public:
         __x = new nanogui::Label(this, "");
         __y = new nanogui::Label(this, "");
         __z = new nanogui::Label(this, "");
-        addChild(__x);
-        addChild(__y);
-        addChild(__z);
     }
 
     void setValue(glm::vec3 v) {
@@ -30,9 +27,6 @@ public:
         __x->setCaption("x:" + std::to_string(x));
         __y->setCaption("y:" + std::to_string(y));
         __z->setCaption("z:" + std::to_string(z));
-
-//        setWidth(100.0f);
-//        setHeight(50.0f);
     }
 };
 

@@ -35,7 +35,7 @@ class ObjectSelector: public Engine::Input::IMouseSubscriber, public Engine::Inp
     OpenGL::VectorDebug *__target = nullptr;
 
     glm::vec3 c = glm::vec3(0.0f, 0.0f, 0.0f);
-
+    std::function<void(Entity *entity)> __listener;
 public:
     ObjectSelector(
             Map *map,
@@ -63,9 +63,10 @@ public:
         __forward = new OpenGL::VectorDebug(0, 0, 0, 0, 0, 0, glm::vec3(0.0f, 1.0f, 0.0f));
         __target = new OpenGL::VectorDebug(0, 0, 0, 0, 0, 0, glm::vec3(1.0f, 1.0f, 0.0f));
 
-        auto cube = new OpenGL::Cube();
-        cube->update();
-        __mesh = new OpenGL::Mesh(__program, cube);
+        glEnable(GL_DEPTH_TEST);
+        auto starModel = new OpenGL::Model("./sharedAssets/models/sol/sol.obj", __program);
+        __mesh = new OpenGL::Mesh(__program, starModel);
+        __mesh->setScale(0.2, 0.2f, 0.2f);
         __callback = new RaycastCallback(__mesh);
     }
 
@@ -86,35 +87,22 @@ public:
         glEnable(GL_DEPTH_TEST);
     }
 
-    void update(double x, double y, double dx, double dy) override {
-        __x = static_cast<float>(x);
-        __y = static_cast<float>(y);
+    void onMouseMove(float x, float y, float dx, float dy) override {
+        __x = x;
+        __y = y;
         updateData();
     }
 
-    void onMouseUp(Engine::Input::MouseButton key) override {};
+    void onMouseUp(Engine::Input::MouseButton key, float x, float y, int mods) override {};
 
-    void onMouseDown(Engine::Input::MouseButton key) override {};
+    void onMouseDown(Engine::Input::MouseButton key, float x, float y, int mods) override {};
 
     void updateData(){
-
-        float x = (2.0f * __x) / __width - 1.0f;
-        float y = 1.0f - (2.0f * __y) / __height;
-        float z = 1.0f;
-
-        glm::vec3 ray_nds =  glm::vec3(x, y, z);
-        glm::vec4 ray_clip = glm::vec4(ray_nds.x, ray_nds.y, -1.0, 1.0);
-        glm::vec4 ray_eye =  glm::inverse(__camera->getProjectionMatrix(__width, __height)) * ray_clip;
-        ray_eye = glm::vec4(ray_eye.x, ray_eye.y, -1.0, 0.0);
-        glm::vec3 ray_wor = glm::inverse(__camera->getViewMatrix()) * ray_eye;
-
-        ray_wor = glm::normalize(ray_wor);
+        auto ray = __camera->castRay(__x, __y, __width, __height);
 
         auto f = 10.0f * __camera->getForwardVector();
-
         auto r = 10.0f * __camera->getRightVector();
         auto u = 10.0f * __camera->getUpVector();
-        auto o = y * u / 10.0f + x * r / 10.0f;
 
         auto p = __camera->getPosition();
 
@@ -123,11 +111,7 @@ public:
         __right->update(c.x + r.x, c.y + r.y, c.z + r.z, c.x, c.y, c.z);
         __forward->update(c.x + f.x, c.y + f.y, c.z + f.z, c.x, c.y, c.z);
 
-        auto ff = __camera->getForwardVector();
-        rp3d::Vector3 start(p.x + o.x, p.y + o.y, p.z + o.z);
-        rp3d::Vector3 end(p.x + o.x + 1000.0f * ray_wor.x, p.y + o.y + 1000.0f * ray_wor.y, p.z + o.z + 1000.0f * ray_wor.z);
-        rp3d::Ray ray(start, end);
-        __target->update(start.x, start.y , start.z , end.x, end.y, end.z);
+        __target->update(ray.point1.x, ray.point1.y , ray.point1.z , ray.point2.x, ray.point2.y, ray.point2.z);
 
         __callback->refresh();
         __world->raycast(ray, __callback);
@@ -135,8 +119,17 @@ public:
         if (!__callback->wasHit()) {
             auto log = spdlog::get("log");
             log->info("ray doesn't intersect any object");
-            __map->getIntersectionPoint(ray);
+            auto point = __map->getIntersectionPoint(ray);
+            if (point.first) {
+                __mesh->setPosition(point.second.x, 0, point.second.z);
+            }
+        } else {
+            __listener(__callback->getSelectedEntity());
         }
 
+    }
+
+    void setListener(std::function<void(Entity *entity)> func) {
+        __listener = func;
     }
 };

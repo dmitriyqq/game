@@ -14,13 +14,16 @@
 #include <spdlog/spdlog.h>
 #include <reactphysics3d.h>
 #include <nanogui/nanogui.h>
+#include "../UI/EntityWindow.hpp"
+#include "IPlayersEntity.hpp"
 
 class StarsFactory;
 class PlanetsFactory;
 class Player;
 
-class Entity : public Engine::IEntity {
+class Entity : public Engine::IEntity, public IPlayersEntity {
     Player* __player = nullptr;
+    nanogui::Window *__window = nullptr;
 protected:
     void setPlayer(Player* player){ __player = player;}
 public:
@@ -28,7 +31,7 @@ public:
     float armor;
 
     enum class Type {
-        ENTITY, PLANET, SUN, ASTEROID, UNIT, GALAXY
+        ENTITY, PLANET, STAR, ASTEROID, UNIT, GALAXY
     };
 
     Entity(Player *player = nullptr): __player(player) {}
@@ -46,7 +49,11 @@ public:
     }
 
     virtual nanogui::Window* getWindow() {
-        return new
+        if (__window == nullptr) {
+            __window = new EntityWindow(nullptr, getName(), getPlayer()->getName(), health, armor);
+        }
+
+        return __window;
     }
 
     virtual Type getType() {

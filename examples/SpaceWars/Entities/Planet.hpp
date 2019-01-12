@@ -18,7 +18,7 @@ class Planet : public ArcBallPositionProvider, public GlobeBody {
     friend class PlanetsFactory;
 
     float __orbitRadius;
-    float __speed = 0.01f;
+    float __speed = 0.001f;
     float __theta = 0.0f;
 
     void updatePosition() {
@@ -39,15 +39,23 @@ class Planet : public ArcBallPositionProvider, public GlobeBody {
 
     void update(float delta_time) {
         __phi += __speed * delta_time;
-        __theta += __speed * delta_time;
-        if (__phi >= 2 * 3.1451) {
+        __theta += 2 * __speed * delta_time;
+        if (__phi >= 2 * 3.1451f) {
             __phi = 0.0f;
         }
 
-        if (__theta >= 3.14f) {
+        if (__theta >= 2 * 3.1451f) {
             __theta = 0.0f;
         }
         updatePosition();
+    }
+
+    Type getType() override {
+        return Entity::Type::PLANET;
+    }
+
+    const char* getName() override {
+        return "Planet";
     }
 
 };

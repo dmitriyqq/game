@@ -7,6 +7,9 @@
 
 class RaycastCallback : public rp3d::RaycastCallback, public IDrawable{
     OpenGL::Mesh *__mesh = nullptr;
+    nanogui::Window *__window = nullptr;
+    Entity *__selectedEntity = nullptr;
+
     bool __hit = false;
     virtual rp3d::decimal notifyRaycastHit(const rp3d::RaycastInfo& info) override {
 
@@ -15,7 +18,7 @@ class RaycastCallback : public rp3d::RaycastCallback, public IDrawable{
 
         auto hit = info.body->getUserData();
 
-        Entity *e = static_cast<Entity*> (info.body->getUserData());
+        __selectedEntity = static_cast<Entity*> (info.body->getUserData());
         __mesh->setPosition(info.worldPoint.x, info.worldPoint.y, info.worldPoint.z);
         __hit = true;
         return rp3d::decimal(0.0);
@@ -34,5 +37,9 @@ public:
 
     void refresh() {
       __hit = false;
+    }
+
+    Entity *getSelectedEntity() {
+        return __selectedEntity;
     }
 };

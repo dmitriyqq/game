@@ -31,7 +31,7 @@ class FpsLikeCamera: public Camera, public Engine::Input::IUpdatableKeytable, pu
 
         }
 
-        void update(double x, double y, double dx, double dy) override {
+        void onMouseMove(float x, float y, float dx, float dy) override {
             setView(-dx, dy, true);
         }
     };

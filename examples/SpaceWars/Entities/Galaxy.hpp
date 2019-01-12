@@ -26,8 +26,8 @@ public:
         __planetsFactory(planetsFactory), Entity(player) {
         __star = __starFactory->createStar(player, position);
 
-        float step = 8.0f;
-        float offset = __star->getRadius() + 2.0f * step;
+        float step = 16.0f;
+        float offset = __star->getRadius() + 3.0f * step;
         for (int i = 0; i < NUM_PLANETS; i++) {
             auto planet = __planetsFactory->createPlanet(player, position, offset);
             offset += 4.0f * planet->getRadius() + step;

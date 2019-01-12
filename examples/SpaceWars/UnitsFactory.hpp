@@ -6,8 +6,18 @@
 #define GAMEENGINE_UNITSFACTORY_HPP
 
 
-class UnitsFactory {
+#include "Entities/Unit.hpp"
 
+class UnitsFactory {
+public:
+    std::vector <Unit *> __units;
+    UnitsFactory() {
+
+    }
+
+    std::vector <Unit *> getAvailableUnits() {
+
+    }
 };
 
 

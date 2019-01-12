@@ -3,10 +3,10 @@
 #include "DrawableEntity.hpp"
 
 class StaticEntity: public DrawableEntity {
-    rp3d::BoxShape *__shape = nullptr;
-    rp3d::ProxyShape *__proxyShape = nullptr;
     glm::vec3 __scale;
 
+protected:
+    rp3d::ProxyShape *__proxyShape = nullptr;
     virtual void setBoundingBox() {
         auto box = __drawable->getBox();
         auto t = box.second - box.first;
@@ -16,11 +16,10 @@ class StaticEntity: public DrawableEntity {
         t.z *= c.z;
 
         const rp3d::Vector3 halfExtents(t.x, t.y, t.z);
-        __shape = new rp3d::BoxShape(halfExtents);
+        auto shape = new rp3d::BoxShape(halfExtents);
         rp3d::decimal mass = rp3d::decimal(4.0);
-        __proxyShape = __body->addCollisionShape(__shape, rp3d::Transform::identity(), mass);
+        __proxyShape = __body->addCollisionShape(shape, rp3d::Transform::identity(), mass);
     }
-protected:
     rp3d::RigidBody *__body = nullptr;
 public:
     StaticEntity(OpenGL::PositionShaderProgram *program,
@@ -37,7 +36,7 @@ public:
 
     void setRotation(float w) {
         auto t = __body->getTransform();
-        t.setOrientation(rp3d::Quaternion(0.0f, w, 0.0f, 1.0f));
+        t.setOrientation(rp3d::Quaternion::fromEulerAngles(0.0f, w, 0.0f));
         __body->setTransform(t);
     }
 

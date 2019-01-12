@@ -7,6 +7,7 @@ namespace Glfw {
 
     class KeyMap {
         using KeyType = Engine::Input::Key;
+        using SpecialKeyType = Engine::Input::SpecialKey;
     public:
         Engine::Input::Key map(int glfw_key) const {
             switch (glfw_key) {
@@ -52,6 +53,15 @@ namespace Glfw {
                     return GLFW_KEY_ESCAPE;
                 default:
                     return GLFW_KEY_ESCAPE;
+            }
+        }
+
+        static bool isSpecialKeyPressed(unsigned int mods, Engine::Input::SpecialKey key) {
+            switch (key) {
+                case SpecialKeyType::SHIFT: return (mods & GLFW_MOD_SHIFT) != 0;
+                case SpecialKeyType::CONTROL: return (mods & GLFW_MOD_CONTROL) != 0;
+                case SpecialKeyType::ALT: return (mods & GLFW_MOD_ALT) != 0;
+                case SpecialKeyType::SUPER: return (mods & GLFW_MOD_SUPER) != 0;
             }
         }
     };

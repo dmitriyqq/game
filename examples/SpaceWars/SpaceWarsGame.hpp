@@ -28,6 +28,7 @@
 #include "Players/HumanPlayer.hpp"
 #include "Players/GodPlayer.hpp"
 #include "Players/ComputerPlayer.hpp"
+#include "MapSelector.hpp"
 
 class ExitGameESC: public Engine::Input::IKeyboardSubscriber {
     public: 
@@ -43,9 +44,11 @@ class SpaceWarsGame: public Engine::IGame {
     OpenGL::PositionShaderProgram *__debugProgram = nullptr;
     OpenGL::ICamera *__currentCamera = nullptr;
 
-    nanogui::Screen *__screen;
-    ObjectSelector *__selector;
-    DebugCamera *__debugCam;
+    nanogui::Screen *__screen = nullptr;
+    ObjectSelector *__objectSelector = nullptr;
+    MapSelector *__mapSelector = nullptr;
+    DebugCamera *__debugCam = nullptr;
+    nanogui::Window *__selectedEntityWindow = nullptr;
 
     std::vector<Engine::Input::IUpdatableKeytable *> __systems;
 
@@ -153,11 +156,28 @@ public:
         auto width = __window->getWidth();
         auto height = __window->getHeight();
 
-        __selector = new ObjectSelector(__map, true, __world, __currentCamera, __debugProgram, __program, __selectedPlayer, width, height);
+        __mapSelector = new MapSelector(__map, __players[1], __debugProgram, __currentCamera, width, height);
+        __objectSelector = new ObjectSelector(__map, true, __world, __currentCamera, __debugProgram, __program, __selectedPlayer, width, height);
+        __objectSelector->setListener([this](Entity *e){
+            if (__selectedEntityWindow != e->getWindow()) {
+                if (__selectedEntityWindow != nullptr) {
+                    __screen->removeChild(__selectedEntityWindow);
+                }
+                __selectedEntityWindow = e->getWindow();
 
-        __window->getMouseInput()->addSubscriber(__selector);
+                // HACK, USE REFS
+                __selectedEntityWindow->incRef();
+
+                __screen->addChild(__selectedEntityWindow);
+                __selectedEntityWindow->requestFocus();
+                __selectedEntityWindow->center();
+            }
+        });
+
+        __window->getMouseInput()->addSubscriber(__objectSelector);
+        __window->getMouseInput()->addSubscriber(__mapSelector);
         __window->getKeyboardDirectInput()->addSubscriber(new ExitGameESC());
-        __window->getKeyboardDirectInput()->addSubscriber(__selector);
+        __window->getKeyboardDirectInput()->addSubscriber(__objectSelector);
     }
 
     ~SpaceWarsGame() = default;
@@ -184,7 +204,8 @@ protected:
         __window->startDisplay();
 
         __map->draw();
-        __selector->draw();
+        __objectSelector->draw();
+        __mapSelector->draw();
 
         __screen->drawContents();
         __screen->drawWidgets();

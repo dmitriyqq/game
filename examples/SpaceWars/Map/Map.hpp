@@ -22,11 +22,15 @@ class Map : IDrawable, Engine::Input::IUpdatable {
     OpenGL::GridDebug *__gridDebug = nullptr;
 
     glm::vec3 planeN = glm::vec3(0.0f, 1.0f, 0.0f);
-    glm::vec3 planeP = glm::vec3(0.0f, 0.0f, 0.0f);
+
 
     StarsFactory *__starsFactory = nullptr;
     PlanetsFactory *__planetsFactory = nullptr;
     std::vector<Galaxy*> __galaxies;
+
+    rp3d::BoxShape *__shape;
+    rp3d::CollisionBody *__body;
+    rp3d::CollisionWorld *__world;
 
 public:
 
@@ -39,6 +43,12 @@ public:
         __starsFactory(starsFactory),
         __planetsFactory(planetsFactory),
         __size(size) {
+
+        __world = new rp3d::CollisionWorld();
+        __shape = new rp3d::BoxShape(rp3d::Vector3(size / 2.0f, 0.5f, size /2.0f));
+        __body = new rp3d::CollisionBody(rp3d::Transform::identity(), *__world, 1);
+        __body->addCollisionShape(__shape, rp3d::Transform::identity());
+
         __axiesDebug = new OpenGL::AxiesDebug(__size, __size, __size);
         __axiesDebug->update();
 
@@ -71,26 +81,9 @@ public:
     }
 
     std::pair<bool, glm::vec3> getIntersectionPoint(rp3d::Ray ray) {
-        glm::vec3 tmp = planeN * (-1.0f);
-        auto d = glm::dot(planeP, tmp);
-        if (std::abs(d) < 0.0001f) // your favorite epsilon
-        {
-            return {false, glm::vec3()};
-        }
-
-        auto rayP = ray.point1;
-        auto rayD = ray.point2 - ray.point1;
-        float t = -(d + rayP.z * planeN.z + rayP.y * planeN.y + rayP.x * planeN.x)
-                / (rayD.z * planeN.z + rayD.y * planeN.y + rayD.x * planeN.x);
-
-        if (t <= 0) {
-            return {false, glm::vec3()};
-        }
-
-        auto ans = rayP + t * rayD;
-        auto logger = spdlog::get("log");
-        logger->info("ray intersect map at {} {} {}", ans.x, ans.y, ans.z);
-        return {true, glm::vec3(ans.x, ans.y, ans.z)};
+        rp3d::RaycastInfo info;
+        __body->raycast(ray, info);
+        return {true, glm::vec3(info.worldPoint.x, 0, info.worldPoint.z)};
     }
 
     bool enableDebug() {

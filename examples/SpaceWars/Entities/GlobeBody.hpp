@@ -26,10 +26,16 @@ public:
          glm::vec3 position,
          float radius):
             StaticEntity(program, model,
-                         glm::vec3(2.0f * radius, 2.0f * radius, 2.0f * radius)),
+                         glm::vec3(radius, radius, radius)),
             __radius(radius)
     {
         addToWorld(world, position);
+    }
+
+     void setBoundingBox() override {
+        auto shape = new rp3d::SphereShape(__radius);
+       rp3d::decimal mass = rp3d::decimal(4.0);
+        __proxyShape = __body->addCollisionShape(shape, rp3d::Transform::identity(), mass);
     }
 
     void update(float delta_time) {

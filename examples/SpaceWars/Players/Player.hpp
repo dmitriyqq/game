@@ -1,10 +1,9 @@
 #pragma once
 
-#include "../Entities/Planet.hpp"
-#include "../StarsFactory.hpp"
-#include "../Entities/Entity.hpp"
+#include <string>
 
 class Player {
+    class Entity;
     Entity * __selectedObject = nullptr;
 
     std::string __name;
@@ -14,4 +13,5 @@ public:
 
     const std::string& getName() const { return __name; }
 
+    void selectAllEntities(float x1, float y1, float x2, float y2) {}
 };

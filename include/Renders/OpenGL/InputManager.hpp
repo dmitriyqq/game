@@ -28,8 +28,8 @@ namespace Glfw{
 
         nanogui::Screen *__screen;
 
-        double mouseX = 0, mouseY = 0;
-        double deltaX = 0, deltaY = 0;
+        float mouseX = 0, mouseY = 0;
+        float deltaX = 0, deltaY = 0;
 
         void setupCallbacks(){
             glfwSetWindowUserPointer(__window, this);
@@ -38,6 +38,8 @@ namespace Glfw{
             glfwSetKeyCallback(__window, handleKeyboard);
             glfwSetScrollCallback(__window, scrollCallback);
             glfwSetFramebufferSizeCallback(__window, framebufferSizeCallback);
+            glfwSetCharCallback(__window, charCallback);
+            glfwSetDropCallback(__window, dropCallback);
         }
 
         static void charCallback(GLFWwindow *window, unsigned int codepoint){
@@ -60,25 +62,25 @@ namespace Glfw{
             manager->__screen->resizeCallbackEvent(width, height);
         }
 
-        void updateMouse(double newX, double newY){
+        void updateMouse(float newX, float newY){
             deltaX = newX - mouseX;
             deltaY = newY - mouseY;
             mouseX = newX;
             mouseY = newY;
             for(auto &&sub: __mouseSubscribers){
-                sub->update(newX, newY, deltaX, deltaY);
+                sub->onMouseMove(newX, newY, deltaX, deltaY);
             }
         }
 
-        void updateMouseDown(Engine::Input::MouseButton key) {
+        void updateMouseDown(Engine::Input::MouseButton key, int mods) {
             for(auto &&sub: __mouseSubscribers){
-                sub->onMouseDown(key);
+                sub->onMouseDown(key, mouseX, mouseY, mods);
             }
         }
 
-        void updateMouseUp(Engine::Input::MouseButton key) {
+        void updateMouseUp(Engine::Input::MouseButton key, int mods) {
             for(auto &&sub: __mouseSubscribers){
-                sub->onMouseUp(key);
+                sub->onMouseUp(key, mouseX, mouseY, mods);
             }
         }
 
@@ -92,9 +94,9 @@ namespace Glfw{
                 }
 
                 if (action == GLFW_PRESS) {
-                    manager->updateMouseDown(button);
+                    manager->updateMouseDown(button, mods);
                 } else {
-                    manager->updateMouseUp(button);
+                    manager->updateMouseUp(button, mods);
                 }
             }
         }
