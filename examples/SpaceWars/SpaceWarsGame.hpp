@@ -100,14 +100,16 @@ class SpaceWarsGame: public Engine::IGame {
         // stars factory
         {
             auto starModel = new OpenGL::Model("./sharedAssets/models/sol/sol.obj", __program);
+            auto texture = new Texture("./sharedAssets/icons/sun.jpg");
             __models.push_back(starModel);
-            starsFactory = new StarsFactory(starModel, __world, __program);
+            starsFactory = new StarsFactory(starModel, __world, __program, texture);
         }
         // planets factory
         {
             auto planetModel = new OpenGL::Model("./sharedAssets/models/planet/planet.obj", __program);
+            auto texture = new Texture("./sharedAssets/icons/planet.jpg");
             __models.push_back(planetModel);
-            planetsFactory = new PlanetsFactory(planetModel, __world, __program);
+            planetsFactory = new PlanetsFactory(planetModel, __world, __program, texture);
         }
 
         __map = new Map(__program, __debugProgram, starsFactory, planetsFactory);

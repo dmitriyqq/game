@@ -24,6 +24,7 @@ class Player;
 class Entity : public Engine::IEntity, public IPlayersEntity {
     Player* __player = nullptr;
     nanogui::Window *__window = nullptr;
+    Texture *__texture = nullptr;
 protected:
     void setPlayer(Player* player){ __player = player;}
 public:
@@ -43,6 +44,10 @@ public:
         log->error("Calling update on static entity. This is strange");
     };
 
+    void setIcon(Texture *texture) {
+        __texture = texture;
+    }
+
     virtual void draw() const {
         auto log = spdlog::get("log");
         log->error("Calling draw on headless entity. This is strange");
@@ -50,7 +55,7 @@ public:
 
     virtual nanogui::Window* getWindow() {
         if (__window == nullptr) {
-            __window = new EntityWindow(nullptr, getName(), getPlayer()->getName(), health, armor);
+            __window = new EntityWindow(nullptr, getName(), getPlayer()->getName(), health, armor, __texture->getId());
         }
 
         return __window;

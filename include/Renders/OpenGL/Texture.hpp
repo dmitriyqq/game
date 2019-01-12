@@ -6,8 +6,7 @@
 #include <stb_image.hpp>
 #include <iostream>
 
-struct Texture{
-private:
+class Texture{
     unsigned int __id;
     int __width, __height;
     int __numChannels;
