@@ -31,11 +31,11 @@ public:
     };
 
     void onMouseMove(float x, float y, float dx, float dy) override {
-        if (__draw) {
-            auto p = screenToMap(x, y);
-            __x2 = p.first;
-            __y2 = p.second;
+        auto p = screenToMap(x, y);
+        __x2 = p.first;
+        __y2 = p.second;
 
+        if (__draw) {
             updateRect();
         }
     }
@@ -48,12 +48,17 @@ public:
         float dx = std::abs(__x1 - __x2);
         float dy = std::abs(__x2 - __x2);
 
-        if (dx > 0.5f && dy > 0.5f) {
-            __player->selectAllEntities(__x1, __y1, __x2, __y2);
+        if (dx > 3.0f && dy > 3.0f) {
+            if (key == Engine::Input::MouseButton::LEFT) {
+                __player->selectAllEntities(__x1, __y1, __x2, __y2);
+            }
+        } else {
+            if (key == Engine::Input::MouseButton::RIGHT) {
+                __player->moveTo(__x2, __y2);
+            }
         }
-
         __draw = false;
-        __x1 = 0; __x2 = 0; __y1 = 0; __y2 = 0;
+
         updateRect();
 
     };
@@ -62,11 +67,15 @@ public:
         __rect->update(__x1, __y1, __x2, __y2);
     }
 
-    void onMouseDown(Engine::Input::MouseButton key, float x, float y, int mods) override {
-        auto p = screenToMap(x, y);
-        __x1 = p.first;
-        __y1 = p.second;
-        __draw = true;
+    bool onMouseDown(Engine::Input::MouseButton key, float x, float y, int mods) override {
+
+            auto p = screenToMap(x, y);
+            __x2 = __x1 = p.first;
+            __y2 = __y1 = p.second;
+            updateRect();
+            __draw = true;
+
+        return false;
     };
 
     void draw() const override {
@@ -76,4 +85,7 @@ public:
         }
     }
 
+    glm::vec3 getSelectedPoint() {
+        return glm::vec3(__x2, 0.0f, __y2);
+    }
 };

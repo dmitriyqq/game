@@ -15,6 +15,8 @@ class DrawableEntity: public Entity {
 protected:
     OpenGL::IBoundingBoxDrawable *__drawable = nullptr;
     OpenGL::PositionShaderProgram *__program = nullptr;
+
+
 public:
     DrawableEntity(
         OpenGL::PositionShaderProgram *program,
@@ -22,7 +24,6 @@ public:
     {}
 
     void draw() const override {
-
         __drawable->draw();
     }
 };

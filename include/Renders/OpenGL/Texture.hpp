@@ -52,7 +52,7 @@ public:
         glBindTexture(GL_TEXTURE_2D, __id);
     }
 
-    ~Texture(){
+//    ~Texture(){
         // glDeleteTextures(1, &__id);
-    }
+//    }
 };

@@ -1,7 +1,6 @@
 #pragma once
 
 #include <nanogui/nanogui.h>
-#include "../Players/Player.hpp"
 
 class EntityWindow: public nanogui::Window {
     nanogui::Label *__entityName = nullptr;
@@ -28,13 +27,12 @@ public:
         __healthValue(health),
         __armorValue(armor)
     {
-        setLayout(new nanogui::BoxLayout(nanogui::Orientation::Vertical, nanogui::Alignment::Minimum));
+        setLayout(new nanogui::BoxLayout(nanogui::Orientation::Vertical, nanogui::Alignment::Middle));
         __entityPlayer = new nanogui::Label(this, __playerName);
         __health = new nanogui::Label(this, std::to_string(__healthValue));
         __armor = new nanogui::Label(this, std::to_string(__armorValue));
         __view = new nanogui::ImageView(this, imageId);
-        __view->setWidth(64);
-        __view->setHeight(64);
+        __view->setFixedOffset(true);
     }
 
 

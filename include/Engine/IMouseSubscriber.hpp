@@ -11,7 +11,7 @@ namespace Engine{
 
             virtual void onMouseUp(MouseButton key, float x, float y, int mods) {};
 
-            virtual void onMouseDown(MouseButton key, float x, float y, int mods) {};
+            virtual bool onMouseDown(MouseButton key, float x, float y, int mods) {};
         };
     }
 

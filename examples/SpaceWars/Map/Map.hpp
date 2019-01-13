@@ -17,7 +17,7 @@ class Map : IDrawable, Engine::Input::IUpdatable {
 
     OpenGL::PositionShaderProgram *__program = nullptr;
     OpenGL::PositionShaderProgram *__debugProgram = nullptr;
-
+    OpenGL::Mesh *__skyBox = nullptr;
     OpenGL::AxiesDebug *__axiesDebug = nullptr;
     OpenGL::GridDebug *__gridDebug = nullptr;
 
@@ -54,10 +54,15 @@ public:
 
         __gridDebug = new OpenGL::GridDebug(__size, __size, __size, 50);
         __gridDebug->update();
+
+        auto model = new OpenGL::Model("./sharedAssets/models/sky/sky.obj", __program);
+        __skyBox = new OpenGL::Mesh(__program, model);
+        __skyBox->setScale(size/2.0f, size/2.0f, size/2.0f);
     }
 
     void draw() const override {
         glDisable(GL_DEPTH_TEST);
+        __skyBox->draw();
         if(__debug) {
             __debugProgram->use();
             __axiesDebug->draw();

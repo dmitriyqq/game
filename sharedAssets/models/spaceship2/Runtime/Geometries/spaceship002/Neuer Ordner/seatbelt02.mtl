@@ -1,0 +1,180 @@
+#  ==========================================================================
+#  Wavefront Material file
+#  Exported by Red-i Productions' "Riptide"
+#  (a free plugin for Cinema 4D PC & Mac, R7.3 or later)
+#  
+#  Red-i Productions
+#  http://skinprops.com
+#  
+#  ==========================================================================
+
+newmtl default_Mat
+illum 2
+Kd 0.800000 0.800000 0.800000
+
+newmtl outside
+Ns 50.781250
+illum 2
+Kd 0.800000 0.401569 0.200784
+
+newmtl inside
+illum 2
+Kd 0.000000 0.800000 0.401569
+
+newmtl display
+illum 2
+Kd 0.000000 0.000000 0.125490
+
+newmtl alu
+Ns 50.781250
+illum 2
+Kd 0.401569 0.401569 0.401569
+
+newmtl floor
+Ns 50.781250
+illum 2
+Kd 0.401569 0.200784 0.200784
+
+newmtl light01
+Ns 50.781250
+illum 2
+Ka 0.000000 0.501961 1.000000
+Kd 0.000000 0.401569 0.800000
+
+newmtl black
+Ns 50.781250
+illum 2
+Kd 0.000000 0.000000 0.000000
+
+newmtl jet
+Ns 50.781250
+illum 2
+Kd 0.800000 0.401569 0.602353
+
+newmtl below
+Ns 50.781250
+illum 2
+Kd 0.800000 0.586667 0.586667
+
+newmtl floorlight
+Ns 50.781250
+illum 2
+Ka 1.000000 1.000000 0.000000
+Kd 0.800000 0.800000 0.473726
+
+newmtl metaldunkel
+Ns 50.781250
+illum 2
+Kd 0.000000 0.200784 0.000000
+
+newmtl metal01
+Ns 50.781250
+illum 2
+Kd 0.000000 0.200784 0.200784
+
+newmtl metalhell
+Ns 50.781250
+illum 2
+Kd 0.401569 0.800000 0.800000
+
+newmtl chrom
+Ns 50.781250
+illum 2
+Kd 0.800000 0.800000 0.000000
+
+newmtl seal
+Ns 50.781250
+illum 2
+Kd 0.800000 0.000000 0.800000
+
+newmtl switch02
+Ns 50.781250
+d 0.550000
+Ni 1.000000
+illum 2
+Ka 1.000000 0.000000 0.000000
+Kd 0.800000 0.000000 0.000000
+
+newmtl switch04
+Ns 50.781250
+d 0.530000
+Ni 1.000000
+illum 2
+Kd 0.000000 0.000000 0.501961
+
+newmtl switch01
+Ns 50.781250
+d 0.430000
+Ni 1.000000
+illum 2
+Ka 0.000000 1.000000 0.000000
+Kd 0.000000 0.800000 0.000000
+
+newmtl switch03
+Ns 50.781250
+d 0.550000
+Ni 1.000000
+illum 2
+Ka 1.000000 0.501961 0.000000
+Kd 0.800000 0.401569 0.000000
+
+newmtl light02
+Ns 50.781250
+illum 2
+Ka 0.501961 1.000000 1.000000
+Kd 0.000000 0.000000 0.800000
+
+newmtl 03
+Ns 50.781250
+illum 2
+Kd 0.800000 0.800000 0.658824
+
+newmtl blue
+Ns 50.781250
+d 0.620000
+Ni 1.000000
+illum 2
+Ka 0.000000 0.000000 1.000000
+Kd 0.000000 0.000000 0.401569
+
+newmtl levy
+Ns 50.781250
+illum 2
+Kd 0.800000 0.401569 0.401569
+
+newmtl plastic01
+Ns 50.781250
+illum 2
+Kd 0.401569 0.800000 0.401569
+
+newmtl glass
+Ns 50.781250
+d 0.660000
+Ni 1.000000
+illum 2
+Kd 0.000000 0.000000 0.501961
+
+newmtl fabric
+Ns 50.781250
+illum 2
+Kd 0.800000 0.646275 0.800000
+
+newmtl metal00
+Ns 50.781250
+illum 2
+Kd 0.800000 0.574118 0.348235
+
+newmtl alu01
+Ns 50.781250
+illum 2
+Kd 0.800000 0.401569 0.602353
+
+newmtl cushion
+Ns 50.781250
+illum 2
+Kd 0.401569 0.401569 0.000000
+
+newmtl seat
+Ns 50.781250
+illum 2
+Kd 0.200784 0.000000 0.200784

@@ -1,0 +1,321 @@
+# Exported from Bryce 6.0
+
+newmtl material_1
+    Ns 121
+    d 1.000000
+    illum 2
+    #bump_amt 0.000000
+    #refl_amt 0.150000
+    #amb_amt 0.020000
+    #dif_amt 0.800000
+    #spec_amt 1.000000
+    Ka 0.009412 0.008471 0.007529
+    map_Kd Mosquito_mtl23_diffcol.png
+    Ks 1.000000 1.000000 1.000000
+    Tf 0.470588 0.423529 0.376471
+newmtl material_2
+    Ns 121
+    d 1.000000
+    illum 2
+    #bump_amt 0.000000
+    #refl_amt 0.150000
+    #amb_amt 0.020000
+    #dif_amt 0.800000
+    #spec_amt 1.000000
+    Ka 0.009412 0.008471 0.007529
+    map_Kd Mosquito_mtl23_diffcol.png
+    Ks 1.000000 1.000000 1.000000
+    Tf 0.470588 0.423529 0.376471
+newmtl material_3
+    Ns 121
+    d 1.000000
+    illum 2
+    #bump_amt 0.000000
+    #refl_amt 0.150000
+    #amb_amt 0.020000
+    #dif_amt 0.800000
+    #spec_amt 0.525424
+    Ka 0.009412 0.008471 0.007529
+    map_Kd Mosquito_mtl23_diffcol.png
+    Ks 0.525424 0.525424 0.525424
+    Tf 0.470588 0.423529 0.376471
+newmtl material_4
+    Ns 121
+    d 1.000000
+    illum 2
+    #bump_amt 0.000000
+    #refl_amt 0.150000
+    #amb_amt 0.020000
+    #dif_amt 0.800000
+    #spec_amt 0.779661
+    Ka 0.009412 0.008471 0.007529
+    map_Kd Mosquito_mtl23_diffcol.png
+    Ks 0.779661 0.779661 0.779661
+    Tf 0.470588 0.423529 0.376471
+newmtl material_5
+    Ns 121
+    d 1.000000
+    illum 2
+    #bump_amt 0.000000
+    #refl_amt 0.150000
+    #amb_amt 0.020000
+    #dif_amt 0.800000
+    #spec_amt 0.779661
+    Ka 0.009412 0.008471 0.007529
+    map_Kd Mosquito_mtl23_diffcol.png
+    Ks 0.779661 0.779661 0.779661
+    Tf 0.470588 0.423529 0.376471
+newmtl material_6
+    Ns 121
+    d 1.000000
+    illum 2
+    #bump_amt 0.000000
+    #refl_amt 0.150000
+    #amb_amt 0.020000
+    #dif_amt 0.800000
+    #spec_amt 0.779661
+    Ka 0.009412 0.008471 0.007529
+    map_Kd Mosquito_mtl23_diffcol.png
+    Ks 0.779661 0.779661 0.779661
+    Tf 0.470588 0.423529 0.376471
+newmtl material_7
+    Ns 196
+    d 1.000000
+    illum 2
+    #bump_amt 0.000000
+    #refl_amt 0.000000
+    #amb_amt 1.000000
+    #dif_amt 1.000000
+    #spec_amt 0.000000
+    Ka 1.000000 1.000000 1.000000
+    Ks 0.000000 0.000000 0.000000
+    Tf 1.000000 1.000000 1.000000
+    map_Ka "Mosquito_mtl7_ambicol.bmp"
+    map_Kd "Mosquito_mtl7_diffcol.bmp"
+    map_D ""s
+newmtl material_8
+    Ns 121
+    d 1.000000
+    illum 2
+    #bump_amt 0.000000
+    #refl_amt 0.150000
+    #amb_amt 0.020000
+    #dif_amt 0.800000
+    #spec_amt 1.000000
+    Ka 0.009412 0.008471 0.007529
+    map_Kd Mosquito_mtl23_diffcol.png
+    Ks 1.000000 1.000000 1.000000
+    Tf 0.470588 0.423529 0.376471
+newmtl material_9
+    Ns 121
+    d 1.000000
+    illum 2
+    #bump_amt 0.000000
+    #refl_amt 0.150000
+    #amb_amt 0.020000
+    #dif_amt 0.800000
+    #spec_amt 1.000000
+    Ka 0.009412 0.008471 0.007529
+    map_Kd Mosquito_mtl23_diffcol.png
+    Ks 1.000000 1.000000 1.000000
+    Tf 0.470588 0.423529 0.376471
+newmtl material_10
+    Ns 203
+    d 1.000000
+    illum 2
+    #bump_amt 0.000000
+    #refl_amt 0.000000
+    #amb_amt 0.000000
+    #dif_amt 1.000000
+    #spec_amt 0.749020
+    Ka 0.000000 0.000000 0.000000
+    map_Kd Mosquito_mtl23_diffcol.png
+    Ks 0.749020 0.749020 0.749020
+    Tf 0.062745 0.800000 0.117647
+    map_Kd "Mosquito_mtl10_diffcol.bmp"
+newmtl material_11
+    Ns 121
+    d 1.000000
+    illum 2
+    #bump_amt 0.000000
+    #refl_amt 0.150000
+    #amb_amt 0.020000
+    #dif_amt 0.800000
+    #spec_amt 0.700000
+    Ka 0.009412 0.008471 0.007529
+    Kd 0.376471 0.332549 0.288627
+    Ks 0.700000 0.700000 0.700000
+    Tf 0.470588 0.423529 0.376471
+newmtl material_12
+    Ns 215
+    d 1.000000
+    illum 2
+    #bump_amt 0.000000
+    #refl_amt 0.796610
+    #amb_amt 0.000000
+    #dif_amt 0.000000
+    #spec_amt 0.779661
+    Ka 0.000000 0.000000 0.000000
+    map_Kd Mosquito_mtl23_diffcol.png
+    Ks 0.779661 0.779661 0.779661
+    Tf 1.000000 1.000000 1.000000
+newmtl material_13
+    Ns 203
+    d 1.000000
+    illum 2
+    #bump_amt 0.000000
+    #refl_amt 0.000000
+    #amb_amt 0.000000
+    #dif_amt 1.000000
+    #spec_amt 0.749020
+    Ka 0.000000 0.000000 0.000000
+    map_Kd Mosquito_mtl23_diffcol.png
+    Ks 0.749020 0.749020 0.749020
+    Tf 0.878431 0.878431 0.878431
+newmtl material_14
+    Ns 215
+    d 1.000000
+    illum 2
+    #bump_amt 0.000000
+    #refl_amt 0.796610
+    #amb_amt 0.000000
+    #dif_amt 0.000000
+    #spec_amt 0.779661
+    Ka 0.000000 0.000000 0.000000
+    map_Kd Mosquito_mtl23_diffcol.png
+    Ks 0.779661 0.779661 0.779661
+    Tf 1.000000 1.000000 1.000000
+newmtl material_15
+    Ns 203
+    d 1.000000
+    illum 2
+    #bump_amt 0.000000
+    #refl_amt 0.000000
+    #amb_amt 0.000000
+    #dif_amt 1.000000
+    #spec_amt 0.749020
+    Ka 0.000000 0.000000 0.000000
+    map_Kd Mosquito_mtl23_diffcol.png
+    Ks 0.749020 0.749020 0.749020
+    Tf 0.898039 0.305882 0.423529
+newmtl material_16
+    Ns 203
+    d 1.000000
+    illum 2
+    #bump_amt 0.000000
+    #refl_amt 0.000000
+    #amb_amt 0.000000
+    #dif_amt 1.000000
+    #spec_amt 0.749020
+    Ka 0.000000 0.000000 0.000000
+    map_Kd Mosquito_mtl23_diffcol.png
+    Ks 0.749020 0.749020 0.749020
+    Tf 0.988235 0.101961 0.031373
+newmtl material_17
+    Ns 203
+    d 1.000000
+    illum 2
+    #bump_amt 0.000000
+    #refl_amt 0.000000
+    #amb_amt 0.000000
+    #dif_amt 1.000000
+    #spec_amt 0.749020
+    Ka 0.000000 0.000000 0.000000
+    map_Kd Mosquito_mtl23_diffcol.png
+    Ks 0.749020 0.749020 0.749020
+    Tf 0.725490 0.745098 0.070588
+newmtl material_18
+    Ns 203
+    d 1.000000
+    illum 2
+    #bump_amt 0.000000
+    #refl_amt 0.000000
+    #amb_amt 0.000000
+    #dif_amt 1.000000
+    #spec_amt 0.749020
+    Ka 0.000000 0.000000 0.000000
+    map_Kd Mosquito_mtl23_diffcol.png
+    Ks 0.749020 0.749020 0.749020
+    Tf 0.866667 0.509804 0.113725
+newmtl material_19
+    Ns 203
+    d 1.000000
+    illum 2
+    #bump_amt 0.000000
+    #refl_amt 0.000000
+    #amb_amt 0.000000
+    #dif_amt 1.000000
+    #spec_amt 0.749020
+    Ka 0.000000 0.000000 0.000000
+    map_Kd Mosquito_mtl23_diffcol.png
+    Ks 0.749020 0.749020 0.749020
+    Tf 0.062745 0.800000 0.117647
+    map_Kd "Mosquito_mtl19_diffcol.bmp"
+newmtl material_20
+    Ns 203
+    d 1.000000
+    illum 2
+    #bump_amt 0.000000
+    #refl_amt 0.000000
+    #amb_amt 0.000000
+    #dif_amt 1.000000
+    #spec_amt 0.749020
+    Ka 0.000000 0.000000 0.000000
+    map_Kd Mosquito_mtl23_diffcol.png
+    Ks 0.749020 0.749020 0.749020
+    Tf 0.878431 0.878431 0.878431
+newmtl material_21
+    Ns 11
+    d 1.000000
+    illum 2
+    #bump_amt 0.101695
+    #refl_amt 0.040000
+    #amb_amt 0.000000
+    #dif_amt 1.000000
+    #spec_amt 0.305085
+    Ka 0.000000 0.000000 0.000000
+    map_Kd Mosquito_mtl23_diffcol.png
+    Ks 0.305085 0.305085 0.305085
+    Tf 1.000000 1.000000 1.000000
+    map_Bump "Mosquito_mtl21_bumpamt.bmp"
+newmtl material_22
+    Ns 11
+    d 1.000000
+    illum 2
+    #bump_amt 0.101695
+    #refl_amt 0.040000
+    #amb_amt 0.000000
+    #dif_amt 1.000000
+    #spec_amt 0.305085
+    Ka 0.000000 0.000000 0.000000
+    map_Kd Mosquito_mtl23_diffcol.png
+    Ks 0.305085 0.305085 0.305085
+    Tf 1.000000 1.000000 1.000000
+    map_Bump "Mosquito_mtl22_bumpamt.bmp"
+newmtl material_23
+    Ns 203
+    d 1.000000
+    illum 2
+    #bump_amt 0.000000
+    #refl_amt 0.000000
+    #amb_amt 0.000000
+    #dif_amt 1.000000
+    #spec_amt 0.749020
+    Ka 0.000000 0.000000 0.000000
+    map_Kd Mosquito_mtl23_diffcol.png
+    Ks 0.749020 0.749020 0.749020
+    Tf 0.062745 0.800000 0.117647
+    map_Kd Mosquito_mtl23_diffcol.png
+newmtl material_24
+    Ns 196
+    d 0.135593
+    illum 2
+    #bump_amt 0.000000
+    #refl_amt 0.000000
+    #amb_amt 0.000000
+    #dif_amt 0.000000
+    #spec_amt 1.000000
+    Ka 0.000000 0.000000 0.000000
+    map_Kd Mosquito_mtl23_diffcol.png
+    Ks 1.000000 1.000000 1.000000
+    Tf 0.952941 0.996078 0.415686

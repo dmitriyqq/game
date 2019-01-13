@@ -15,18 +15,18 @@
 #include <reactphysics3d.h>
 #include <nanogui/nanogui.h>
 #include "../UI/EntityWindow.hpp"
-#include "IPlayersEntity.hpp"
+#include "../Players/IPlayer.hpp"
 
 class StarsFactory;
 class PlanetsFactory;
-class Player;
+class IPlayer;
 
-class Entity : public Engine::IEntity, public IPlayersEntity {
-    Player* __player = nullptr;
+class Entity {
+    IPlayer* __player = nullptr;
     nanogui::Window *__window = nullptr;
     Texture *__texture = nullptr;
 protected:
-    void setPlayer(Player* player){ __player = player;}
+    void setPlayer(IPlayer* player){ __player = player;}
 public:
     float health;
     float armor;
@@ -35,9 +35,9 @@ public:
         ENTITY, PLANET, STAR, ASTEROID, UNIT, GALAXY
     };
 
-    Entity(Player *player = nullptr): __player(player) {}
+    Entity(IPlayer *player = nullptr): __player(player) {}
 
-    Player* getPlayer() const { return __player;}
+    IPlayer* getPlayer() const { return __player;}
 
     virtual void update(float delta_time){
         auto log = spdlog::get("log");
@@ -55,7 +55,7 @@ public:
 
     virtual nanogui::Window* getWindow() {
         if (__window == nullptr) {
-            __window = new EntityWindow(nullptr, getName(), getPlayer()->getName(), health, armor, __texture->getId());
+            __window = new EntityWindow(nullptr, getName(), __player->getName(), health, armor, __texture->getId());
         }
 
         return __window;

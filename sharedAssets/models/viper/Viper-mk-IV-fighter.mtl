@@ -12,7 +12,7 @@ Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd face.jpg
-bump face-bump.jpg -bm -0.05
+bump face-bump.jpg
 Ni 1.00
 Ks 0.00 0.00 0.00
 map_Ks face specular.jpg
@@ -22,7 +22,7 @@ Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd engine-cover.jpg
-bump engine cover bump.jpg -bm -0.05
+bump engine cover bump.jpg
 Ni 1.00
 Ks 0.00 0.00 0.00
 map_Ks engine-covers specular.jpg
@@ -32,7 +32,7 @@ Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd aripa buna.jpg
-bump wing bump.jpg -bm -0.05
+bump wing bump.jpg
 Ni 1.00
 Ks 0.00 0.00 0.00
 map_Ks wing specular.jpg
@@ -42,7 +42,7 @@ Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd wing-up.jpg
-bump wing-up bump.jpg -bm -0.05
+bump wing-up bump.jpg
 Ni 1.00
 Ks 0.00 0.00 0.00
 map_Ks wing-up specular.jpg

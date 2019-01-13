@@ -61,7 +61,7 @@ public:
         __up = new OpenGL::VectorDebug(0, 0, 0, 0, 0, 0, glm::vec3(1.0f, 0.0f, 0.0f));
         __right = new OpenGL::VectorDebug(0, 0, 0, 0, 0, 0, glm::vec3(0.0f, 0.0f, 1.0f));
         __forward = new OpenGL::VectorDebug(0, 0, 0, 0, 0, 0, glm::vec3(0.0f, 1.0f, 0.0f));
-        __target = new OpenGL::VectorDebug(0, 0, 0, 0, 0, 0, glm::vec3(1.0f, 1.0f, 0.0f));
+//        __target = new OpenGL::VectorDebug(0, 0, 0, 0, 0, 0, glm::vec3(1.0f, 1.0f, 0.0f));
 
         glEnable(GL_DEPTH_TEST);
         auto starModel = new OpenGL::Model("./sharedAssets/models/sol/sol.obj", __program);
@@ -71,7 +71,7 @@ public:
     }
 
     void processKey(Engine::Input::Key key) override {
-        updateData();
+        updateDebugData();
     }
 
     void draw(){
@@ -83,21 +83,41 @@ public:
         __up->draw();
         __right->draw();
         __forward->draw();
-        __target->draw();
+//        __target->draw();
         glEnable(GL_DEPTH_TEST);
     }
 
     void onMouseMove(float x, float y, float dx, float dy) override {
         __x = x;
         __y = y;
-        updateData();
+        updateDebugData();
     }
 
-    void onMouseUp(Engine::Input::MouseButton key, float x, float y, int mods) override {};
+    void onMouseUp(Engine::Input::MouseButton key, float x, float y, int mods) override {
 
-    void onMouseDown(Engine::Input::MouseButton key, float x, float y, int mods) override {};
+    };
 
-    void updateData(){
+    bool onMouseDown(Engine::Input::MouseButton key, float x, float y, int mods) override {
+        auto ray = __camera->castRay(__x, __y, __width, __height);
+        __callback->refresh();
+        __world->raycast(ray, __callback);
+
+        if (__callback->wasHit()) {
+            auto e = __callback->getSelectedEntity();
+            if (__player != e->getPlayer() && key == Engine::Input::MouseButton::RIGHT){
+                __player->attack(e);
+            }
+
+            if (key == Engine::Input::MouseButton::LEFT) {
+                __listener(e);
+            }
+            return true;
+        }
+
+        return false;
+    };
+
+    void updateDebugData() {
         auto ray = __camera->castRay(__x, __y, __width, __height);
 
         auto f = 10.0f * __camera->getForwardVector();
@@ -111,22 +131,7 @@ public:
         __right->update(c.x + r.x, c.y + r.y, c.z + r.z, c.x, c.y, c.z);
         __forward->update(c.x + f.x, c.y + f.y, c.z + f.z, c.x, c.y, c.z);
 
-        __target->update(ray.point1.x, ray.point1.y , ray.point1.z , ray.point2.x, ray.point2.y, ray.point2.z);
-
-        __callback->refresh();
-        __world->raycast(ray, __callback);
-
-        if (!__callback->wasHit()) {
-            auto log = spdlog::get("log");
-            log->info("ray doesn't intersect any object");
-            auto point = __map->getIntersectionPoint(ray);
-            if (point.first) {
-                __mesh->setPosition(point.second.x, 0, point.second.z);
-            }
-        } else {
-            __listener(__callback->getSelectedEntity());
-        }
-
+//        __target->update(ray.point1.x, ray.point1.y , ray.point1.z , ray.point2.x, ray.point2.y, ray.point2.z);
     }
 
     void setListener(std::function<void(Entity *entity)> func) {

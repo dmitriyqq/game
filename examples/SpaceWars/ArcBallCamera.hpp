@@ -71,18 +71,20 @@ class ArcBallCamera : public OpenGL::FpsLikeCamera, public ArcBallPositionProvid
                 return;
             }
 
-            __phi += 0.005 * dx;
-            __alpha += 0.005 *dy;
+            __phi += 0.02 * dx;
+            __alpha += 0.02 *dy;
         }
 
         void onMouseUp(Engine::Input::MouseButton key, float x, float y, int mods) override {
                 __mousePressed = false;
         }
 
-        void onMouseDown(Engine::Input::MouseButton key, float x, float y, int mods) override {
+        bool onMouseDown(Engine::Input::MouseButton key, float x, float y, int mods) override {
             if (Glfw::KeyMap::isSpecialKeyPressed(mods, Engine::Input::SpecialKey::SHIFT)) {
                 __mousePressed = true;
             }
+
+            return false;
         }
 
 

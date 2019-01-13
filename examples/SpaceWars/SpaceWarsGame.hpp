@@ -29,6 +29,7 @@
 #include "Players/GodPlayer.hpp"
 #include "Players/ComputerPlayer.hpp"
 #include "MapSelector.hpp"
+#include "UI/EntityFactoryWindow.hpp"
 
 class ExitGameESC: public Engine::Input::IKeyboardSubscriber {
     public: 
@@ -47,8 +48,9 @@ class SpaceWarsGame: public Engine::IGame {
     nanogui::Screen *__screen = nullptr;
     ObjectSelector *__objectSelector = nullptr;
     MapSelector *__mapSelector = nullptr;
-    DebugCamera *__debugCam = nullptr;
     nanogui::Window *__selectedEntityWindow = nullptr;
+    DebugCamera *__debugCam = nullptr;
+    EntityFactoryWindow *__entityFactoryWindow = nullptr;
 
     std::vector<Engine::Input::IUpdatableKeytable *> __systems;
 
@@ -61,6 +63,9 @@ class SpaceWarsGame: public Engine::IGame {
     // do not forget to dispose it...
     std::vector <OpenGL::Model*> __models;
 
+    UnitsFactory *__unitsFactory = nullptr;
+    Unit * __unit = nullptr;
+
     void updateSystems(float delta_time) {
         for(auto &&system:__systems) {
             system->update(delta_time, *__window->getKeyBoardState());
@@ -70,17 +75,12 @@ class SpaceWarsGame: public Engine::IGame {
     void initUI() {
         using namespace nanogui;
         __screen = __window->getScreen();
-//        gui = new FormHelper(screen);
-//        ref<Window> window = gui->addWindow(Eigen::Vector2i(10, 10), "Object creator");
-//        gui->addVariable("Resources", x);
-//        gui->addButton("Create object", [&](){ addObject(); });
 
         __debugCam = new DebugCamera(__screen, __currentCamera);
-//        __debugCam->getWindow();
+
+
         __screen->setVisible(true);
         __screen->performLayout();
-
-//        window->center();
     }
 
     void initPrograms() {
@@ -100,14 +100,14 @@ class SpaceWarsGame: public Engine::IGame {
         // stars factory
         {
             auto starModel = new OpenGL::Model("./sharedAssets/models/sol/sol.obj", __program);
-            auto texture = new Texture("./sharedAssets/icons/sun.jpg");
+            auto texture = new Texture("./sharedAssets/icons/sun.png");
             __models.push_back(starModel);
             starsFactory = new StarsFactory(starModel, __world, __program, texture);
         }
         // planets factory
         {
             auto planetModel = new OpenGL::Model("./sharedAssets/models/planet/planet.obj", __program);
-            auto texture = new Texture("./sharedAssets/icons/planet.jpg");
+            auto texture = new Texture("./sharedAssets/icons/planet.png");
             __models.push_back(planetModel);
             planetsFactory = new PlanetsFactory(planetModel, __world, __program, texture);
         }
@@ -123,13 +123,9 @@ class SpaceWarsGame: public Engine::IGame {
 
         __selectedPlayer = __players[1];
         // units factory
-        {
+        __unitsFactory = new UnitsFactory(__world, __program);
+        __unit = __unitsFactory->constructUnit(__unitsFactory->getAvailableUnits()[1], __players[0]);
 
-        }
-        // environments factory
-        {
-
-        }
 
     }
 
@@ -145,7 +141,6 @@ public:
 
         auto arcBallCamera = new ArcBallCamera();
         arcBallCamera->setZoom(40.0f);
-        __window->getMouseInput()->addSubscriber(arcBallCamera);
         registerSystem(arcBallCamera);
 
         __currentCamera = arcBallCamera;
@@ -159,8 +154,14 @@ public:
         auto height = __window->getHeight();
 
         __mapSelector = new MapSelector(__map, __players[1], __debugProgram, __currentCamera, width, height);
+
+        __entityFactoryWindow = new EntityFactoryWindow(__screen, __mapSelector, __players[1], __unitsFactory, width);
+        __entityFactoryWindow->center();
+        auto padding = (width - __entityFactoryWindow->width())/2.0f;
+        __entityFactoryWindow->setPosition(Eigen::Vector2i(padding, height - __entityFactoryWindow->height()));
+
         __objectSelector = new ObjectSelector(__map, true, __world, __currentCamera, __debugProgram, __program, __selectedPlayer, width, height);
-        __objectSelector->setListener([this](Entity *e){
+        __objectSelector->setListener([this, width](Entity *e){
             if (__selectedEntityWindow != e->getWindow()) {
                 if (__selectedEntityWindow != nullptr) {
                     __screen->removeChild(__selectedEntityWindow);
@@ -173,11 +174,15 @@ public:
                 __screen->addChild(__selectedEntityWindow);
                 __selectedEntityWindow->requestFocus();
                 __selectedEntityWindow->center();
+                __selectedEntityWindow->setPosition(Eigen::Vector2i(width  - __selectedEntityWindow->width(), 0.0f));
+
             }
         });
 
-        __window->getMouseInput()->addSubscriber(__objectSelector);
+        __window->getMouseInput()->addSubscriber(arcBallCamera);
+        __window->getMouseInput()->addSubscriber(__entityFactoryWindow);
         __window->getMouseInput()->addSubscriber(__mapSelector);
+        __window->getMouseInput()->addSubscriber(__objectSelector);
         __window->getKeyboardDirectInput()->addSubscriber(new ExitGameESC());
         __window->getKeyboardDirectInput()->addSubscriber(__objectSelector);
     }
@@ -190,6 +195,13 @@ protected:
 
             __map->update(__delta_time);
             __world->update(__delta_time);
+
+            for (auto player : __players){
+                player->update(__delta_time);
+            }
+
+            __unit->update(__delta_time);
+            __entityFactoryWindow->update(__delta_time);
         }
 
         __debugCam->update();
@@ -206,9 +218,15 @@ protected:
         __window->startDisplay();
 
         __map->draw();
+
+        for (auto player : __players){
+            player->draw();
+        }
+
         __objectSelector->draw();
         __mapSelector->draw();
-
+        __unit->draw();
+        __entityFactoryWindow->draw();
         __screen->drawContents();
         __screen->drawWidgets();
 

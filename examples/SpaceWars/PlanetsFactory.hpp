@@ -1,7 +1,9 @@
 #pragma once
 
 #include <random>
+#include <Renders/OpenGL/Model.hpp>
 #include "Entities/Planet.hpp"
+#include "Players/Player.hpp"
 
 class PlanetsFactory {
     OpenGL::Model *__model = nullptr;

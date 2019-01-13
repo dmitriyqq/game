@@ -1,0 +1,77 @@
+
+Merci d'avoir télécharger ce produit.
+
+____________________________________________________________________________
+----------------INFORMATION GENERALE ---------------------------------------
+____________________________________________________________________________
+
+
+ ©Juin2014
+
+-Nom du produit: SSY217
+
+-Par: Hend Z.
+
+-Email: contact.vertx3d@gmail.com
+
+-site web: www.vertx3d.com
+
+____________________________________________________________________________
+--------------- DESCRIPTION ------------------------------------------------
+____________________________________________________________________________
+
+
+Ceci est un modèle de vaisseau spatial. Il se presente en deux modes, un mode normal et un mode de combat. Les versions MAYA (mb et ma) contiennent des set driven key qui permettent de passer d'un mode à un autre sans changer de fichier. Pour les autres formats, des fichiers distinct pour chaque mode sont inclus. 
+
+____________________________________________________________________________
+--------------- Système requis ---------------------------------------------
+____________________________________________________________________________
+
+
+Ce produit a été créé avec Maya 2012 sur un PC. Il n'a pas été tester sur d'autres versions de Maya ou sur un systéme Mac.
+
+____________________________________________________________________________
+--------------- Installation Instructions ----------------------------------
+____________________________________________________________________________
+
+
+J'ai placé tout les fichiers dans le dossier racine, De ce fait, vous ne deveriez avoir aucun probléme pour charger les textures, sur n'importe quelle autre application 3D. Ouvrez les fichiers Maya (.ma ou .mb) ou importer le format de votre choix dans une scéne existante. Vous seriez, peut etre amenés à ajuster la taille du modèle.  
+
+Pour les versions MAYA (ma et mb) j'ai configuré un systéme avec le set driven key afin de passer du mode normale au mode combat sans avoir à changer de fichier. Pour plus d'information, référez-vous aux tutoriels. 
+  
+____________________________________________________________________________
+---------------  Restrictions d'usage -----------------------------------
+____________________________________________________________________________
+
+
+Vous pouvez utiliser ce produit a des fins commerciales ou non commerciales, comme bon vous semble. Vous ne pouvez pas le redistribuer ou le vendre, en totalité ou en partie.
+
+____________________________________________________________________________
+--------------- Fichiers inclus --------------------------------------------
+____________________________________________________________________________
+
+
+- Tutorials
+- Lisezmoi.txt
+- Readme.txt
+- SSY217.fbx
+- SSY217.ma
+- SSY217.mb
+- SSY217.mtl
+- SSY217.obj
+- SSY217_Back_bmp.jpg
+- SSY217_Back_clr.jpg
+- SSY217_Engine_bmp.jpg
+- SSY217_Engine_clr.jpg
+- SSY217_FightingMode.fbx
+- SSY217_FightingMode.mtl
+- SSY217_FightingMode.obj
+- SSY217_Main_Body_bmp.jpg
+- SSY217_Main_Body_clr.jpg
+- SSY217_Parts_bmp.jpg
+- SSY217_Parts_clr.jpg
+- SSY217_Wings_bmp.jpg
+- SSY217_Wings_clr.jpg
+
+
+Pour les feedback, questions, suggestions ou si vous voulez un modèle personnalisé, n'hésitez pas à me contacter par email contact.vertx3d@gmail.com ou via mon site web www.vertx3d.com

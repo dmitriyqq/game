@@ -1,0 +1,15092 @@
+{
+
+version
+	{
+	number 7.2
+	}
+
+thighLength 0.188311
+
+targetFigure blMilWom_v4b
+
+refFigure JamesG2
+
+actor BODY:3
+	{
+	channels
+		{
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  -0.00440692
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0.371998
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0.256408
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+controlProp GoalCenterOfMass:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+controlProp CenterOfMass:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor hip:3
+	{
+	channels
+		{
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  4
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -28
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0.000583559
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  -0.194173
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  -0.204631
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor abdomen:3
+	{
+	channels
+		{
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -2.06005
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -1.18244
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  35.791
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor chest:3
+	{
+	channels
+		{
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -0.00976564
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -0.205078
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor neck:3
+	{
+	channels
+		{
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor head:3
+	{
+	channels
+		{
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor eyeBrow:3
+	{
+	channels
+		{
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor rEye:3
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -13
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor lEye:3
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -13
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor upperJaw:3
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor lowerJaw:3
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor tongueBase:3
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor tongue01:3
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  19
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor tongue02:3
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  17
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor tongue03:3
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  6
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor tongue04:3
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -14
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor tongue05:3
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor tongueTip:3
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor rCollar:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -25.1091
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  8.88027
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -0.0794298
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor rShldr:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  36.8589
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  37.9468
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  29.8651
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor rForeArm:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  30.973
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -7.08426
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0.948997
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor rHand:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  2.5014
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -11.4653
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -11
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor rThumb1:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -7.5041
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -16.978
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -3.3727
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor rThumb2:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -8
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -15.002
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor rThumb3:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -0
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -24.0078
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor rIndex1:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -6
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -12
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor rIndex2:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -0
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  15
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor rIndex3:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -0
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  30
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor rMid1:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  7
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  2.97389
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor rMid2:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -0.0222859
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -0.0626364
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  29.0153
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor rMid3:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -0
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  28
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor rRing1:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -0.0251124
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  2.97818
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  49.9609
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor rRing2:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -0.0234516
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -0.0156391
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  65.9491
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor rRing3:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -0
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  14
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor rPinky1:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -0.0228427
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  7.87339
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  39.0244
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor rPinky2:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -0
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  49
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor rPinky3:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -0
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  63
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor lCollar:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -25.2144
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -8.11192
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0.00168124
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor lShldr:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  17.8548
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -28.0626
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -22.0364
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor lForeArm:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  43.8819
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -6.02098
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -2.00313
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor lHand:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -11.0529
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -4.48098
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  9.27613
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  -0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor lThumb1:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -27.0177
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -5.95466
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  10.0154
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor lThumb2:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -0.849385
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  1.81124
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -11.6105
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor lThumb3:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -10
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor lIndex1:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -0.0478776
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  8.85117
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  19.9546
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor lIndex2:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  19
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor lIndex3:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -7
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor lMid1:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -2
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  7
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor lMid2:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  28
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor lMid3:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  12
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor lRing1:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -5
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -4
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor lRing2:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  19
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor lRing3:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -15
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor lPinky1:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -0.022492
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -6.96858
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  13.0409
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor lPinky2:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -0.0172092
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0.189203
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -9.92648
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor lPinky3:3
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -10
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor rThigh:3
+	{
+	channels
+		{
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  8.61848
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -9.91566
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -83.388
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor rShin:3
+	{
+	channels
+		{
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -0.145367
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0.904922
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  65.6212
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor rFoot:3
+	{
+	channels
+		{
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  7.22221
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -10.4888
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  2.54699
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor rToe:3
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor lThigh:3
+	{
+	channels
+		{
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -3.06022
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  8.2202
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -86.078
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor lShin:3
+	{
+	channels
+		{
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0.169896
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -1.06218
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  70.1034
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor lFoot:3
+	{
+	channels
+		{
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -1.11635
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  8.60318
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -2.69723
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor lToe:3
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+actor bodyMorphs:3
+	{
+	channels
+		{
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+baseProp V4BsNeckBackBend:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.669878
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0100212
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4NeckBackBend:3
+	}
+
+magnetDeformerProp V4NeckBackBend:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnNeckBackBend:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  -14
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.663057
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0328591
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.93
+	falloffCpt 0.8 0.07
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsRCollarTrapUp:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.0309182
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.648443
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0188969
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4RCollarTrapUp:3
+	}
+
+magnetDeformerProp V4RCollarTrapUp:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnRCollarTrapUp:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  -27
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  -8
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  -1
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.0384302
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.625008
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0262813
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.93
+	falloffCpt 0.8 0.07
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsLCollarTrapUp:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.0309182
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.648443
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0188969
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4LCollarTrapUp:3
+	}
+
+magnetDeformerProp V4LCollarTrapUp:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnLCollarTrapUp:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  27
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  -8
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  1
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.0384302
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.625008
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0262813
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.93
+	falloffCpt 0.8 0.07
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsRShldrDeltCrsUp:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.061064
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.618387
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0181424
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4RShldrDeltCrsUp:3
+	}
+
+magnetDeformerProp V4RShldrDeltCrsUp:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnRShldrDeltCrsUp:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  10
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.0700624
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.619873
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0179885
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.8 0.07
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsLShldrDeltCrsUp:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.061064
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.618387
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0181424
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4LShldrDeltCrsUp:3
+	}
+
+magnetDeformerProp V4LShldrDeltCrsUp:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnLShldrDeltCrsUp:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  -10
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.0700624
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.619873
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0179885
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.8 0.07
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsRShldrDeltUp:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.0786587
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.606841
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0121761
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4RShldrDeltUp:3
+	}
+
+magnetDeformerProp V4RShldrDeltUp:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnRShldrDeltUp:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  -3
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.0675892
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.621337
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0219154
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.93
+	falloffCpt 0.8 0.07
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsLShldrDeltUp:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.0787
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.6068
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0122
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4LShldrDeltUp:3
+	}
+
+magnetDeformerProp V4LShldrDeltUp:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnLShldrDeltUp:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  3
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.0675892
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.621337
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0219154
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.93
+	falloffCpt 0.8 0.07
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsRShldrDeltFwd-Chst:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.0577
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.6046
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0041
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4RShldrDeltFwd-Chst:3
+	}
+
+magnetDeformerProp V4RShldrDeltFwd-Chst:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnRShldrDeltFwd-Chst:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  -42
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.062
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.6072
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0008
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.93
+	falloffCpt 0.8 0.07
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsRShldrDeltFwd-Cllr:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.0576781
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.604592
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.00412256
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4RShldrDeltFwd-Cllr:3
+	}
+
+magnetDeformerProp V4RShldrDeltFwd-Cllr:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnRShldrDeltFwd-Cllr:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.0589591
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.607161
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.00212738
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.93
+	falloffCpt 0.8 0.07
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsLShldrDeltFwd-Chst:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.0577
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.6046
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0041
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4LShldrDeltFwd-Chst:3
+	}
+
+magnetDeformerProp V4LShldrDeltFwd-Chst:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnLShldrDeltFwd-Chst:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  42
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.062
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.6072
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0008
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.93
+	falloffCpt 0.8 0.07
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsLShldrDeltFwd-Cllr:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.0576781
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.604592
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.00412256
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4LShldrDeltFwd-Cllr:3
+	}
+
+magnetDeformerProp V4LShldrDeltFwd-Cllr:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnLShldrDeltFwd-Cllr:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.0589591
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.607161
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.00212738
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.93
+	falloffCpt 0.8 0.07
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsRShldrPecFwd-Cllr:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.0754124
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.7712
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.023018
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4RShldrPecFwd-Cllr:3
+	}
+
+magnetDeformerProp V4RShldrPecFwd-Cllr:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnRShldrPecFwd-Cllr:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.0458
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.5958
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0.0139
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.8506
+	falloffCpt 0.5135 0.3392
+	falloffCpt 0.8 0.0537
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsRShldrPecFwd-Chst:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.0754
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.7712
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.023
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4RShldrPecFwd-Chst:3
+	}
+
+magnetDeformerProp V4RShldrPecFwd-Chst:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnRShldrPecFwd-Chst:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.0458
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.5958
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0.0139
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.8506
+	falloffCpt 0.5135 0.3392
+	falloffCpt 0.8 0.0537
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsLShldrPecFwd-Cllr:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.0754124
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.7712
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.023018
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4LShldrPecFwd-Cllr:3
+	}
+
+magnetDeformerProp V4LShldrPecFwd-Cllr:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnLShldrPecFwd-Cllr:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.0458
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.5958
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0.0139
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.8506
+	falloffCpt 0.5135 0.3392
+	falloffCpt 0.8 0.0537
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsLShldrPecFwd-Chst:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.0754
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.7712
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.023
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4LShldrPecFwd-Chst:3
+	}
+
+magnetDeformerProp V4LShldrPecFwd-Chst:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnLShldrPecFwd-Chst:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.0458
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.5958
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0.0139
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.8506
+	falloffCpt 0.5135 0.3392
+	falloffCpt 0.8 0.0537
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsRShldrArmPitDn:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.0876533
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.585457
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0211233
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4RShldrArmPitDn:3
+	}
+
+magnetDeformerProp V4RShldrArmPitDn:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnRShldrArmPitDn:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  -2
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  39
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.0814689
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.586056
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0390428
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.93
+	falloffCpt 0.8 0.07
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsLShldrArmPitDn:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.0876533
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.585457
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0211233
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4LShldrArmPitDn:3
+	}
+
+magnetDeformerProp V4LShldrArmPitDn:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnLShldrArmPitDn:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  -2
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  -39
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.0814689
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.586056
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0390428
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.93
+	falloffCpt 0.8 0.07
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsRCllrBreast:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  -26
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  -6
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.0280395
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.543649
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0.00616606
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4RCllrBreast:3
+	}
+
+magnetDeformerProp V4RCllrBreast:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnRCllrBreast:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  -19
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  -26
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  -18
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.0361486
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.55748
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0.0328453
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.405792
+	falloffCpt 0.313514 0.24419
+	falloffCpt 0.486486 0.129847
+	falloffCpt 0.8 0
+	falloffCpt 0.897297 9.0921e-010
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsLCllrBreast:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  26
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  -6
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.0280395
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.543649
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0.00616606
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4LCllrBreast:3
+	}
+
+magnetDeformerProp V4LCllrBreast:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnLCllrBreast:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  19
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  -26
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  18
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.0361
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.5575
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0.0328
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.405792
+	falloffCpt 0.313514 0.24419
+	falloffCpt 0.486486 0.129847
+	falloffCpt 0.8 0
+	falloffCpt 0.897297 9.0921e-010
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsRBreastMorphUpIn:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  -25
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.044
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.5545
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0.0463
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4RBreastMorphUpIn:3
+	}
+
+magnetDeformerProp V4RBreastMorphUpIn:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnRBreastMorphUpIn:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  -35
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  -38
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  -17
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.044
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.5545
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0.0463
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.127027 0.966066
+	falloffCpt 0.881081 0.0535232
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsLBreastMorphUpIn:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  25
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.044
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.5545
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0.0463
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4LBreastMorphUpIn:3
+	}
+
+magnetDeformerProp V4LBreastMorphUpIn:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnLBreastMorphUpIn:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  35
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  -38
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  17
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.044
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.5545
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0.0463
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.127027 0.966066
+	falloffCpt 0.881081 0.0535232
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsRBreastMorphDnOut:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  -25
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.044
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.5545
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0.0463
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4RBreastMorphDnOut:3
+	}
+
+magnetDeformerProp V4RBreastMorphDnOut:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnRBreastMorphDnOut:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  -35
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  -38
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  -17
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.044
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.5545
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0.0463
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.878378 0.175249
+	falloffCpt 0.967568 -0.00717269
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsLBreastMorphDnOut:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  25
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.044
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.5545
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0.0463
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4LBreastMorphDnOut:3
+	}
+
+magnetDeformerProp V4LBreastMorphDnOut:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnLBreastMorphDnOut:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  35
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  -38
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  17
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.044
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.5545
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0.0463
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.878378 0.175249
+	falloffCpt 0.967568 -0.00717269
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsRCllrShldrLatUp:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.0810019
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.595748
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0194007
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4RCllrShldrLatUp:3
+	}
+
+magnetDeformerProp V4RCllrShldrLatUp:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnRCllrShldrLatUp:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.0763353
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.584652
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0183561
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.93
+	falloffCpt 0.8 0.07
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsLCllrShldrLatUp:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.0810019
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.595748
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0194007
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4LCllrShldrLatUp:3
+	}
+
+magnetDeformerProp V4LCllrShldrLatUp:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnLCllrShldrLatUp:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.0763353
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.584652
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0183561
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.93
+	falloffCpt 0.8 0.07
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsAbdomenBackFwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.0017575
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.506105
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0.00154284
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4AbdomenBackFwd:3
+	}
+
+magnetDeformerProp V4AbdomenBackFwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnAbdomenBackFwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  -43
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.503519
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0312099
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.672902
+	falloffCpt 0.8 0.040297
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsRHipGluteFwd-Bkwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.043911
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.357435
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0.00560763
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4RHipGluteFwd-Bkwd:3
+	}
+
+magnetDeformerProp V4RHipGluteFwd-Bkwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnRHipGluteFwd-Bkwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.00344186
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.368939
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0487509
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.93
+	falloffCpt 0.8 0.07
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsLHipGluteFwd-Bkwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.043911
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.357435
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0.00560763
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4LHipGluteFwd-Bkwd:3
+	}
+
+magnetDeformerProp V4LHipGluteFwd-Bkwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnLHipGluteFwd-Bkwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.00344186
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.368939
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0487509
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.93
+	falloffCpt 0.8 0.07
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsRThighGluteFwd-Bkwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.043911
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.357435
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0.00560763
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4RThighGluteFwd-Bkwd:3
+	}
+
+magnetDeformerProp V4RThighGluteFwd-Bkwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnRThighGluteFwd-Bkwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.0265617
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.368939
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0487509
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.93
+	falloffCpt 0.8 0.07
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsLThighGluteFwd-Bkwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.043911
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.357435
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0.00560763
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4LThighGluteFwd-Bkwd:3
+	}
+
+magnetDeformerProp V4LThighGluteFwd-Bkwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnLThighGluteFwd-Bkwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.0265617
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.368939
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0487509
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.93
+	falloffCpt 0.8 0.07
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsRThighGluteOutBkwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.0421962
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.38665
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.00814762
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4RThighGluteOutBkwd:3
+	}
+
+magnetDeformerProp V4RThighGluteOutBkwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnRThighGluteOutBkwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.0520956
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.377061
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0145334
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.607307
+	falloffCpt 0.213514 0.580254
+	falloffCpt 0.443243 0.272368
+	falloffCpt 0.772973 0.0894518
+	falloffCpt 0.8 0.0763361
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsLThighGluteOutBkwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.0421962
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.38665
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.00814762
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4LThighGluteOutBkwd:3
+	}
+
+magnetDeformerProp V4LThighGluteOutBkwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnLThighGluteOutBkwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.0520956
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.377061
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0145334
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.607307
+	falloffCpt 0.213514 0.580254
+	falloffCpt 0.443243 0.272368
+	falloffCpt 0.772973 0.0894518
+	falloffCpt 0.8 0.0763361
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsRThighGluteInBkwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.0382638
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.377649
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.00491834
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4RThighGluteInBkwd:3
+	}
+
+magnetDeformerProp V4RThighGluteInBkwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnRThighGluteInBkwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  67
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.0111699
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.385851
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0317869
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.576001
+	falloffCpt 0.502703 0.323037
+	falloffCpt 0.743243 0.14361
+	falloffCpt 0.8 0.0879926
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsLThighGluteInBkwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.0382638
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.377649
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.00491834
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4LThighGluteInBkwd:3
+	}
+
+magnetDeformerProp V4LThighGluteInBkwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnLThighGluteInBkwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  -67
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.0111699
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.385851
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0317869
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.576001
+	falloffCpt 0.502703 0.323037
+	falloffCpt 0.743243 0.14361
+	falloffCpt 0.8 0.0879926
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsRThighGluteCrsFwd-Bkwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.0363846
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.393515
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.00596625
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4RThighGluteCrsFwd-Bkwd:3
+	}
+
+magnetDeformerProp V4RThighGluteCrsFwd-Bkwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnRThighGluteCrsFwd-Bkwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  1
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.0093
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.357347
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0197674
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.93
+	falloffCpt 0.8 0.07
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsLThighGluteCrsFwd-Bkwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.0363846
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.393515
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.00596625
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4LThighGluteCrsFwd-Bkwd:3
+	}
+
+magnetDeformerProp V4LThighGluteCrsFwd-Bkwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnLThighGluteCrsFwd-Bkwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  1
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.00697
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.357347
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0197674
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.93
+	falloffCpt 0.8 0.07
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsRThighFrontFwd-Bkwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  -6
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.03774
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.29681
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0088186
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4RThighFrontFwd-Bkwd:3
+	}
+
+magnetDeformerProp V4RThighFrontFwd-Bkwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnRThighFrontFwd-Bkwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  -12
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  7
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.0386589
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.322117
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0.0206405
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.933615
+	falloffCpt 0.67027 0.245614
+	falloffCpt 0.8 0.07
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsRThighOutFwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.0386218
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.345746
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0.00770183
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4RThighOutFwd:3
+	}
+
+magnetDeformerProp V4RThighOutFwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnRThighOutFwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  -6
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.0545378
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.339861
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0.0142107
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.93
+	falloffCpt 0.8 0.07
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsRThighInFwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.0235234
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.348641
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.000895057
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4RThighInFwd:3
+	}
+
+magnetDeformerProp V4RThighInFwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnRThighInFwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  27
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  -17
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  -23
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.00919251
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.35625
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0.00759929
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.93
+	falloffCpt 0.8 0.07
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsLThighFrontFwd-Bkwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  -6
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.03774
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.29681
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0088186
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4LThighFrontFwd-Bkwd:3
+	}
+
+magnetDeformerProp V4LThighFrontFwd-Bkwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnLThighFrontFwd-Bkwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  -12
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  -7
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.0386589
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.322117
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0.0206405
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.933615
+	falloffCpt 0.67027 0.245614
+	falloffCpt 0.8 0.07
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsLThighOutFwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.0386218
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.345746
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0.00770183
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4LThighOutFwd:3
+	}
+
+magnetDeformerProp V4LThighOutFwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnLThighOutFwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  -6
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.0545378
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.339861
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0.0142107
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.93
+	falloffCpt 0.8 0.07
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsLThighInFwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.0235234
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.348641
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.000895057
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4LThighInFwd:3
+	}
+
+magnetDeformerProp V4LThighInFwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnLThighInFwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  -27
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  -17
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  23
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.00919251
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.35625
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0.00759929
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.93
+	falloffCpt 0.8 0.07
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsRThighInCollapseFwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.0371063
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.357993
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.00838361
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4RThighInCollapseFwd:3
+	}
+
+magnetDeformerProp V4RThighInCollapseFwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnRThighInCollapseFwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.00353794
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.356854
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0007
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.93
+	falloffCpt 0.8 0.07
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsLThighInCollapseFwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.0371063
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.357993
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.00838361
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4LThighInCollapseFwd:3
+	}
+
+magnetDeformerProp V4LThighInCollapseFwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnLThighInCollapseFwd:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.00353794
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.356854
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0007
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.93
+	falloffCpt 0.8 0.07
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsRThighAdductorOut:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.0312386
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.33348
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0025148
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4RThighAdductorOut:3
+	}
+
+magnetDeformerProp V4RThighAdductorOut:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnRThighAdductorOut:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  -0.00548664
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.325415
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.00442386
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.93
+	falloffCpt 0.8 0.07
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+baseProp V4BsLThighAdductorOut:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.0312
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.3335
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0025
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	deformerProp V4LThighAdductorOut:3
+	}
+
+magnetDeformerProp V4LThighAdductorOut:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+sphereZoneProp V4ZnLThighAdductorOut:3
+	{
+	channels
+		{
+		rotateY yRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zRotate
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xTran
+			{
+			keys
+				{
+				k  0  0.0056
+				}
+			trackingScaleMult 1
+			}
+		translateY yTran
+			{
+			keys
+				{
+				k  0  0.3255
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ zTran
+			{
+			keys
+				{
+				k  0  -0.0044
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	buildSphere
+	newFalloffCurve
+	falloffCpt 0 1
+	falloffCpt 0.2 0.93
+	falloffCpt 0.8 0.07
+	falloffCpt 1 0
+	endFalloffCurve
+	}
+
+figure 
+	{
+	}
+
+refactor BODY:2
+	{
+	channels
+		{
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor hip:2
+	{
+	channels
+		{
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  3.99414
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -35.4102
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0.000623724
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  -0.207537
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  -0.218715
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor waist:2
+	{
+	channels
+		{
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor abdomen:2
+	{
+	channels
+		{
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -2.06005
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -1.13743
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  51.6976
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor chest:2
+	{
+	channels
+		{
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -0.00976564
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0.600188
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -12.1531
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor neck:2
+	{
+	channels
+		{
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0.00913844
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -5.63476
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor head:2
+	{
+	channels
+		{
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0.00882175
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  4.78515
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor leftEye:2
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor rightEye:2
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor lCollar:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -25.2144
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -8.11192
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0.00168124
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor lShldr:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  17.8548
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -40.8703
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -23.3759
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor lForeArm:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  43.8819
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -12.4696
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -1.66636
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor lHand:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -11.0529
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  5.45433
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  10.318
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor lThumb1:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -27.0177
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  5.20061
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -8.57132
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor lThumb2:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -0.849385
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -15.0203
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  20.3556
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor lThumb3:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -19.2575
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  4.47537
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor lIndex1:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -0.0478776
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  10.5507
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -5.13766
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor lIndex2:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  6.93368
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -7.85054
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor lIndex3:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -0.0945522
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -20.2292
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor lMid1:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -1.20117
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -14.3916
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor lMid2:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -0.418959
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -2.59026
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor lMid3:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0.857935
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -0.495092
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor lRing1:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -8.07951
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -21.4014
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor lRing2:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -2.97525
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -8.2868
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor lRing3:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -9.92869
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -27.1689
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor lPinky1:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -0.022492
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -4.91887
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -10.66
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor lPinky2:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -0.0172092
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -16.7525
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -37.1356
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor lPinky3:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -3.00034
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -14.2079
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor rCollar:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -25.1091
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  8.88027
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -0.0794298
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor rShldr:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  36.8589
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  49.6206
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  32.9933
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor rForeArm:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  30.973
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -0.698818
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0.680104
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor rHand:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  2.5014
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -18.9178
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -11.7011
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor rThumb1:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -7.5041
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  2.14511
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -11.4159
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor rThumb2:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -7.99102
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -7.97418
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor rThumb3:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -6.40074
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  17.5639
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor rIndex1:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -5.34983
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  10.4929
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor rIndex2:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -0.519861
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  40.7892
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor rIndex3:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0.174656
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  43.165
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor rMid1:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  8.28897
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  20.7604
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor rMid2:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -0.0222859
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  5.5469
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  59.5584
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor rMid3:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0.386585
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  40.6883
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor rRing1:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -0.0251124
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  7.06595
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  65.7712
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor rRing2:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -0.0234516
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  6.04402
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  93.7256
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor rRing3:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  13.1447
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  28.056
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor rPinky1:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -0.0228427
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  12.4934
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  60.0467
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor rPinky2:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  12.2354
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  78.8193
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor rPinky3:2
+	{
+	channels
+		{
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  2.64757
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  68.27
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor lButtock:2
+	{
+	channels
+		{
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor lThigh:2
+	{
+	channels
+		{
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -3.06022
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  7.24155
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -73.5098
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor lShin:2
+	{
+	channels
+		{
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0.169896
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -3.33025
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  66.0569
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor lFoot:2
+	{
+	channels
+		{
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -1.11635
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  8.60318
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -2.69723
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor lToe:2
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -2.82473
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -20.2939
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor rButtock:2
+	{
+	channels
+		{
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor rThigh:2
+	{
+	channels
+		{
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  8.61848
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -8.70011
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -70.6196
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor rShin:2
+	{
+	channels
+		{
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  -0.145367
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  3.30591
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  61.5796
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor rFoot:2
+	{
+	channels
+		{
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  7.22221
+				}
+			}
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  -10.4888
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  2.54699
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor rToe:2
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0.947136
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  -19.688
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor lBigToe1:2
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor lBigToe2:2
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor lIndexToe1:2
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor lIndexToe2:2
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor lMidToe1:2
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor lMidToe2:2
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor lRingToe1:2
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor lRingToe2:2
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor lPinkyToe1:2
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor lPinkyToe2:2
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor rBigToe1:2
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor rBigToe2:2
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor rIndexToe1:2
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor rIndexToe2:2
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor rMidToe1:2
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor rMidToe2:2
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor rRingToe1:2
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor rRingToe2:2
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor rPinkyToe1:2
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+refactor rPinkyToe2:2
+	{
+	channels
+		{
+		rotateZ zrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateY yrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		rotateX xrot
+			{
+			keys
+				{
+				k  0  0
+				}
+			}
+		translateX xtran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1
+			}
+		translateY ytran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		translateZ ztran
+			{
+			keys
+				{
+				k  0  0
+				}
+			trackingScaleMult 1.000000
+			}
+		}
+	}
+
+figure 
+	{
+	}
+}
+{
+
+version
+	{
+	number 7.2
+	}
+
+thighLength 0.188311
+
+targetFigure blMilWom_v4b
+
+figure 
+	{
+	}
+
+figure 
+	{
+	}
+}

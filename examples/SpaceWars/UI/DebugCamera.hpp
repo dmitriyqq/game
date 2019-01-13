@@ -12,7 +12,7 @@ class DebugCamera {
 public:
     DebugCamera(nanogui::Screen *screen, OpenGL::ICamera *camera):
         __camera(camera) {
-        __window = new nanogui::Window(screen, "");
+        __window = new nanogui::Window(screen, "Camera Position");
         __window->setLayout(new nanogui::GroupLayout());
         __position = new VectorWidget(__window);
         __forward = new VectorWidget(__window);

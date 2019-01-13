@@ -95,11 +95,13 @@ public:
             min.y = std::min(min.y, vector.z);
             min.z = std::min(min.z, vector.z);
 
-            // normals
-            vector.x = mesh->mNormals[i].x;
-            vector.y = mesh->mNormals[i].y;
-            vector.z = mesh->mNormals[i].z;
-            vertex.normal = vector;
+            if (mesh->mNormals) {
+                // normals
+                vector.x = mesh->mNormals[i].x;
+                vector.y = mesh->mNormals[i].y;
+                vector.z = mesh->mNormals[i].z;
+                vertex.normal = vector;
+            }
 
 
             if(mesh->mTextureCoords[0])

@@ -6,10 +6,8 @@
 class DynamicEntity : public DrawableEntity {
     rp3d::BoxShape *__shape = nullptr;
     rp3d::ProxyShape *__proxyShape = nullptr;
+    rp3d::DynamicsWorld *__world = nullptr;
     glm::vec3 __scale;
-
-    OpenGL::IBoundingBoxDrawable *__drawable = nullptr;
-    OpenGL::PositionShaderProgram *__program = nullptr;
 
     void setBoundingBox() {
         auto box = __drawable->getBox();
@@ -35,6 +33,7 @@ public:
     }
 
     virtual void addToWorld(rp3d::DynamicsWorld *world, glm::vec3 pos) {
+        __world = world;
         auto transform = rp3d::Transform(rp3d::Vector3(pos.x, pos.y, pos.z), rp3d::Quaternion::identity());
         __body = world->createRigidBody(transform);
         __body->setType(rp3d::BodyType::DYNAMIC);
@@ -50,6 +49,28 @@ public:
         __program->setModel(matrix);
 
         DrawableEntity::draw();
+    }
+
+    void setPosition(glm::vec3 p) {
+        auto t = __body->getTransform();
+        t.setPosition(rp3d::Vector3(p.x, p.y, p.z));
+        __body->setTransform(t);
+    }
+
+    void setRotation() {
+        auto t = __body->getTransform();
+        t.setOrientation(rp3d::Quaternion::identity());
+        __body->setTransform(t);
+    }
+
+    glm::vec3 getPosition() {
+        auto t = __body->getTransform().getPosition();
+        return glm::vec3(t.x, t.y, t.z);
+    }
+
+    virtual ~DynamicEntity() {
+        __world->destroyRigidBody(__body);
+        delete __shape;
     }
 
 };

@@ -1,0 +1,840 @@
+# File produced by Open Asset Import Library (http://www.assimp.sf.net)
+# (assimp v3.1.187496374)
+
+newmtl Material01
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00045.bmp
+
+newmtl Material02
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00004.bmp
+
+newmtl Material03
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00047.bmp
+
+newmtl Material04
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00059.bmp
+
+newmtl Material05
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00058.bmp
+
+newmtl Material06
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00046.bmp
+
+newmtl Material07
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00057.bmp
+
+newmtl Material08
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00049.bmp
+
+newmtl Material09
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00050.bmp
+
+newmtl Material010
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00044.bmp
+
+newmtl Material011
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00042.bmp
+
+newmtl Material012
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00062.bmp
+
+newmtl Material013
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00043.bmp
+
+newmtl Material014
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00051.bmp
+
+newmtl Material015
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00054.bmp
+
+newmtl Material016
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00048.bmp
+
+newmtl Material017
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00053.bmp
+
+newmtl Material018
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00052.bmp
+
+newmtl Material019
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00056.bmp
+
+newmtl Material020
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00005.bmp
+
+newmtl Material021
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00060.bmp
+
+newmtl Material022
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00061.bmp
+
+newmtl Material023
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00002.bmp
+
+newmtl Material024
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00003.bmp
+
+newmtl Material025
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00006.bmp
+
+newmtl Material026
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00000.bmp
+
+newmtl Material027
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00007.bmp
+
+newmtl Material028
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00008.bmp
+
+newmtl Material029
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00009.bmp
+
+newmtl Material030
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00010.bmp
+
+newmtl Material031
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00011.bmp
+
+newmtl Material032
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00055.bmp
+
+newmtl Material033
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00001.bmp
+
+newmtl Material034
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00017.bmp
+
+newmtl Material035
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00018.bmp
+
+newmtl Material036
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00019.bmp
+
+newmtl Material037
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00024.bmp
+
+newmtl Material038
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00025.bmp
+
+newmtl Material039
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00012.bmp
+
+newmtl Material040
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00013.bmp
+
+newmtl Material041
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00014.bmp
+
+newmtl Material042
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00015.bmp
+
+newmtl Material043
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00016.bmp
+
+newmtl Material044
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00020.bmp
+
+newmtl Material045
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00021.bmp
+
+newmtl Material046
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00030.bmp
+
+newmtl Material047
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00022.bmp
+
+newmtl Material048
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00023.bmp
+
+newmtl Material049
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00026.bmp
+
+newmtl Material050
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00027.bmp
+
+newmtl Material051
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00028.bmp
+
+newmtl Material052
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00029.bmp
+
+newmtl Material053
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00031.bmp
+
+newmtl Material054
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00032.bmp
+
+newmtl Material055
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00033.bmp
+
+newmtl Material056
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00034.bmp
+
+newmtl Material057
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00035.bmp
+
+newmtl Material058
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00036.bmp
+
+newmtl Material059
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00037.bmp
+
+newmtl Material060
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00038.bmp
+
+newmtl Material061
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00039.bmp
+
+newmtl Material062
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00040.bmp
+
+newmtl Material063
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00041.bmp
+
+newmtl Material064
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00063.bmp
+
+newmtl Material065
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00064.bmp
+
+newmtl Material066
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00065.bmp
+
+newmtl Material067
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00066.bmp
+
+newmtl Material068
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00067.bmp
+
+newmtl Material069
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00068.bmp
+
+newmtl Material070
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00069.bmp
+
+newmtl Material071
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00070.bmp
+
+newmtl Material072
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00071.bmp
+
+newmtl Material073
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00072.bmp
+
+newmtl Material074
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00073.bmp
+
+newmtl Material075
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00074.bmp
+
+newmtl Material076
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00075.bmp
+
+newmtl Material077
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00076.bmp
+
+newmtl Material078
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00077.bmp
+
+newmtl Material079
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00078.bmp
+
+newmtl Material080
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00079.bmp
+
+newmtl Material081
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00080.bmp
+
+newmtl Material082
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00081.bmp
+
+newmtl Material083
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00082.bmp
+
+newmtl Material084
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00083.bmp
+
+newmtl Material085
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00084.bmp
+
+newmtl Material086
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00085.bmp
+
+newmtl Material087
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00086.bmp
+
+newmtl Material088
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00087.bmp
+
+newmtl Material089
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00088.bmp
+
+newmtl Material090
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00089.bmp
+
+newmtl Material091
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00090.bmp
+
+newmtl Material092
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00091.bmp
+
+newmtl Material093
+Kd 0.8 0.8 0.8
+Ka 0.5 0.5 0.5
+Ks 0 0 0
+Ke 0 0 0
+d 1
+illum 1
+map_Kd TEX00092.bmp
+
