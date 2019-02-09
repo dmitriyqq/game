@@ -10,7 +10,7 @@
 #include <reactphysics3d.h>
 
 #include "GlobeBody.hpp"
-#include "../ArcBallPositionProvider.hpp"
+#include "Renders/OpenGL/ArcBallPositionProvider.hpp"
 
 class PlanetsFactory;
 

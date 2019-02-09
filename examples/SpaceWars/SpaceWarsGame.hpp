@@ -13,7 +13,7 @@
 
 #include <Engine/Input.hpp>
 
-#include "ArcBallCamera.hpp"
+#include "Renders/OpenGL/ArcBallCamera.hpp"
 #include "Map/Map.hpp"
 
 #include "UI/DebugCamera.hpp"

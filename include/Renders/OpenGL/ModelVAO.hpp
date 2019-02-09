@@ -60,6 +60,10 @@ public:
         setupMesh();
     }
 
+    int getVertexCount() const { return __vertices.size(); }
+    int getIndexCount() const { return __indices.size(); }
+    int getTexturesCount() const { return __textures.size(); }
+
     void draw() const
     {
         unsigned int diffuseNr  = 1;

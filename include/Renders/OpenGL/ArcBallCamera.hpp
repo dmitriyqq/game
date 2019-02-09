@@ -6,20 +6,23 @@
 
 #include "ArcBallPositionProvider.hpp"
 
-class ArcBallCamera : public OpenGL::FpsLikeCamera, public ArcBallPositionProvider{
-    bool __mousePressed = false;
-    float __speed = 10.5f;
+namespace OpenGL {
+
+    class ArcBallCamera : public OpenGL::FpsLikeCamera, public ArcBallPositionProvider {
+        bool __mousePressed = false;
+        float __speed = 10.5f;
 
     public:
-    glm::vec3 up = glm::vec3(0, 1, 0);
-    ArcBallCamera() {
+        glm::vec3 up = glm::vec3(0, 1, 0);
+
+        ArcBallCamera() {
         }
 
         void setCenter(glm::vec3 position) {
             __center = position;
         }
 
-        glm::vec3 getCenter() const{
+        glm::vec3 getCenter() const {
             return __center;
         }
 
@@ -29,35 +32,35 @@ class ArcBallCamera : public OpenGL::FpsLikeCamera, public ArcBallPositionProvid
 
         void update(float delta_time, const Engine::Input::IKeyboardState &keyboard) override {
 
-            if(keyboard.isKeyPressed(Engine::Input::Key::DOWN)){
+            if (keyboard.isKeyPressed(Engine::Input::Key::DOWN)) {
                 auto f = getForwardVector();
-                __center.x +=  -__speed * f.x * delta_time;
-                __center.z +=  -__speed * f.z * delta_time;
+                __center.x += -__speed * f.x * delta_time;
+                __center.z += -__speed * f.z * delta_time;
             }
 
-            if(keyboard.isKeyPressed(Engine::Input::Key::UP)){
+            if (keyboard.isKeyPressed(Engine::Input::Key::UP)) {
                 auto f = getForwardVector();
-                __center.x +=  __speed * f.x * delta_time;
-                __center.z +=  __speed * f.z * delta_time;
+                __center.x += __speed * f.x * delta_time;
+                __center.z += __speed * f.z * delta_time;
             }
 
-            if(keyboard.isKeyPressed(Engine::Input::Key::LEFT)){
+            if (keyboard.isKeyPressed(Engine::Input::Key::LEFT)) {
                 auto r = getRightVector();
                 __center.x += __speed * r.x * delta_time;
                 __center.z += __speed * r.z * delta_time;
             }
 
-            if(keyboard.isKeyPressed(Engine::Input::Key::RIGHT)){
+            if (keyboard.isKeyPressed(Engine::Input::Key::RIGHT)) {
                 auto r = getRightVector();
                 __center.x += -__speed * r.x * delta_time;
                 __center.z += -__speed * r.z * delta_time;
             }
 
-            if(keyboard.isKeyPressed(Engine::Input::Key::MORE)){
+            if (keyboard.isKeyPressed(Engine::Input::Key::MORE)) {
                 __orbitRadius += __speed * delta_time;
             }
 
-            if(keyboard.isKeyPressed(Engine::Input::Key::LESS)){
+            if (keyboard.isKeyPressed(Engine::Input::Key::LESS)) {
                 __orbitRadius -= __speed * delta_time;
             }
         }
@@ -72,11 +75,11 @@ class ArcBallCamera : public OpenGL::FpsLikeCamera, public ArcBallPositionProvid
             }
 
             __phi += 0.02 * dx;
-            __alpha += 0.02 *dy;
+            __alpha += 0.02 * dy;
         }
 
         void onMouseUp(Engine::Input::MouseButton key, float x, float y, int mods) override {
-                __mousePressed = false;
+            __mousePressed = false;
         }
 
         bool onMouseDown(Engine::Input::MouseButton key, float x, float y, int mods) override {
@@ -112,4 +115,6 @@ class ArcBallCamera : public OpenGL::FpsLikeCamera, public ArcBallPositionProvid
         glm::vec3 getPosition() const override {
             return getPostionVector();
         }
-};
+    };
+
+}

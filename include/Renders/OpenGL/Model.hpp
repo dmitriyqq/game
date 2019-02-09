@@ -64,6 +64,13 @@ class Model : public IBoundingBoxDrawable
         return textures;
     }  
 public:
+    const std::vector<ModelVAO> & getMeshes() const {
+        return meshes;
+    }
+
+    const std::vector<Texture> & getAllTextures() const {
+        return textures_loaded;
+    }
 
     ModelVAO processMesh(aiMesh *mesh, const aiScene *scene)
     {

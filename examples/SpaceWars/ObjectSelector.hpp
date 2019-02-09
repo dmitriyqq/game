@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Players/Player.hpp"
-#include "ArcBallCamera.hpp"
+#include "Renders/OpenGL/ArcBallCamera.hpp"
 #include "RaycastCallback.hpp"
 #include "Map/Map.hpp"
 

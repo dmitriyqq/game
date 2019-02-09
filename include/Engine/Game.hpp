@@ -1,7 +1,8 @@
 #pragma once
 
-#include <chrono>
 #include <iostream>
+#include <thread>
+#include <chrono>
 #include "Utils/Constants.hpp"
 
 namespace Engine {
